@@ -1,0 +1,14 @@
+[
+  {
+    "scenario": "Same Creator Cross-Platform",
+    "overlapCoefficient": 0.3
+  },
+  {
+    "scenario": "Same Category Cross-Creator",
+    "overlapCoefficient": 0.15
+  },
+  {
+    "scenario": "Cross-Category Cross-Creator",
+    "overlapCoefficient": 0.05
+  }
+]

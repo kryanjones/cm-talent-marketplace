@@ -1,0 +1,39 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files — never commit secrets
+.env*.local
+.env
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# local-adapter runtime overlay (applications, approvals, saved bundles)
+/data/runtime.json
+
+# headshot pipeline artifacts (images live in Airtable; these are local only)
+/data/headshots/out/
+/data/headshots/final/
+/airtable_proxy_backup.json

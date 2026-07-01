@@ -1,0 +1,5222 @@
+[
+  {
+    "id": "CR-001",
+    "name": "Patrick Salinas",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Patrick Salinas is a politics journalist and creator, formerly of The Atlantic, covering politics & government for an engaged, national audience. Known for books & literature and clear, trusted reporting.",
+    "priorOutlets": [
+      "The Atlantic"
+    ],
+    "primaryBeat": "Politics & Government",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "Emmy Award",
+      "Verified"
+    ],
+    "politicalLean": "Left",
+    "brandSafetyTier": "Use-with-context",
+    "categoryAffinities": [
+      "Books & Literature",
+      "Personal Finance",
+      "Gaming"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-05-26",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Patrick%20Salinas&size=300"
+  },
+  {
+    "id": "CR-002",
+    "name": "Diego Quinn",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Diego Quinn is a politics journalist and creator, formerly of BuzzFeed News, covering politics & government for an engaged, national audience. Known for books & literature and clear, trusted reporting.",
+    "priorOutlets": [
+      "BuzzFeed News",
+      "NPR"
+    ],
+    "primaryBeat": "Politics & Government",
+    "homeMarketDMA": "National",
+    "trustSignals": [],
+    "politicalLean": "Center-Right",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Books & Literature",
+      "Personal Finance",
+      "Home & Garden"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-01-21",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Diego%20Quinn&size=300"
+  },
+  {
+    "id": "CR-003",
+    "name": "Grace Nakamura",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Grace Nakamura is a politics journalist and creator, formerly of Axios, covering politics & government for an engaged, national audience. Known for personal finance and clear, trusted reporting.",
+    "priorOutlets": [
+      "Axios",
+      "Vice News"
+    ],
+    "primaryBeat": "Politics & Government",
+    "homeMarketDMA": "National",
+    "trustSignals": [],
+    "politicalLean": "Center-Right",
+    "brandSafetyTier": "Use-with-context",
+    "categoryAffinities": [
+      "Personal Finance",
+      "Books & Literature",
+      "Travel"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-02-13",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Grace%20Nakamura&size=300"
+  },
+  {
+    "id": "CR-004",
+    "name": "Heidi Pruitt",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Heidi Pruitt is a politics journalist and creator, formerly of Vice News, covering politics & government for an engaged, national audience. Known for personal finance and clear, trusted reporting.",
+    "priorOutlets": [
+      "Vice News",
+      "Politico"
+    ],
+    "primaryBeat": "Politics & Government",
+    "homeMarketDMA": "Los Angeles",
+    "trustSignals": [],
+    "politicalLean": "Left",
+    "brandSafetyTier": "Use-with-context",
+    "categoryAffinities": [
+      "Personal Finance",
+      "Books & Literature",
+      "Food & Cooking"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-04-15",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Heidi%20Pruitt&size=300"
+  },
+  {
+    "id": "CR-005",
+    "name": "Dana Maguire",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Dana Maguire is a politics journalist and creator, formerly of The Washington Post, covering politics & government for an engaged, national audience. Known for personal finance and clear, trusted reporting.",
+    "priorOutlets": [
+      "The Washington Post",
+      "The Atlantic"
+    ],
+    "primaryBeat": "Politics & Government",
+    "homeMarketDMA": "New York",
+    "trustSignals": [
+      "Verified",
+      "SPJ Award"
+    ],
+    "politicalLean": "Right",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Personal Finance",
+      "Books & Literature",
+      "Wellness"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-05-17",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Dana%20Maguire&size=300"
+  },
+  {
+    "id": "CR-006",
+    "name": "Theo Crews",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Theo Crews is a politics journalist and creator, formerly of NPR, covering politics & government for an engaged, national audience. Known for books & literature and clear, trusted reporting.",
+    "priorOutlets": [
+      "NPR"
+    ],
+    "primaryBeat": "Politics & Government",
+    "homeMarketDMA": "Atlanta",
+    "trustSignals": [
+      "Murrow Award",
+      "Pulitzer Finalist"
+    ],
+    "politicalLean": "Center",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Books & Literature",
+      "Personal Finance"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-04-24",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Theo%20Crews&size=300"
+  },
+  {
+    "id": "CR-007",
+    "name": "Carmen Kessler",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Carmen Kessler is a politics journalist and creator, formerly of NBC News, covering politics & government for an engaged, national audience. Known for books & literature and clear, trusted reporting.",
+    "priorOutlets": [
+      "NBC News",
+      "NPR"
+    ],
+    "primaryBeat": "Politics & Government",
+    "homeMarketDMA": "Seattle",
+    "trustSignals": [
+      "Verified"
+    ],
+    "politicalLean": "Center",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Books & Literature",
+      "Personal Finance",
+      "Fitness"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-04-18",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Carmen%20Kessler&size=300"
+  },
+  {
+    "id": "CR-008",
+    "name": "Elena Delgado",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Elena Delgado is a politics journalist and creator, formerly of Reuters, covering politics & government for an engaged, national audience. Known for books & literature and clear, trusted reporting.",
+    "priorOutlets": [
+      "Reuters"
+    ],
+    "primaryBeat": "Politics & Government",
+    "homeMarketDMA": "National",
+    "trustSignals": [],
+    "politicalLean": "Left",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Books & Literature",
+      "Personal Finance",
+      "Science"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-04-27",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Elena%20Delgado&size=300"
+  },
+  {
+    "id": "CR-009",
+    "name": "Nathan Haddad",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Nathan Haddad is a politics journalist and creator, formerly of The Guardian, covering politics & government for an engaged, national audience. Known for personal finance and clear, trusted reporting.",
+    "priorOutlets": [
+      "The Guardian"
+    ],
+    "primaryBeat": "Politics & Government",
+    "homeMarketDMA": "Detroit",
+    "trustSignals": [
+      "Verified",
+      "Murrow Award"
+    ],
+    "politicalLean": "Center-Left",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Personal Finance",
+      "Books & Literature",
+      "Fitness"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-01-12",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Nathan%20Haddad&size=300"
+  },
+  {
+    "id": "CR-010",
+    "name": "Nadia Donnelly",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Nadia Donnelly is a politics journalist and creator, formerly of Newsweek, covering politics & government for an engaged, national audience. Known for books & literature and clear, trusted reporting.",
+    "priorOutlets": [
+      "Newsweek"
+    ],
+    "primaryBeat": "Politics & Government",
+    "homeMarketDMA": "New York",
+    "trustSignals": [
+      "Peabody Award"
+    ],
+    "politicalLean": "Center-Right",
+    "brandSafetyTier": "Use-with-context",
+    "categoryAffinities": [
+      "Books & Literature",
+      "Personal Finance",
+      "Fitness"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-01-27",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Nadia%20Donnelly&size=300"
+  },
+  {
+    "id": "CR-011",
+    "name": "Jordan Sorensen",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Jordan Sorensen is a politics journalist and creator, formerly of Reuters, covering politics & government for an engaged, national audience. Known for personal finance and clear, trusted reporting.",
+    "priorOutlets": [
+      "Reuters",
+      "The Atlantic"
+    ],
+    "primaryBeat": "Politics & Government",
+    "homeMarketDMA": "National",
+    "trustSignals": [],
+    "politicalLean": "Center-Right",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Personal Finance",
+      "Books & Literature",
+      "Fitness"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-01-14",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Jordan%20Sorensen&size=300"
+  },
+  {
+    "id": "CR-012",
+    "name": "Beatriz Bauer",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Beatriz Bauer is a politics journalist and creator, formerly of ABC News, covering politics & government for an engaged, national audience. Known for books & literature and clear, trusted reporting.",
+    "priorOutlets": [
+      "ABC News",
+      "BuzzFeed News"
+    ],
+    "primaryBeat": "Politics & Government",
+    "homeMarketDMA": "Portland",
+    "trustSignals": [
+      "Peabody Award"
+    ],
+    "politicalLean": "Center",
+    "brandSafetyTier": "Use-with-context",
+    "categoryAffinities": [
+      "Books & Literature",
+      "Personal Finance",
+      "Consumer Tech"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-04-11",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Beatriz%20Bauer&size=300"
+  },
+  {
+    "id": "CR-013",
+    "name": "Roman Halloran",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Roman Halloran is a politics journalist and creator, formerly of Reuters, covering politics & government for an engaged, national audience. Known for personal finance and clear, trusted reporting.",
+    "priorOutlets": [
+      "Reuters",
+      "The New York Times"
+    ],
+    "primaryBeat": "Politics & Government",
+    "homeMarketDMA": "Detroit",
+    "trustSignals": [
+      "Emmy Award"
+    ],
+    "politicalLean": "Center-Left",
+    "brandSafetyTier": "Use-with-context",
+    "categoryAffinities": [
+      "Personal Finance",
+      "Books & Literature",
+      "Fashion"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-05-27",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Roman%20Halloran&size=300"
+  },
+  {
+    "id": "CR-014",
+    "name": "Chloe Bashir",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Chloe Bashir is a politics journalist and creator, formerly of The Washington Post, covering politics & government for an engaged, national audience. Known for personal finance and clear, trusted reporting.",
+    "priorOutlets": [
+      "The Washington Post"
+    ],
+    "primaryBeat": "Politics & Government",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "SPJ Award"
+    ],
+    "politicalLean": "Center-Left",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Personal Finance",
+      "Books & Literature",
+      "Parenting"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-01-22",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Chloe%20Bashir&size=300"
+  },
+  {
+    "id": "CR-015",
+    "name": "Damon Salinas",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Damon Salinas is a politics journalist and creator, formerly of The Washington Post, covering politics & government for an engaged, national audience. Known for books & literature and clear, trusted reporting.",
+    "priorOutlets": [
+      "The Washington Post",
+      "ABC News"
+    ],
+    "primaryBeat": "Politics & Government",
+    "homeMarketDMA": "Los Angeles",
+    "trustSignals": [],
+    "politicalLean": "Center",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Books & Literature",
+      "Personal Finance",
+      "Food & Cooking"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-05-16",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Damon%20Salinas&size=300"
+  },
+  {
+    "id": "CR-016",
+    "name": "Theo Tran",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Theo Tran is a politics journalist and creator, formerly of The Atlantic, covering politics & government for an engaged, national audience. Known for personal finance and clear, trusted reporting.",
+    "priorOutlets": [
+      "The Atlantic",
+      "Newsweek"
+    ],
+    "primaryBeat": "Politics & Government",
+    "homeMarketDMA": "National",
+    "trustSignals": [],
+    "politicalLean": "Center",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Personal Finance",
+      "Books & Literature",
+      "Outdoors"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-01-27",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Theo%20Tran&size=300"
+  },
+  {
+    "id": "CR-017",
+    "name": "Damon Quinn",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Damon Quinn is a politics journalist and creator, formerly of CNN, covering politics & government for an engaged, national audience. Known for personal finance and clear, trusted reporting.",
+    "priorOutlets": [
+      "CNN"
+    ],
+    "primaryBeat": "Politics & Government",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "Verified",
+      "Webby Award"
+    ],
+    "politicalLean": "Center-Left",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Personal Finance",
+      "Books & Literature",
+      "Wellness"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-03-13",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Damon%20Quinn&size=300"
+  },
+  {
+    "id": "CR-018",
+    "name": "Grace Rios",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Grace Rios is a politics journalist and creator, formerly of Politico, covering politics & government for an engaged, national audience. Known for books & literature and clear, trusted reporting.",
+    "priorOutlets": [
+      "Politico"
+    ],
+    "primaryBeat": "Politics & Government",
+    "homeMarketDMA": "San Francisco Bay Area",
+    "trustSignals": [
+      "Verified"
+    ],
+    "politicalLean": "Center-Left",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Books & Literature",
+      "Personal Finance"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-02-12",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Grace%20Rios&size=300"
+  },
+  {
+    "id": "CR-019",
+    "name": "Omar Sorensen",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Omar Sorensen is a politics journalist and creator, formerly of Reuters, covering politics & government for an engaged, national audience. Known for personal finance and clear, trusted reporting.",
+    "priorOutlets": [
+      "Reuters"
+    ],
+    "primaryBeat": "Politics & Government",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "Webby Award",
+      "Emmy Award"
+    ],
+    "politicalLean": "Center",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Personal Finance",
+      "Books & Literature",
+      "Sustainability"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-05-18",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Omar%20Sorensen&size=300"
+  },
+  {
+    "id": "CR-020",
+    "name": "Andre Beaumont",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Andre Beaumont is a politics journalist and creator, formerly of The Washington Post, covering politics & government for an engaged, national audience. Known for books & literature and clear, trusted reporting.",
+    "priorOutlets": [
+      "The Washington Post"
+    ],
+    "primaryBeat": "Politics & Government",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "Verified",
+      "Pulitzer Finalist"
+    ],
+    "politicalLean": "Left",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Books & Literature",
+      "Personal Finance",
+      "Pets"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-03-10",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Andre%20Beaumont&size=300"
+  },
+  {
+    "id": "CR-021",
+    "name": "Owen Brennan",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Owen Brennan is a politics journalist and creator, formerly of CNN, covering politics & government for an engaged, national audience. Known for books & literature and clear, trusted reporting.",
+    "priorOutlets": [
+      "CNN",
+      "The Washington Post"
+    ],
+    "primaryBeat": "Politics & Government",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "SPJ Award",
+      "Webby Award"
+    ],
+    "politicalLean": "Right",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Books & Literature",
+      "Personal Finance",
+      "Sustainability"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-05-18",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Owen%20Brennan&size=300"
+  },
+  {
+    "id": "CR-022",
+    "name": "Tomas Halloran",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Tomas Halloran is a politics journalist and creator, formerly of The Washington Post, covering politics & government for an engaged, national audience. Known for books & literature and clear, trusted reporting.",
+    "priorOutlets": [
+      "The Washington Post"
+    ],
+    "primaryBeat": "Politics & Government",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "Webby Award",
+      "Verified"
+    ],
+    "politicalLean": "Left",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Books & Literature",
+      "Personal Finance",
+      "Travel"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-01-11",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Tomas%20Halloran&size=300"
+  },
+  {
+    "id": "CR-023",
+    "name": "Selma Mwangi",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Selma Mwangi is a business journalist and creator, formerly of The Wall Street Journal, covering business & finance for an engaged, national audience. Known for auto and clear, trusted reporting.",
+    "priorOutlets": [
+      "The Wall Street Journal"
+    ],
+    "primaryBeat": "Business & Finance",
+    "homeMarketDMA": "National",
+    "trustSignals": [],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Use-with-context",
+    "categoryAffinities": [
+      "Auto",
+      "Consumer Tech",
+      "Home & Garden"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-01-10",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Selma%20Mwangi&size=300"
+  },
+  {
+    "id": "CR-024",
+    "name": "Phoebe Abara",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Phoebe Abara is a business journalist and creator, formerly of Financial Times, covering business & finance for an engaged, national audience. Known for consumer tech and clear, trusted reporting.",
+    "priorOutlets": [
+      "Financial Times",
+      "BuzzFeed News"
+    ],
+    "primaryBeat": "Business & Finance",
+    "homeMarketDMA": "New Orleans",
+    "trustSignals": [
+      "Peabody Award",
+      "Murrow Award"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Consumer Tech",
+      "Personal Finance",
+      "Wellness"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-03-15",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Phoebe%20Abara&size=300"
+  },
+  {
+    "id": "CR-025",
+    "name": "Lucas Pruitt",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Lucas Pruitt is a business journalist and creator, formerly of CNN, covering business & finance for an engaged, national audience. Known for auto and clear, trusted reporting.",
+    "priorOutlets": [
+      "CNN",
+      "ABC News"
+    ],
+    "primaryBeat": "Business & Finance",
+    "homeMarketDMA": "Salt Lake City",
+    "trustSignals": [
+      "Verified"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Auto",
+      "Personal Finance",
+      "Consumer Tech"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-02-26",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Lucas%20Pruitt&size=300"
+  },
+  {
+    "id": "CR-026",
+    "name": "Damon Tran",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Damon Tran is a business journalist and creator, formerly of The Guardian, covering business & finance for an engaged, national audience. Known for auto and clear, trusted reporting.",
+    "priorOutlets": [
+      "The Guardian",
+      "The Atlantic"
+    ],
+    "primaryBeat": "Business & Finance",
+    "homeMarketDMA": "San Francisco Bay Area",
+    "trustSignals": [],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Auto",
+      "Consumer Tech",
+      "Arts & Design"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-04-26",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Damon%20Tran&size=300"
+  },
+  {
+    "id": "CR-027",
+    "name": "Farah Petrova",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Farah Petrova is a business journalist and creator, formerly of Axios, covering business & finance for an engaged, national audience. Known for consumer tech and clear, trusted reporting.",
+    "priorOutlets": [
+      "Axios",
+      "The Guardian"
+    ],
+    "primaryBeat": "Business & Finance",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "Peabody Award",
+      "Murrow Award"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Consumer Tech",
+      "Auto",
+      "Gaming"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-03-21",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Farah%20Petrova&size=300"
+  },
+  {
+    "id": "CR-028",
+    "name": "Aisha Sorensen",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Aisha Sorensen is a business journalist and creator, formerly of Bloomberg, covering business & finance for an engaged, national audience. Known for consumer tech and clear, trusted reporting.",
+    "priorOutlets": [
+      "Bloomberg",
+      "CNBC"
+    ],
+    "primaryBeat": "Business & Finance",
+    "homeMarketDMA": "National",
+    "trustSignals": [],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Consumer Tech",
+      "Auto",
+      "Wellness"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-02-25",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Aisha%20Sorensen&size=300"
+  },
+  {
+    "id": "CR-029",
+    "name": "Nadia Tran",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Nadia Tran is a business journalist and creator, formerly of Time, covering business & finance for an engaged, national audience. Known for auto and clear, trusted reporting.",
+    "priorOutlets": [
+      "Time"
+    ],
+    "primaryBeat": "Business & Finance",
+    "homeMarketDMA": "Pittsburgh",
+    "trustSignals": [
+      "Murrow Award"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Auto",
+      "Consumer Tech",
+      "Sustainability"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-02-19",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Nadia%20Tran&size=300"
+  },
+  {
+    "id": "CR-030",
+    "name": "Theo Hartley",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Theo Hartley is a business journalist and creator, formerly of CNN, covering business & finance for an engaged, national audience. Known for auto and clear, trusted reporting.",
+    "priorOutlets": [
+      "CNN"
+    ],
+    "primaryBeat": "Business & Finance",
+    "homeMarketDMA": "San Francisco Bay Area",
+    "trustSignals": [
+      "Webby Award",
+      "Murrow Award"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Auto",
+      "Consumer Tech",
+      "Outdoors"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-01-15",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Theo%20Hartley&size=300"
+  },
+  {
+    "id": "CR-031",
+    "name": "Lila Maddox",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Lila Maddox is a business journalist and creator, formerly of The Washington Post, covering business & finance for an engaged, national audience. Known for consumer tech and clear, trusted reporting.",
+    "priorOutlets": [
+      "The Washington Post"
+    ],
+    "primaryBeat": "Business & Finance",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "Emmy Award",
+      "Murrow Award"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Consumer Tech",
+      "Personal Finance",
+      "Books & Literature"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-01-12",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Lila%20Maddox&size=300"
+  },
+  {
+    "id": "CR-032",
+    "name": "Heidi Stockton",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Heidi Stockton is a business journalist and creator, formerly of Financial Times, covering business & finance for an engaged, national audience. Known for auto and clear, trusted reporting.",
+    "priorOutlets": [
+      "Financial Times",
+      "BuzzFeed News"
+    ],
+    "primaryBeat": "Business & Finance",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "Pulitzer Finalist"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Auto",
+      "Consumer Tech",
+      "Music"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-05-20",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Heidi%20Stockton&size=300"
+  },
+  {
+    "id": "CR-033",
+    "name": "Saanvi Orozco",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Saanvi Orozco is a business journalist and creator, formerly of NPR, covering business & finance for an engaged, national audience. Known for auto and clear, trusted reporting.",
+    "priorOutlets": [
+      "NPR"
+    ],
+    "primaryBeat": "Business & Finance",
+    "homeMarketDMA": "National",
+    "trustSignals": [],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Auto",
+      "Consumer Tech",
+      "Fashion"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-03-21",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Saanvi%20Orozco&size=300"
+  },
+  {
+    "id": "CR-034",
+    "name": "Damon Ngata",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Damon Ngata is a business journalist and creator, formerly of CNN, covering business & finance for an engaged, national audience. Known for personal finance and clear, trusted reporting.",
+    "priorOutlets": [
+      "CNN"
+    ],
+    "primaryBeat": "Business & Finance",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "Pulitzer Finalist",
+      "Webby Award"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Personal Finance",
+      "Consumer Tech",
+      "Travel"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-01-22",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Damon%20Ngata&size=300"
+  },
+  {
+    "id": "CR-035",
+    "name": "Maren Petrova",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Maren Petrova is a business journalist and creator, formerly of Financial Times, covering business & finance for an engaged, national audience. Known for personal finance and clear, trusted reporting.",
+    "priorOutlets": [
+      "Financial Times",
+      "The Atlantic"
+    ],
+    "primaryBeat": "Business & Finance",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "Emmy Award",
+      "Murrow Award"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Personal Finance",
+      "Consumer Tech"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-03-22",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Maren%20Petrova&size=300"
+  },
+  {
+    "id": "CR-036",
+    "name": "Vera Donnelly",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Vera Donnelly is a business journalist and creator, formerly of CNN, covering business & finance for an engaged, national audience. Known for auto and clear, trusted reporting.",
+    "priorOutlets": [
+      "CNN"
+    ],
+    "primaryBeat": "Business & Finance",
+    "homeMarketDMA": "Pittsburgh",
+    "trustSignals": [],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Use-with-context",
+    "categoryAffinities": [
+      "Auto",
+      "Consumer Tech",
+      "Sustainability"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-02-24",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Vera%20Donnelly&size=300"
+  },
+  {
+    "id": "CR-037",
+    "name": "Lucas Rourke",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Lucas Rourke is a business journalist and creator, formerly of The Guardian, covering business & finance for an engaged, national audience. Known for personal finance and clear, trusted reporting.",
+    "priorOutlets": [
+      "The Guardian",
+      "Reuters"
+    ],
+    "primaryBeat": "Business & Finance",
+    "homeMarketDMA": "Atlanta",
+    "trustSignals": [],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Personal Finance",
+      "Auto",
+      "Music"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-02-10",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Lucas%20Rourke&size=300"
+  },
+  {
+    "id": "CR-038",
+    "name": "Ronan Delgado",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Ronan Delgado is a business journalist and creator, formerly of CNN, covering business & finance for an engaged, national audience. Known for auto and clear, trusted reporting.",
+    "priorOutlets": [
+      "CNN",
+      "Reuters"
+    ],
+    "primaryBeat": "Business & Finance",
+    "homeMarketDMA": "New York",
+    "trustSignals": [
+      "Pulitzer Finalist",
+      "SPJ Award"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Auto",
+      "Consumer Tech"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-03-26",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Ronan%20Delgado&size=300"
+  },
+  {
+    "id": "CR-039",
+    "name": "Asher Maddox",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Asher Maddox is a business journalist and creator, formerly of Reuters, covering business & finance for an engaged, national audience. Known for auto and clear, trusted reporting.",
+    "priorOutlets": [
+      "Reuters"
+    ],
+    "primaryBeat": "Business & Finance",
+    "homeMarketDMA": "National",
+    "trustSignals": [],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Auto",
+      "Consumer Tech",
+      "Arts & Design"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-04-25",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Asher%20Maddox&size=300"
+  },
+  {
+    "id": "CR-040",
+    "name": "Garrett Wexler",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Garrett Wexler is a business journalist and creator, formerly of The Wall Street Journal, covering business & finance for an engaged, national audience. Known for auto and clear, trusted reporting.",
+    "priorOutlets": [
+      "The Wall Street Journal",
+      "The Washington Post"
+    ],
+    "primaryBeat": "Business & Finance",
+    "homeMarketDMA": "Kansas City",
+    "trustSignals": [
+      "Pulitzer Finalist",
+      "Peabody Award"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Auto",
+      "Consumer Tech",
+      "Music"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-01-21",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Garrett%20Wexler&size=300"
+  },
+  {
+    "id": "CR-041",
+    "name": "Quentin Beaumont",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Quentin Beaumont is a business journalist and creator, formerly of The Wall Street Journal, covering business & finance for an engaged, national audience. Known for personal finance and clear, trusted reporting.",
+    "priorOutlets": [
+      "The Wall Street Journal"
+    ],
+    "primaryBeat": "Business & Finance",
+    "homeMarketDMA": "Denver",
+    "trustSignals": [],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Personal Finance",
+      "Consumer Tech",
+      "Pets"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-05-19",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Quentin%20Beaumont&size=300"
+  },
+  {
+    "id": "CR-042",
+    "name": "Margot Nakamura",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Margot Nakamura is a business journalist and creator, formerly of CNN, covering business & finance for an engaged, national audience. Known for personal finance and clear, trusted reporting.",
+    "priorOutlets": [
+      "CNN",
+      "The Wall Street Journal"
+    ],
+    "primaryBeat": "Business & Finance",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "Verified"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Use-with-context",
+    "categoryAffinities": [
+      "Personal Finance",
+      "Auto",
+      "Arts & Design"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-01-26",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Margot%20Nakamura&size=300"
+  },
+  {
+    "id": "CR-043",
+    "name": "Kenji Ferreira",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Kenji Ferreira is a technology journalist and creator, formerly of The Atlantic, covering technology for an engaged, national audience. Known for science and clear, trusted reporting.",
+    "priorOutlets": [
+      "The Atlantic",
+      "Vice News"
+    ],
+    "primaryBeat": "Technology",
+    "homeMarketDMA": "Dallas-Fort Worth",
+    "trustSignals": [],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Science",
+      "Gaming",
+      "Books & Literature"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-04-28",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Kenji%20Ferreira&size=300"
+  },
+  {
+    "id": "CR-044",
+    "name": "Owen Marchetti",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Owen Marchetti is a technology journalist and creator, formerly of Newsweek, covering technology for an engaged, national audience. Known for science and clear, trusted reporting.",
+    "priorOutlets": [
+      "Newsweek",
+      "The Atlantic"
+    ],
+    "primaryBeat": "Technology",
+    "homeMarketDMA": "New Orleans",
+    "trustSignals": [
+      "SPJ Award",
+      "Pulitzer Finalist"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Science",
+      "Consumer Tech",
+      "Home & Garden"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-01-15",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Owen%20Marchetti&size=300"
+  },
+  {
+    "id": "CR-045",
+    "name": "Garrett Brennan",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Garrett Brennan is a technology journalist and creator, formerly of NPR, covering technology for an engaged, national audience. Known for gaming and clear, trusted reporting.",
+    "priorOutlets": [
+      "NPR"
+    ],
+    "primaryBeat": "Technology",
+    "homeMarketDMA": "National",
+    "trustSignals": [],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Gaming",
+      "Science",
+      "Travel"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-05-28",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Garrett%20Brennan&size=300"
+  },
+  {
+    "id": "CR-046",
+    "name": "Petra Haddad",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Petra Haddad is a technology journalist and creator, formerly of Reuters, covering technology for an engaged, national audience. Known for science and clear, trusted reporting.",
+    "priorOutlets": [
+      "Reuters"
+    ],
+    "primaryBeat": "Technology",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "Verified",
+      "Peabody Award"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Science",
+      "Consumer Tech",
+      "Parenting"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-04-19",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Petra%20Haddad&size=300"
+  },
+  {
+    "id": "CR-047",
+    "name": "Omar Behrend",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Omar Behrend is a technology journalist and creator, formerly of The Atlantic, covering technology for an engaged, national audience. Known for consumer tech and clear, trusted reporting.",
+    "priorOutlets": [
+      "The Atlantic",
+      "PBS NewsHour"
+    ],
+    "primaryBeat": "Technology",
+    "homeMarketDMA": "National",
+    "trustSignals": [],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Use-with-context",
+    "categoryAffinities": [
+      "Consumer Tech",
+      "Gaming",
+      "Science"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-02-22",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Omar%20Behrend&size=300"
+  },
+  {
+    "id": "CR-048",
+    "name": "Caleb Carrington",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Caleb Carrington is a technology journalist and creator, formerly of The Washington Post, covering technology for an engaged, national audience. Known for science and clear, trusted reporting.",
+    "priorOutlets": [
+      "The Washington Post",
+      "Newsweek"
+    ],
+    "primaryBeat": "Technology",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "Pulitzer Finalist"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Science",
+      "Gaming",
+      "Parenting"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-04-14",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Caleb%20Carrington&size=300"
+  },
+  {
+    "id": "CR-049",
+    "name": "Phoebe Tran",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Phoebe Tran is a technology journalist and creator, formerly of The New York Times, covering technology for an engaged, national audience. Known for science and clear, trusted reporting.",
+    "priorOutlets": [
+      "The New York Times"
+    ],
+    "primaryBeat": "Technology",
+    "homeMarketDMA": "Charlotte",
+    "trustSignals": [
+      "Pulitzer Finalist",
+      "Emmy Award"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Science",
+      "Gaming",
+      "Home & Garden"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-05-11",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Phoebe%20Tran&size=300"
+  },
+  {
+    "id": "CR-050",
+    "name": "Saanvi Fontaine",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Saanvi Fontaine is a technology journalist and creator, formerly of The Washington Post, covering technology for an engaged, national audience. Known for consumer tech and clear, trusted reporting.",
+    "priorOutlets": [
+      "The Washington Post",
+      "Time"
+    ],
+    "primaryBeat": "Technology",
+    "homeMarketDMA": "Dallas-Fort Worth",
+    "trustSignals": [
+      "Pulitzer Finalist",
+      "Peabody Award"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Use-with-context",
+    "categoryAffinities": [
+      "Consumer Tech",
+      "Science",
+      "Fashion"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-05-28",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Saanvi%20Fontaine&size=300"
+  },
+  {
+    "id": "CR-051",
+    "name": "Esme Escobar",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Esme Escobar is a technology journalist and creator, formerly of The New York Times, covering technology for an engaged, national audience. Known for consumer tech and clear, trusted reporting.",
+    "priorOutlets": [
+      "The New York Times",
+      "The Verge"
+    ],
+    "primaryBeat": "Technology",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "Murrow Award"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Use-with-context",
+    "categoryAffinities": [
+      "Consumer Tech",
+      "Gaming",
+      "Outdoors"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-05-20",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Esme%20Escobar&size=300"
+  },
+  {
+    "id": "CR-052",
+    "name": "Isaiah Maguire",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Isaiah Maguire is a technology journalist and creator, formerly of Newsweek, covering technology for an engaged, national audience. Known for consumer tech and clear, trusted reporting.",
+    "priorOutlets": [
+      "Newsweek",
+      "NBC News"
+    ],
+    "primaryBeat": "Technology",
+    "homeMarketDMA": "Detroit",
+    "trustSignals": [],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Consumer Tech",
+      "Science",
+      "Wellness"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-02-16",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Isaiah%20Maguire&size=300"
+  },
+  {
+    "id": "CR-053",
+    "name": "Maren Nakamura",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Maren Nakamura is a technology journalist and creator, formerly of BuzzFeed News, covering technology for an engaged, national audience. Known for science and clear, trusted reporting.",
+    "priorOutlets": [
+      "BuzzFeed News",
+      "WIRED"
+    ],
+    "primaryBeat": "Technology",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "Emmy Award",
+      "Peabody Award"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Use-with-context",
+    "categoryAffinities": [
+      "Science",
+      "Gaming",
+      "Books & Literature"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-04-12",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Maren%20Nakamura&size=300"
+  },
+  {
+    "id": "CR-054",
+    "name": "Jordan Salinas",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Jordan Salinas is a technology journalist and creator, formerly of CNN, covering technology for an engaged, national audience. Known for consumer tech and clear, trusted reporting.",
+    "priorOutlets": [
+      "CNN"
+    ],
+    "primaryBeat": "Technology",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "Emmy Award"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Consumer Tech",
+      "Gaming",
+      "Music"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-05-16",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Jordan%20Salinas&size=300"
+  },
+  {
+    "id": "CR-055",
+    "name": "Simone Cho",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Simone Cho is a technology journalist and creator, formerly of The New York Times, covering technology for an engaged, national audience. Known for consumer tech and clear, trusted reporting.",
+    "priorOutlets": [
+      "The New York Times",
+      "NBC News"
+    ],
+    "primaryBeat": "Technology",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "Peabody Award"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Consumer Tech",
+      "Gaming",
+      "Travel"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-03-22",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Simone%20Cho&size=300"
+  },
+  {
+    "id": "CR-056",
+    "name": "Nadia Bauer",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Nadia Bauer is a technology journalist and creator, formerly of BuzzFeed News, covering technology for an engaged, national audience. Known for science and clear, trusted reporting.",
+    "priorOutlets": [
+      "BuzzFeed News",
+      "ABC News"
+    ],
+    "primaryBeat": "Technology",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "SPJ Award"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Science",
+      "Gaming",
+      "Pets"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-02-10",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Nadia%20Bauer&size=300"
+  },
+  {
+    "id": "CR-057",
+    "name": "Cole Lindgren",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Cole Lindgren is a technology journalist and creator, formerly of Vice News, covering technology for an engaged, national audience. Known for gaming and clear, trusted reporting.",
+    "priorOutlets": [
+      "Vice News"
+    ],
+    "primaryBeat": "Technology",
+    "homeMarketDMA": "Pittsburgh",
+    "trustSignals": [
+      "Pulitzer Finalist",
+      "Verified"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Gaming",
+      "Science",
+      "Auto"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-03-12",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Cole%20Lindgren&size=300"
+  },
+  {
+    "id": "CR-058",
+    "name": "Selma Okonkwo",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Selma Okonkwo is a technology journalist and creator, formerly of Newsweek, covering technology for an engaged, national audience. Known for consumer tech and clear, trusted reporting.",
+    "priorOutlets": [
+      "Newsweek",
+      "BuzzFeed News"
+    ],
+    "primaryBeat": "Technology",
+    "homeMarketDMA": "National",
+    "trustSignals": [],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Consumer Tech",
+      "Science",
+      "Sustainability"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-04-11",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Selma%20Okonkwo&size=300"
+  },
+  {
+    "id": "CR-059",
+    "name": "Sergio Achterberg",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Sergio Achterberg is a technology journalist and creator, formerly of CNN, covering technology for an engaged, national audience. Known for gaming and clear, trusted reporting.",
+    "priorOutlets": [
+      "CNN"
+    ],
+    "primaryBeat": "Technology",
+    "homeMarketDMA": "San Francisco Bay Area",
+    "trustSignals": [
+      "SPJ Award",
+      "Peabody Award"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Gaming",
+      "Consumer Tech",
+      "Wellness"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-03-21",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Sergio%20Achterberg&size=300"
+  },
+  {
+    "id": "CR-060",
+    "name": "Esme Okafor",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Esme Okafor is a technology journalist and creator, formerly of Axios, covering technology for an engaged, national audience. Known for gaming and clear, trusted reporting.",
+    "priorOutlets": [
+      "Axios",
+      "The Washington Post"
+    ],
+    "primaryBeat": "Technology",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "Pulitzer Finalist"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Gaming",
+      "Science",
+      "Auto"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-01-25",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Esme%20Okafor&size=300"
+  },
+  {
+    "id": "CR-061",
+    "name": "Darius Sharpe",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Darius Sharpe is a technology journalist and creator, formerly of BuzzFeed News, covering technology for an engaged, national audience. Known for science and clear, trusted reporting.",
+    "priorOutlets": [
+      "BuzzFeed News"
+    ],
+    "primaryBeat": "Technology",
+    "homeMarketDMA": "Philadelphia",
+    "trustSignals": [],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Science",
+      "Consumer Tech",
+      "Personal Finance"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-04-14",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Darius%20Sharpe&size=300"
+  },
+  {
+    "id": "CR-062",
+    "name": "Spencer Hartley",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Spencer Hartley is a technology journalist and creator, formerly of Axios, covering technology for an engaged, national audience. Known for science and clear, trusted reporting.",
+    "priorOutlets": [
+      "Axios",
+      "Newsweek"
+    ],
+    "primaryBeat": "Technology",
+    "homeMarketDMA": "Minneapolis",
+    "trustSignals": [
+      "Pulitzer Finalist"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Science",
+      "Gaming",
+      "Sustainability"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-02-22",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Spencer%20Hartley&size=300"
+  },
+  {
+    "id": "CR-063",
+    "name": "Renata Maddox",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Renata Maddox is a health journalist and creator, formerly of Axios, covering health & science for an engaged, national audience. Known for science and clear, trusted reporting.",
+    "priorOutlets": [
+      "Axios",
+      "The New York Times"
+    ],
+    "primaryBeat": "Health & Science",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "Peabody Award",
+      "Pulitzer Finalist"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Science",
+      "Wellness",
+      "Outdoors"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-02-14",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Renata%20Maddox&size=300"
+  },
+  {
+    "id": "CR-064",
+    "name": "Theo Kessler",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Theo Kessler is a health journalist and creator, formerly of The Washington Post, covering health & science for an engaged, national audience. Known for wellness and clear, trusted reporting.",
+    "priorOutlets": [
+      "The Washington Post",
+      "The New York Times"
+    ],
+    "primaryBeat": "Health & Science",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "Verified"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Wellness",
+      "Science",
+      "Gaming"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-05-25",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Theo%20Kessler&size=300"
+  },
+  {
+    "id": "CR-065",
+    "name": "Noor Voss",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Noor Voss is a health journalist and creator, formerly of The Atlantic, covering health & science for an engaged, national audience. Known for fitness and clear, trusted reporting.",
+    "priorOutlets": [
+      "The Atlantic",
+      "PBS NewsHour"
+    ],
+    "primaryBeat": "Health & Science",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "Verified",
+      "Murrow Award"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Fitness",
+      "Science",
+      "Travel"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-04-15",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Noor%20Voss&size=300"
+  },
+  {
+    "id": "CR-066",
+    "name": "Ronan Quinn",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Ronan Quinn is a health journalist and creator, formerly of NBC News, covering health & science for an engaged, national audience. Known for wellness and clear, trusted reporting.",
+    "priorOutlets": [
+      "NBC News"
+    ],
+    "primaryBeat": "Health & Science",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "Pulitzer Finalist",
+      "SPJ Award"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Wellness",
+      "Science",
+      "Sustainability"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-03-22",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Ronan%20Quinn&size=300"
+  },
+  {
+    "id": "CR-067",
+    "name": "Camille Crews",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Camille Crews is a health journalist and creator, formerly of NPR, covering health & science for an engaged, national audience. Known for science and clear, trusted reporting.",
+    "priorOutlets": [
+      "NPR"
+    ],
+    "primaryBeat": "Health & Science",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "Verified",
+      "Pulitzer Finalist"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Science",
+      "Fitness"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-02-24",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Camille%20Crews&size=300"
+  },
+  {
+    "id": "CR-068",
+    "name": "Isaiah Delgado",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Isaiah Delgado is a health journalist and creator, formerly of ABC News, covering health & science for an engaged, national audience. Known for science and clear, trusted reporting.",
+    "priorOutlets": [
+      "ABC News"
+    ],
+    "primaryBeat": "Health & Science",
+    "homeMarketDMA": "Atlanta",
+    "trustSignals": [],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Science",
+      "Fitness",
+      "Food & Cooking"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-02-28",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Isaiah%20Delgado&size=300"
+  },
+  {
+    "id": "CR-069",
+    "name": "Spencer Bellamy",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Spencer Bellamy is a health journalist and creator, formerly of The New York Times, covering health & science for an engaged, national audience. Known for fitness and clear, trusted reporting.",
+    "priorOutlets": [
+      "The New York Times"
+    ],
+    "primaryBeat": "Health & Science",
+    "homeMarketDMA": "Nashville",
+    "trustSignals": [
+      "Pulitzer Finalist"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Fitness",
+      "Science",
+      "Travel"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-05-27",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Spencer%20Bellamy&size=300"
+  },
+  {
+    "id": "CR-070",
+    "name": "Trevor Sorensen",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Trevor Sorensen is a health journalist and creator, formerly of Time, covering health & science for an engaged, national audience. Known for fitness and clear, trusted reporting.",
+    "priorOutlets": [
+      "Time",
+      "BuzzFeed News"
+    ],
+    "primaryBeat": "Health & Science",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "Peabody Award",
+      "Pulitzer Finalist"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Fitness",
+      "Wellness",
+      "Arts & Design"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-01-20",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Trevor%20Sorensen&size=300"
+  },
+  {
+    "id": "CR-071",
+    "name": "Wesley Achterberg",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Wesley Achterberg is a health journalist and creator, formerly of ABC News, covering health & science for an engaged, national audience. Known for science and clear, trusted reporting.",
+    "priorOutlets": [
+      "ABC News"
+    ],
+    "primaryBeat": "Health & Science",
+    "homeMarketDMA": "Charlotte",
+    "trustSignals": [
+      "Verified"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Science",
+      "Wellness",
+      "Travel"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-02-17",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Wesley%20Achterberg&size=300"
+  },
+  {
+    "id": "CR-072",
+    "name": "Andre Abara",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Andre Abara is a health journalist and creator, formerly of The Atlantic, covering health & science for an engaged, national audience. Known for wellness and clear, trusted reporting.",
+    "priorOutlets": [
+      "The Atlantic",
+      "CNN"
+    ],
+    "primaryBeat": "Health & Science",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "Webby Award",
+      "Emmy Award"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Use-with-context",
+    "categoryAffinities": [
+      "Wellness",
+      "Fitness",
+      "Books & Literature"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-01-21",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Andre%20Abara&size=300"
+  },
+  {
+    "id": "CR-073",
+    "name": "Nathan Stein",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Nathan Stein is a health journalist and creator, formerly of Reuters, covering health & science for an engaged, national audience. Known for fitness and clear, trusted reporting.",
+    "priorOutlets": [
+      "Reuters"
+    ],
+    "primaryBeat": "Health & Science",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "Verified"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Fitness",
+      "Wellness",
+      "Science"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-01-19",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Nathan%20Stein&size=300"
+  },
+  {
+    "id": "CR-074",
+    "name": "Greta Lindqvist",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Greta Lindqvist is a health journalist and creator, formerly of PBS NewsHour, covering health & science for an engaged, national audience. Known for wellness and clear, trusted reporting.",
+    "priorOutlets": [
+      "PBS NewsHour",
+      "The Washington Post"
+    ],
+    "primaryBeat": "Health & Science",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "Pulitzer Finalist"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Wellness",
+      "Fitness",
+      "Outdoors"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-04-26",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Greta%20Lindqvist&size=300"
+  },
+  {
+    "id": "CR-075",
+    "name": "Owen Sharpe",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Owen Sharpe is a health journalist and creator, formerly of Reuters, covering health & science for an engaged, national audience. Known for science and clear, trusted reporting.",
+    "priorOutlets": [
+      "Reuters",
+      "NBC News"
+    ],
+    "primaryBeat": "Health & Science",
+    "homeMarketDMA": "Seattle",
+    "trustSignals": [
+      "Murrow Award",
+      "Emmy Award"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Use-with-context",
+    "categoryAffinities": [
+      "Science",
+      "Wellness",
+      "Books & Literature"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-02-16",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Owen%20Sharpe&size=300"
+  },
+  {
+    "id": "CR-076",
+    "name": "Ruth Behrend",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Ruth Behrend is a health journalist and creator, formerly of The Guardian, covering health & science for an engaged, national audience. Known for fitness and clear, trusted reporting.",
+    "priorOutlets": [
+      "The Guardian",
+      "BuzzFeed News"
+    ],
+    "primaryBeat": "Health & Science",
+    "homeMarketDMA": "National",
+    "trustSignals": [],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Fitness",
+      "Science",
+      "Music"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-01-11",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Ruth%20Behrend&size=300"
+  },
+  {
+    "id": "CR-077",
+    "name": "Devin Brennan",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Devin Brennan is a health journalist and creator, formerly of Axios, covering health & science for an engaged, national audience. Known for science and clear, trusted reporting.",
+    "priorOutlets": [
+      "Axios"
+    ],
+    "primaryBeat": "Health & Science",
+    "homeMarketDMA": "Los Angeles",
+    "trustSignals": [],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Use-with-context",
+    "categoryAffinities": [
+      "Science",
+      "Wellness",
+      "Parenting"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-04-19",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Devin%20Brennan&size=300"
+  },
+  {
+    "id": "CR-078",
+    "name": "Sofia Adeyemi",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Sofia Adeyemi is a health journalist and creator, formerly of Axios, covering health & science for an engaged, national audience. Known for science and clear, trusted reporting.",
+    "priorOutlets": [
+      "Axios"
+    ],
+    "primaryBeat": "Health & Science",
+    "homeMarketDMA": "National",
+    "trustSignals": [],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Science",
+      "Fitness",
+      "Fashion"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-05-27",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Sofia%20Adeyemi&size=300"
+  },
+  {
+    "id": "CR-079",
+    "name": "Diego Rios",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Diego Rios is a culture journalist and creator, formerly of The Washington Post, covering culture & entertainment for an engaged, national audience. Known for books & literature and clear, trusted reporting.",
+    "priorOutlets": [
+      "The Washington Post",
+      "CNN"
+    ],
+    "primaryBeat": "Culture & Entertainment",
+    "homeMarketDMA": "Salt Lake City",
+    "trustSignals": [],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Books & Literature",
+      "Arts & Design",
+      "Sustainability"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-03-23",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Diego%20Rios&size=300"
+  },
+  {
+    "id": "CR-080",
+    "name": "Devin Whitfield",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Devin Whitfield is a culture journalist and creator, formerly of ABC News, covering culture & entertainment for an engaged, national audience. Known for music and clear, trusted reporting.",
+    "priorOutlets": [
+      "ABC News",
+      "The Atlantic"
+    ],
+    "primaryBeat": "Culture & Entertainment",
+    "homeMarketDMA": "National",
+    "trustSignals": [],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Music",
+      "Books & Literature",
+      "Consumer Tech"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-01-16",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Devin%20Whitfield&size=300"
+  },
+  {
+    "id": "CR-081",
+    "name": "Petra Lockwood",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Petra Lockwood is a culture journalist and creator, formerly of ABC News, covering culture & entertainment for an engaged, national audience. Known for music and clear, trusted reporting.",
+    "priorOutlets": [
+      "ABC News",
+      "NPR"
+    ],
+    "primaryBeat": "Culture & Entertainment",
+    "homeMarketDMA": "Houston",
+    "trustSignals": [],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Music",
+      "Books & Literature",
+      "Food & Cooking"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-01-27",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Petra%20Lockwood&size=300"
+  },
+  {
+    "id": "CR-082",
+    "name": "Ingrid Adeyemi",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Ingrid Adeyemi is a culture journalist and creator, formerly of Axios, covering culture & entertainment for an engaged, national audience. Known for books & literature and clear, trusted reporting.",
+    "priorOutlets": [
+      "Axios"
+    ],
+    "primaryBeat": "Culture & Entertainment",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "Peabody Award",
+      "Emmy Award"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Books & Literature",
+      "Music",
+      "Pets"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-05-24",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Ingrid%20Adeyemi&size=300"
+  },
+  {
+    "id": "CR-083",
+    "name": "Hugo Beaumont",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Hugo Beaumont is a culture journalist and creator, formerly of The Guardian, covering culture & entertainment for an engaged, national audience. Known for arts & design and clear, trusted reporting.",
+    "priorOutlets": [
+      "The Guardian",
+      "Reuters"
+    ],
+    "primaryBeat": "Culture & Entertainment",
+    "homeMarketDMA": "National",
+    "trustSignals": [],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Arts & Design",
+      "Books & Literature",
+      "Gaming"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-01-15",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Hugo%20Beaumont&size=300"
+  },
+  {
+    "id": "CR-084",
+    "name": "Maya Brennan",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Maya Brennan is a culture journalist and creator, formerly of The New York Times, covering culture & entertainment for an engaged, national audience. Known for books & literature and clear, trusted reporting.",
+    "priorOutlets": [
+      "The New York Times"
+    ],
+    "primaryBeat": "Culture & Entertainment",
+    "homeMarketDMA": "New York",
+    "trustSignals": [
+      "Verified"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Books & Literature",
+      "Music",
+      "Fashion"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-03-23",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Maya%20Brennan&size=300"
+  },
+  {
+    "id": "CR-085",
+    "name": "Owen Nawaz",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Owen Nawaz is a culture journalist and creator, formerly of The Guardian, covering culture & entertainment for an engaged, national audience. Known for music and clear, trusted reporting.",
+    "priorOutlets": [
+      "The Guardian"
+    ],
+    "primaryBeat": "Culture & Entertainment",
+    "homeMarketDMA": "National",
+    "trustSignals": [],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Music",
+      "Books & Literature",
+      "Sustainability"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-01-15",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Owen%20Nawaz&size=300"
+  },
+  {
+    "id": "CR-086",
+    "name": "Felix Hartley",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Felix Hartley is a culture journalist and creator, formerly of Newsweek, covering culture & entertainment for an engaged, national audience. Known for music and clear, trusted reporting.",
+    "priorOutlets": [
+      "Newsweek",
+      "NPR"
+    ],
+    "primaryBeat": "Culture & Entertainment",
+    "homeMarketDMA": "National",
+    "trustSignals": [],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Use-with-context",
+    "categoryAffinities": [
+      "Music",
+      "Books & Literature",
+      "Auto"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-02-17",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Felix%20Hartley&size=300"
+  },
+  {
+    "id": "CR-087",
+    "name": "Roman Calloway",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Roman Calloway is a culture journalist and creator, formerly of Reuters, covering culture & entertainment for an engaged, national audience. Known for music and clear, trusted reporting.",
+    "priorOutlets": [
+      "Reuters",
+      "PBS NewsHour"
+    ],
+    "primaryBeat": "Culture & Entertainment",
+    "homeMarketDMA": "Pittsburgh",
+    "trustSignals": [
+      "Peabody Award"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Music",
+      "Books & Literature",
+      "Outdoors"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-01-12",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Roman%20Calloway&size=300"
+  },
+  {
+    "id": "CR-088",
+    "name": "Bianca Rourke",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Bianca Rourke is a culture journalist and creator, formerly of Axios, covering culture & entertainment for an engaged, national audience. Known for music and clear, trusted reporting.",
+    "priorOutlets": [
+      "Axios"
+    ],
+    "primaryBeat": "Culture & Entertainment",
+    "homeMarketDMA": "Tampa",
+    "trustSignals": [],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Music",
+      "Books & Literature",
+      "Gaming"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-01-25",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Bianca%20Rourke&size=300"
+  },
+  {
+    "id": "CR-089",
+    "name": "Reid Salinas",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Reid Salinas is a culture journalist and creator, formerly of Reuters, covering culture & entertainment for an engaged, national audience. Known for music and clear, trusted reporting.",
+    "priorOutlets": [
+      "Reuters",
+      "Axios"
+    ],
+    "primaryBeat": "Culture & Entertainment",
+    "homeMarketDMA": "Nashville",
+    "trustSignals": [
+      "Murrow Award",
+      "Webby Award"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Music",
+      "Arts & Design",
+      "Parenting"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-02-16",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Reid%20Salinas&size=300"
+  },
+  {
+    "id": "CR-090",
+    "name": "Anaya Lindgren",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Anaya Lindgren is a culture journalist and creator, formerly of CNN, covering culture & entertainment for an engaged, national audience. Known for music and clear, trusted reporting.",
+    "priorOutlets": [
+      "CNN",
+      "The Washington Post"
+    ],
+    "primaryBeat": "Culture & Entertainment",
+    "homeMarketDMA": "Denver",
+    "trustSignals": [],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Music",
+      "Arts & Design",
+      "Travel"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-01-26",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Anaya%20Lindgren&size=300"
+  },
+  {
+    "id": "CR-091",
+    "name": "Grace Orozco",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Grace Orozco is a culture journalist and creator, formerly of The Atlantic, covering culture & entertainment for an engaged, national audience. Known for music and clear, trusted reporting.",
+    "priorOutlets": [
+      "The Atlantic"
+    ],
+    "primaryBeat": "Culture & Entertainment",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "SPJ Award"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Music",
+      "Books & Literature",
+      "Personal Finance"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-01-25",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Grace%20Orozco&size=300"
+  },
+  {
+    "id": "CR-092",
+    "name": "Phoebe Quinn",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Phoebe Quinn is a culture journalist and creator, formerly of CNN, covering culture & entertainment for an engaged, national audience. Known for books & literature and clear, trusted reporting.",
+    "priorOutlets": [
+      "CNN"
+    ],
+    "primaryBeat": "Culture & Entertainment",
+    "homeMarketDMA": "Dallas-Fort Worth",
+    "trustSignals": [],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Books & Literature",
+      "Music",
+      "Travel"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-04-20",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Phoebe%20Quinn&size=300"
+  },
+  {
+    "id": "CR-093",
+    "name": "Camille Quinn",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Camille Quinn is a culture journalist and creator, formerly of The Guardian, covering culture & entertainment for an engaged, national audience. Known for music and clear, trusted reporting.",
+    "priorOutlets": [
+      "The Guardian"
+    ],
+    "primaryBeat": "Culture & Entertainment",
+    "homeMarketDMA": "Tampa",
+    "trustSignals": [
+      "Murrow Award",
+      "Peabody Award"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Music",
+      "Books & Literature",
+      "Consumer Tech"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-04-26",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Camille%20Quinn&size=300"
+  },
+  {
+    "id": "CR-094",
+    "name": "Camille Pruitt",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Camille Pruitt is a culture journalist and creator, formerly of Vice News, covering culture & entertainment for an engaged, national audience. Known for books & literature and clear, trusted reporting.",
+    "priorOutlets": [
+      "Vice News"
+    ],
+    "primaryBeat": "Culture & Entertainment",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "Murrow Award"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Use-with-context",
+    "categoryAffinities": [
+      "Books & Literature",
+      "Arts & Design",
+      "Outdoors"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-03-26",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Camille%20Pruitt&size=300"
+  },
+  {
+    "id": "CR-095",
+    "name": "Victor Bashir",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Victor Bashir is a sports journalist and creator, formerly of Newsweek, covering sports for an engaged, national audience. Known for fitness and clear, trusted reporting.",
+    "priorOutlets": [
+      "Newsweek",
+      "ESPN"
+    ],
+    "primaryBeat": "Sports",
+    "homeMarketDMA": "Nashville",
+    "trustSignals": [],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Fitness",
+      "Auto",
+      "Outdoors"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-03-24",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Victor%20Bashir&size=300"
+  },
+  {
+    "id": "CR-096",
+    "name": "Trevor Bauer",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Trevor Bauer is a sports journalist and creator, formerly of Time, covering sports for an engaged, national audience. Known for fitness and clear, trusted reporting.",
+    "priorOutlets": [
+      "Time",
+      "Newsweek"
+    ],
+    "primaryBeat": "Sports",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "Pulitzer Finalist"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Fitness",
+      "Auto",
+      "Arts & Design"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-02-10",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Trevor%20Bauer&size=300"
+  },
+  {
+    "id": "CR-097",
+    "name": "Farah Nakamura",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Farah Nakamura is a sports journalist and creator, formerly of CNN, covering sports for an engaged, national audience. Known for fitness and clear, trusted reporting.",
+    "priorOutlets": [
+      "CNN",
+      "NPR"
+    ],
+    "primaryBeat": "Sports",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "Webby Award"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Fitness",
+      "Auto",
+      "Outdoors"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-04-22",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Farah%20Nakamura&size=300"
+  },
+  {
+    "id": "CR-098",
+    "name": "Lila Bellamy",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Lila Bellamy is a sports journalist and creator, formerly of BuzzFeed News, covering sports for an engaged, national audience. Known for fitness and clear, trusted reporting.",
+    "priorOutlets": [
+      "BuzzFeed News"
+    ],
+    "primaryBeat": "Sports",
+    "homeMarketDMA": "San Francisco Bay Area",
+    "trustSignals": [
+      "Pulitzer Finalist"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Fitness",
+      "Auto",
+      "Home & Garden"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-04-27",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Lila%20Bellamy&size=300"
+  },
+  {
+    "id": "CR-099",
+    "name": "Yara Halloran",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Yara Halloran is a sports journalist and creator, formerly of PBS NewsHour, covering sports for an engaged, national audience. Known for fitness and clear, trusted reporting.",
+    "priorOutlets": [
+      "PBS NewsHour",
+      "Reuters"
+    ],
+    "primaryBeat": "Sports",
+    "homeMarketDMA": "Washington DC",
+    "trustSignals": [],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Fitness",
+      "Outdoors",
+      "Auto"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-05-13",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Yara%20Halloran&size=300"
+  },
+  {
+    "id": "CR-100",
+    "name": "Garrett Escobar",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Garrett Escobar is a sports journalist and creator, formerly of PBS NewsHour, covering sports for an engaged, national audience. Known for auto and clear, trusted reporting.",
+    "priorOutlets": [
+      "PBS NewsHour"
+    ],
+    "primaryBeat": "Sports",
+    "homeMarketDMA": "National",
+    "trustSignals": [],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Auto",
+      "Fitness",
+      "Fashion"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-04-12",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Garrett%20Escobar&size=300"
+  },
+  {
+    "id": "CR-101",
+    "name": "Grace Pruitt",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Grace Pruitt is a sports journalist and creator, formerly of ABC News, covering sports for an engaged, national audience. Known for auto and clear, trusted reporting.",
+    "priorOutlets": [
+      "ABC News",
+      "NBC News"
+    ],
+    "primaryBeat": "Sports",
+    "homeMarketDMA": "National",
+    "trustSignals": [],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Auto",
+      "Outdoors",
+      "Books & Literature"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-02-14",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Grace%20Pruitt&size=300"
+  },
+  {
+    "id": "CR-102",
+    "name": "Maya Tran",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Maya Tran is a sports journalist and creator, formerly of The New York Times, covering sports for an engaged, national audience. Known for outdoors and clear, trusted reporting.",
+    "priorOutlets": [
+      "The New York Times"
+    ],
+    "primaryBeat": "Sports",
+    "homeMarketDMA": "National",
+    "trustSignals": [],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Use-with-context",
+    "categoryAffinities": [
+      "Outdoors",
+      "Fitness",
+      "Pets"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-03-16",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Maya%20Tran&size=300"
+  },
+  {
+    "id": "CR-103",
+    "name": "Diego Nawaz",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Diego Nawaz is a sports journalist and creator, formerly of NPR, covering sports for an engaged, national audience. Known for auto and clear, trusted reporting.",
+    "priorOutlets": [
+      "NPR",
+      "Axios"
+    ],
+    "primaryBeat": "Sports",
+    "homeMarketDMA": "Nashville",
+    "trustSignals": [],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Auto",
+      "Outdoors",
+      "Sustainability"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-01-28",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Diego%20Nawaz&size=300"
+  },
+  {
+    "id": "CR-104",
+    "name": "Aisha Salinas",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Aisha Salinas is a sports journalist and creator, formerly of Axios, covering sports for an engaged, national audience. Known for auto and clear, trusted reporting.",
+    "priorOutlets": [
+      "Axios",
+      "Time"
+    ],
+    "primaryBeat": "Sports",
+    "homeMarketDMA": "Tampa",
+    "trustSignals": [],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Use-with-context",
+    "categoryAffinities": [
+      "Auto",
+      "Outdoors"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-05-23",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Aisha%20Salinas&size=300"
+  },
+  {
+    "id": "CR-105",
+    "name": "Dana Hartley",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Dana Hartley is a sports journalist and creator, formerly of NPR, covering sports for an engaged, national audience. Known for fitness and clear, trusted reporting.",
+    "priorOutlets": [
+      "NPR",
+      "The New York Times"
+    ],
+    "primaryBeat": "Sports",
+    "homeMarketDMA": "Kansas City",
+    "trustSignals": [
+      "Murrow Award"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Use-with-context",
+    "categoryAffinities": [
+      "Fitness",
+      "Outdoors",
+      "Music"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-01-22",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Dana%20Hartley&size=300"
+  },
+  {
+    "id": "CR-106",
+    "name": "Marcus Nakamura",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Marcus Nakamura is a sports journalist and creator, formerly of Time, covering sports for an engaged, national audience. Known for auto and clear, trusted reporting.",
+    "priorOutlets": [
+      "Time"
+    ],
+    "primaryBeat": "Sports",
+    "homeMarketDMA": "Atlanta",
+    "trustSignals": [],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Auto",
+      "Outdoors",
+      "Books & Literature"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-03-17",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Marcus%20Nakamura&size=300"
+  },
+  {
+    "id": "CR-107",
+    "name": "Lila Hartley",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Lila Hartley is a sports journalist and creator, formerly of NPR, covering sports for an engaged, national audience. Known for fitness and clear, trusted reporting.",
+    "priorOutlets": [
+      "NPR"
+    ],
+    "primaryBeat": "Sports",
+    "homeMarketDMA": "National",
+    "trustSignals": [],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Fitness",
+      "Outdoors",
+      "Parenting"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-05-20",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Lila%20Hartley&size=300"
+  },
+  {
+    "id": "CR-108",
+    "name": "Ruth Brennan",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Ruth Brennan is a sports journalist and creator, formerly of The Guardian, covering sports for an engaged, national audience. Known for auto and clear, trusted reporting.",
+    "priorOutlets": [
+      "The Guardian",
+      "BuzzFeed News"
+    ],
+    "primaryBeat": "Sports",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "Verified"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Auto",
+      "Fitness",
+      "Books & Literature"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-01-24",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Ruth%20Brennan&size=300"
+  },
+  {
+    "id": "CR-109",
+    "name": "Talia Behrend",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Talia Behrend is a sports journalist and creator, formerly of The Athletic, covering sports for an engaged, national audience. Known for auto and clear, trusted reporting.",
+    "priorOutlets": [
+      "The Athletic"
+    ],
+    "primaryBeat": "Sports",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "Peabody Award"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Auto",
+      "Fitness",
+      "Food & Cooking"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-02-23",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Talia%20Behrend&size=300"
+  },
+  {
+    "id": "CR-110",
+    "name": "Dana Cho",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Dana Cho is a sports journalist and creator, formerly of NPR, covering sports for an engaged, national audience. Known for auto and clear, trusted reporting.",
+    "priorOutlets": [
+      "NPR",
+      "The New York Times"
+    ],
+    "primaryBeat": "Sports",
+    "homeMarketDMA": "Atlanta",
+    "trustSignals": [
+      "Murrow Award",
+      "SPJ Award"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Auto",
+      "Fitness",
+      "Fashion"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-01-28",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Dana%20Cho&size=300"
+  },
+  {
+    "id": "CR-111",
+    "name": "Kenji Halloran",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Kenji Halloran is a international affairs journalist and creator, formerly of BuzzFeed News, covering international affairs for an engaged, national audience. Known for travel and clear, trusted reporting.",
+    "priorOutlets": [
+      "BuzzFeed News",
+      "The Atlantic"
+    ],
+    "primaryBeat": "International Affairs",
+    "homeMarketDMA": "Atlanta",
+    "trustSignals": [
+      "Verified",
+      "SPJ Award"
+    ],
+    "politicalLean": "Left",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Travel",
+      "Books & Literature",
+      "Arts & Design"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-05-16",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Kenji%20Halloran&size=300"
+  },
+  {
+    "id": "CR-112",
+    "name": "Petra Orozco",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Petra Orozco is a international affairs journalist and creator, formerly of Axios, covering international affairs for an engaged, national audience. Known for travel and clear, trusted reporting.",
+    "priorOutlets": [
+      "Axios"
+    ],
+    "primaryBeat": "International Affairs",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "Emmy Award",
+      "Pulitzer Finalist"
+    ],
+    "politicalLean": "Right",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Travel",
+      "Books & Literature",
+      "Gaming"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-01-23",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Petra%20Orozco&size=300"
+  },
+  {
+    "id": "CR-113",
+    "name": "Victor Cho",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Victor Cho is a international affairs journalist and creator, formerly of Newsweek, covering international affairs for an engaged, national audience. Known for books & literature and clear, trusted reporting.",
+    "priorOutlets": [
+      "Newsweek"
+    ],
+    "primaryBeat": "International Affairs",
+    "homeMarketDMA": "Philadelphia",
+    "trustSignals": [],
+    "politicalLean": "Center",
+    "brandSafetyTier": "Use-with-context",
+    "categoryAffinities": [
+      "Books & Literature",
+      "Travel",
+      "Music"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-03-20",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Victor%20Cho&size=300"
+  },
+  {
+    "id": "CR-114",
+    "name": "Cole Delgado",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Cole Delgado is a international affairs journalist and creator, formerly of Axios, covering international affairs for an engaged, national audience. Known for books & literature and clear, trusted reporting.",
+    "priorOutlets": [
+      "Axios",
+      "Financial Times"
+    ],
+    "primaryBeat": "International Affairs",
+    "homeMarketDMA": "Los Angeles",
+    "trustSignals": [
+      "Murrow Award",
+      "Verified"
+    ],
+    "politicalLean": "Center-Right",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Books & Literature",
+      "Travel",
+      "Food & Cooking"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-04-24",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Cole%20Delgado&size=300"
+  },
+  {
+    "id": "CR-115",
+    "name": "Hannah Pruitt",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Hannah Pruitt is a international affairs journalist and creator, formerly of NPR, covering international affairs for an engaged, national audience. Known for books & literature and clear, trusted reporting.",
+    "priorOutlets": [
+      "NPR"
+    ],
+    "primaryBeat": "International Affairs",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "SPJ Award",
+      "Murrow Award"
+    ],
+    "politicalLean": "Left",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Books & Literature",
+      "Travel",
+      "Parenting"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-03-17",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Hannah%20Pruitt&size=300"
+  },
+  {
+    "id": "CR-116",
+    "name": "Garrett Dembele",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Garrett Dembele is a international affairs journalist and creator, formerly of NPR, covering international affairs for an engaged, national audience. Known for books & literature and clear, trusted reporting.",
+    "priorOutlets": [
+      "NPR",
+      "PBS NewsHour"
+    ],
+    "primaryBeat": "International Affairs",
+    "homeMarketDMA": "Charlotte",
+    "trustSignals": [
+      "Murrow Award",
+      "Webby Award"
+    ],
+    "politicalLean": "Center",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Books & Literature",
+      "Travel",
+      "Gaming"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-02-21",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Garrett%20Dembele&size=300"
+  },
+  {
+    "id": "CR-117",
+    "name": "Hugo Cho",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Hugo Cho is a international affairs journalist and creator, formerly of CNN, covering international affairs for an engaged, national audience. Known for books & literature and clear, trusted reporting.",
+    "priorOutlets": [
+      "CNN"
+    ],
+    "primaryBeat": "International Affairs",
+    "homeMarketDMA": "Kansas City",
+    "trustSignals": [],
+    "politicalLean": "Center-Right",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Books & Literature",
+      "Travel"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-03-19",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Hugo%20Cho&size=300"
+  },
+  {
+    "id": "CR-118",
+    "name": "Yara Albright",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Yara Albright is a international affairs journalist and creator, formerly of Newsweek, covering international affairs for an engaged, national audience. Known for books & literature and clear, trusted reporting.",
+    "priorOutlets": [
+      "Newsweek",
+      "CNN"
+    ],
+    "primaryBeat": "International Affairs",
+    "homeMarketDMA": "National",
+    "trustSignals": [],
+    "politicalLean": "Right",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Books & Literature",
+      "Travel",
+      "Wellness"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-04-21",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Yara%20Albright&size=300"
+  },
+  {
+    "id": "CR-119",
+    "name": "Priya Kessler",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Priya Kessler is a international affairs journalist and creator, formerly of Reuters, covering international affairs for an engaged, national audience. Known for books & literature and clear, trusted reporting.",
+    "priorOutlets": [
+      "Reuters"
+    ],
+    "primaryBeat": "International Affairs",
+    "homeMarketDMA": "National",
+    "trustSignals": [],
+    "politicalLean": "Center",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Books & Literature",
+      "Travel",
+      "Wellness"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-04-22",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Priya%20Kessler&size=300"
+  },
+  {
+    "id": "CR-120",
+    "name": "Asher Petrova",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Asher Petrova is a international affairs journalist and creator, formerly of NBC News, covering international affairs for an engaged, national audience. Known for travel and clear, trusted reporting.",
+    "priorOutlets": [
+      "NBC News",
+      "Axios"
+    ],
+    "primaryBeat": "International Affairs",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "Peabody Award"
+    ],
+    "politicalLean": "Center",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Travel",
+      "Books & Literature",
+      "Outdoors"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-03-24",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Asher%20Petrova&size=300"
+  },
+  {
+    "id": "CR-121",
+    "name": "Hannah Rourke",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Hannah Rourke is a international affairs journalist and creator, formerly of NPR, covering international affairs for an engaged, national audience. Known for books & literature and clear, trusted reporting.",
+    "priorOutlets": [
+      "NPR"
+    ],
+    "primaryBeat": "International Affairs",
+    "homeMarketDMA": "Pittsburgh",
+    "trustSignals": [
+      "SPJ Award"
+    ],
+    "politicalLean": "Right",
+    "brandSafetyTier": "Use-with-context",
+    "categoryAffinities": [
+      "Books & Literature",
+      "Travel",
+      "Home & Garden"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-05-13",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Hannah%20Rourke&size=300"
+  },
+  {
+    "id": "CR-122",
+    "name": "Tomas Crews",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Tomas Crews is a international affairs journalist and creator, formerly of The New York Times, covering international affairs for an engaged, national audience. Known for travel and clear, trusted reporting.",
+    "priorOutlets": [
+      "The New York Times",
+      "Reuters"
+    ],
+    "primaryBeat": "International Affairs",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "Murrow Award",
+      "Pulitzer Finalist"
+    ],
+    "politicalLean": "Right",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Travel",
+      "Books & Literature",
+      "Music"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-04-22",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Tomas%20Crews&size=300"
+  },
+  {
+    "id": "CR-123",
+    "name": "Marcus Carrington",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Marcus Carrington is a international affairs journalist and creator, formerly of Financial Times, covering international affairs for an engaged, national audience. Known for books & literature and clear, trusted reporting.",
+    "priorOutlets": [
+      "Financial Times"
+    ],
+    "primaryBeat": "International Affairs",
+    "homeMarketDMA": "National",
+    "trustSignals": [],
+    "politicalLean": "Center",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Books & Literature",
+      "Travel",
+      "Music"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-02-26",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Marcus%20Carrington&size=300"
+  },
+  {
+    "id": "CR-124",
+    "name": "Asher Mwangi",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Asher Mwangi is a international affairs journalist and creator, formerly of Reuters, covering international affairs for an engaged, national audience. Known for books & literature and clear, trusted reporting.",
+    "priorOutlets": [
+      "Reuters",
+      "NBC News"
+    ],
+    "primaryBeat": "International Affairs",
+    "homeMarketDMA": "Detroit",
+    "trustSignals": [],
+    "politicalLean": "Center",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Books & Literature",
+      "Travel",
+      "Pets"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-03-17",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Asher%20Mwangi&size=300"
+  },
+  {
+    "id": "CR-125",
+    "name": "Jordan Rourke",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Jordan Rourke is a climate journalist and creator, formerly of The New York Times, covering climate & environment for an engaged, national audience. Known for science and clear, trusted reporting.",
+    "priorOutlets": [
+      "The New York Times",
+      "NPR"
+    ],
+    "primaryBeat": "Climate & Environment",
+    "homeMarketDMA": "Portland",
+    "trustSignals": [],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Science",
+      "Outdoors",
+      "Music"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-03-27",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Jordan%20Rourke&size=300"
+  },
+  {
+    "id": "CR-126",
+    "name": "Hugo Albright",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Hugo Albright is a climate journalist and creator, formerly of Time, covering climate & environment for an engaged, national audience. Known for outdoors and clear, trusted reporting.",
+    "priorOutlets": [
+      "Time",
+      "NPR"
+    ],
+    "primaryBeat": "Climate & Environment",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "Webby Award",
+      "SPJ Award"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Outdoors",
+      "Sustainability",
+      "Personal Finance"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-04-19",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Hugo%20Albright&size=300"
+  },
+  {
+    "id": "CR-127",
+    "name": "Dana Crews",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Dana Crews is a climate journalist and creator, formerly of PBS NewsHour, covering climate & environment for an engaged, national audience. Known for science and clear, trusted reporting.",
+    "priorOutlets": [
+      "PBS NewsHour",
+      "The Atlantic"
+    ],
+    "primaryBeat": "Climate & Environment",
+    "homeMarketDMA": "Philadelphia",
+    "trustSignals": [
+      "Verified"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Use-with-context",
+    "categoryAffinities": [
+      "Science",
+      "Outdoors",
+      "Home & Garden"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-05-15",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Dana%20Crews&size=300"
+  },
+  {
+    "id": "CR-128",
+    "name": "Spencer Sharpe",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Spencer Sharpe is a climate journalist and creator, formerly of ABC News, covering climate & environment for an engaged, national audience. Known for outdoors and clear, trusted reporting.",
+    "priorOutlets": [
+      "ABC News",
+      "The Atlantic"
+    ],
+    "primaryBeat": "Climate & Environment",
+    "homeMarketDMA": "Denver",
+    "trustSignals": [],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Outdoors",
+      "Sustainability",
+      "Consumer Tech"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-04-25",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Spencer%20Sharpe&size=300"
+  },
+  {
+    "id": "CR-129",
+    "name": "Chloe Nawaz",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Chloe Nawaz is a climate journalist and creator, formerly of The Washington Post, covering climate & environment for an engaged, national audience. Known for outdoors and clear, trusted reporting.",
+    "priorOutlets": [
+      "The Washington Post"
+    ],
+    "primaryBeat": "Climate & Environment",
+    "homeMarketDMA": "Phoenix",
+    "trustSignals": [
+      "Verified",
+      "SPJ Award"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Outdoors",
+      "Sustainability",
+      "Pets"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-03-27",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Chloe%20Nawaz&size=300"
+  },
+  {
+    "id": "CR-130",
+    "name": "Tomas Ishikawa",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Tomas Ishikawa is a climate journalist and creator, formerly of NBC News, covering climate & environment for an engaged, national audience. Known for outdoors and clear, trusted reporting.",
+    "priorOutlets": [
+      "NBC News",
+      "The Washington Post"
+    ],
+    "primaryBeat": "Climate & Environment",
+    "homeMarketDMA": "Philadelphia",
+    "trustSignals": [
+      "Webby Award",
+      "Emmy Award"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Outdoors",
+      "Science",
+      "Wellness"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-04-26",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Tomas%20Ishikawa&size=300"
+  },
+  {
+    "id": "CR-131",
+    "name": "Carmen Fontaine",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Carmen Fontaine is a climate journalist and creator, formerly of CNN, covering climate & environment for an engaged, national audience. Known for outdoors and clear, trusted reporting.",
+    "priorOutlets": [
+      "CNN",
+      "The Atlantic"
+    ],
+    "primaryBeat": "Climate & Environment",
+    "homeMarketDMA": "San Francisco Bay Area",
+    "trustSignals": [
+      "Murrow Award"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Outdoors",
+      "Sustainability",
+      "Pets"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-02-12",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Carmen%20Fontaine&size=300"
+  },
+  {
+    "id": "CR-132",
+    "name": "Chloe Hartley",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Chloe Hartley is a climate journalist and creator, formerly of The Washington Post, covering climate & environment for an engaged, national audience. Known for sustainability and clear, trusted reporting.",
+    "priorOutlets": [
+      "The Washington Post",
+      "PBS NewsHour"
+    ],
+    "primaryBeat": "Climate & Environment",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "Murrow Award"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Sustainability",
+      "Outdoors",
+      "Pets"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-05-15",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Chloe%20Hartley&size=300"
+  },
+  {
+    "id": "CR-133",
+    "name": "Farah Falk",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Farah Falk is a climate journalist and creator, formerly of The New York Times, covering climate & environment for an engaged, national audience. Known for outdoors and clear, trusted reporting.",
+    "priorOutlets": [
+      "The New York Times"
+    ],
+    "primaryBeat": "Climate & Environment",
+    "homeMarketDMA": "National",
+    "trustSignals": [],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Outdoors",
+      "Science",
+      "Arts & Design"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-01-28",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Farah%20Falk&size=300"
+  },
+  {
+    "id": "CR-134",
+    "name": "Anika Abara",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Anika Abara is a climate journalist and creator, formerly of The Atlantic, covering climate & environment for an engaged, national audience. Known for sustainability and clear, trusted reporting.",
+    "priorOutlets": [
+      "The Atlantic"
+    ],
+    "primaryBeat": "Climate & Environment",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "Verified",
+      "Webby Award"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Use-with-context",
+    "categoryAffinities": [
+      "Sustainability",
+      "Science",
+      "Music"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-01-14",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Anika%20Abara&size=300"
+  },
+  {
+    "id": "CR-135",
+    "name": "Trevor Dembele",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Trevor Dembele is a climate journalist and creator, formerly of The Guardian, covering climate & environment for an engaged, national audience. Known for sustainability and clear, trusted reporting.",
+    "priorOutlets": [
+      "The Guardian"
+    ],
+    "primaryBeat": "Climate & Environment",
+    "homeMarketDMA": "Portland",
+    "trustSignals": [],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Sustainability",
+      "Outdoors",
+      "Arts & Design"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-01-28",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Trevor%20Dembele&size=300"
+  },
+  {
+    "id": "CR-136",
+    "name": "Devin Sandoval",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Devin Sandoval is a climate journalist and creator, formerly of The Washington Post, covering climate & environment for an engaged, national audience. Known for sustainability and clear, trusted reporting.",
+    "priorOutlets": [
+      "The Washington Post",
+      "Newsweek"
+    ],
+    "primaryBeat": "Climate & Environment",
+    "homeMarketDMA": "Miami",
+    "trustSignals": [
+      "Murrow Award",
+      "Pulitzer Finalist"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Sustainability",
+      "Outdoors",
+      "Personal Finance"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-03-27",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Devin%20Sandoval&size=300"
+  },
+  {
+    "id": "CR-137",
+    "name": "Soledad Maddox",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Soledad Maddox is a investigative journalist and creator, formerly of NBC News, covering investigative for an engaged, national audience. Known for books & literature and clear, trusted reporting.",
+    "priorOutlets": [
+      "NBC News"
+    ],
+    "primaryBeat": "Investigative",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "Webby Award",
+      "Murrow Award"
+    ],
+    "politicalLean": "Center-Left",
+    "brandSafetyTier": "Use-with-context",
+    "categoryAffinities": [
+      "Books & Literature",
+      "Personal Finance",
+      "Food & Cooking"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-04-21",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Soledad%20Maddox&size=300"
+  },
+  {
+    "id": "CR-138",
+    "name": "Malik Wexler",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Malik Wexler is a investigative journalist and creator, formerly of The New York Times, covering investigative for an engaged, national audience. Known for personal finance and clear, trusted reporting.",
+    "priorOutlets": [
+      "The New York Times"
+    ],
+    "primaryBeat": "Investigative",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "Webby Award",
+      "Verified"
+    ],
+    "politicalLean": "Center-Left",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Personal Finance",
+      "Books & Literature",
+      "Sustainability"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-01-23",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Malik%20Wexler&size=300"
+  },
+  {
+    "id": "CR-139",
+    "name": "Marcus Okafor",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Marcus Okafor is a investigative journalist and creator, formerly of Vice News, covering investigative for an engaged, national audience. Known for books & literature and clear, trusted reporting.",
+    "priorOutlets": [
+      "Vice News",
+      "The Guardian"
+    ],
+    "primaryBeat": "Investigative",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "Verified",
+      "Emmy Award"
+    ],
+    "politicalLean": "Left",
+    "brandSafetyTier": "Use-with-context",
+    "categoryAffinities": [
+      "Books & Literature",
+      "Personal Finance",
+      "Food & Cooking"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-02-25",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Marcus%20Okafor&size=300"
+  },
+  {
+    "id": "CR-140",
+    "name": "Wesley Cho",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Wesley Cho is a investigative journalist and creator, formerly of Newsweek, covering investigative for an engaged, national audience. Known for books & literature and clear, trusted reporting.",
+    "priorOutlets": [
+      "Newsweek",
+      "PBS NewsHour"
+    ],
+    "primaryBeat": "Investigative",
+    "homeMarketDMA": "National",
+    "trustSignals": [],
+    "politicalLean": "Center-Right",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Books & Literature",
+      "Personal Finance",
+      "Consumer Tech"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-05-16",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Wesley%20Cho&size=300"
+  },
+  {
+    "id": "CR-141",
+    "name": "Hugo Sandoval",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Hugo Sandoval is a investigative journalist and creator, formerly of PBS NewsHour, covering investigative for an engaged, national audience. Known for personal finance and clear, trusted reporting.",
+    "priorOutlets": [
+      "PBS NewsHour"
+    ],
+    "primaryBeat": "Investigative",
+    "homeMarketDMA": "National",
+    "trustSignals": [],
+    "politicalLean": "Center",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Personal Finance",
+      "Books & Literature",
+      "Gaming"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-01-22",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Hugo%20Sandoval&size=300"
+  },
+  {
+    "id": "CR-142",
+    "name": "Margot Behrend",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Margot Behrend is a investigative journalist and creator, formerly of BuzzFeed News, covering investigative for an engaged, national audience. Known for books & literature and clear, trusted reporting.",
+    "priorOutlets": [
+      "BuzzFeed News",
+      "Vice News"
+    ],
+    "primaryBeat": "Investigative",
+    "homeMarketDMA": "Portland",
+    "trustSignals": [
+      "Verified"
+    ],
+    "politicalLean": "Right",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Books & Literature",
+      "Personal Finance",
+      "Consumer Tech"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-05-14",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Margot%20Behrend&size=300"
+  },
+  {
+    "id": "CR-143",
+    "name": "Esme Bellamy",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Esme Bellamy is a investigative journalist and creator, formerly of The Washington Post, covering investigative for an engaged, national audience. Known for books & literature and clear, trusted reporting.",
+    "priorOutlets": [
+      "The Washington Post"
+    ],
+    "primaryBeat": "Investigative",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "Webby Award"
+    ],
+    "politicalLean": "Right",
+    "brandSafetyTier": "Use-with-context",
+    "categoryAffinities": [
+      "Books & Literature",
+      "Personal Finance",
+      "Gaming"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-05-15",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Esme%20Bellamy&size=300"
+  },
+  {
+    "id": "CR-144",
+    "name": "Esme Behrend",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Esme Behrend is a investigative journalist and creator, formerly of Axios, covering investigative for an engaged, national audience. Known for books & literature and clear, trusted reporting.",
+    "priorOutlets": [
+      "Axios",
+      "PBS NewsHour"
+    ],
+    "primaryBeat": "Investigative",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "SPJ Award"
+    ],
+    "politicalLean": "Left",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Books & Literature",
+      "Personal Finance",
+      "Consumer Tech"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-03-18",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Esme%20Behrend&size=300"
+  },
+  {
+    "id": "CR-145",
+    "name": "Dana Delgado",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Dana Delgado is a investigative journalist and creator, formerly of The New York Times, covering investigative for an engaged, national audience. Known for personal finance and clear, trusted reporting.",
+    "priorOutlets": [
+      "The New York Times",
+      "BuzzFeed News"
+    ],
+    "primaryBeat": "Investigative",
+    "homeMarketDMA": "Kansas City",
+    "trustSignals": [],
+    "politicalLean": "Center",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Personal Finance",
+      "Books & Literature",
+      "Home & Garden"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-05-26",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Dana%20Delgado&size=300"
+  },
+  {
+    "id": "CR-146",
+    "name": "Chloe Pruitt",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Chloe Pruitt is a investigative journalist and creator, formerly of NBC News, covering investigative for an engaged, national audience. Known for personal finance and clear, trusted reporting.",
+    "priorOutlets": [
+      "NBC News",
+      "PBS NewsHour"
+    ],
+    "primaryBeat": "Investigative",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "Peabody Award"
+    ],
+    "politicalLean": "Center-Left",
+    "brandSafetyTier": "Use-with-context",
+    "categoryAffinities": [
+      "Personal Finance",
+      "Books & Literature",
+      "Sustainability"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-04-14",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Chloe%20Pruitt&size=300"
+  },
+  {
+    "id": "CR-147",
+    "name": "Devin Cho",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Devin Cho is a food journalist and creator, formerly of The Washington Post, covering food & dining for an engaged, national audience. Known for food & cooking and clear, trusted reporting.",
+    "priorOutlets": [
+      "The Washington Post",
+      "NBC News"
+    ],
+    "primaryBeat": "Food & Dining",
+    "homeMarketDMA": "Atlanta",
+    "trustSignals": [],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Food & Cooking",
+      "Travel",
+      "Arts & Design"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-01-16",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Devin%20Cho&size=300"
+  },
+  {
+    "id": "CR-148",
+    "name": "Brendan Fontaine",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Brendan Fontaine is a food journalist and creator, formerly of The Atlantic, covering food & dining for an engaged, national audience. Known for home & garden and clear, trusted reporting.",
+    "priorOutlets": [
+      "The Atlantic",
+      "NBC News"
+    ],
+    "primaryBeat": "Food & Dining",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "SPJ Award",
+      "Murrow Award"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Home & Garden",
+      "Travel",
+      "Arts & Design"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-05-26",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Brendan%20Fontaine&size=300"
+  },
+  {
+    "id": "CR-149",
+    "name": "Lila Cho",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Lila Cho is a food journalist and creator, formerly of Axios, covering food & dining for an engaged, national audience. Known for travel and clear, trusted reporting.",
+    "priorOutlets": [
+      "Axios"
+    ],
+    "primaryBeat": "Food & Dining",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "Webby Award"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Use-with-context",
+    "categoryAffinities": [
+      "Travel",
+      "Food & Cooking",
+      "Outdoors"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-04-16",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Lila%20Cho&size=300"
+  },
+  {
+    "id": "CR-150",
+    "name": "Anaya Dovan",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Anaya Dovan is a food journalist and creator, formerly of ABC News, covering food & dining for an engaged, national audience. Known for home & garden and clear, trusted reporting.",
+    "priorOutlets": [
+      "ABC News"
+    ],
+    "primaryBeat": "Food & Dining",
+    "homeMarketDMA": "Pittsburgh",
+    "trustSignals": [
+      "Peabody Award"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Home & Garden",
+      "Travel",
+      "Fashion"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-03-20",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Anaya%20Dovan&size=300"
+  },
+  {
+    "id": "CR-151",
+    "name": "Levi Lockwood",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Levi Lockwood is a food journalist and creator, formerly of The Guardian, covering food & dining for an engaged, national audience. Known for home & garden and clear, trusted reporting.",
+    "priorOutlets": [
+      "The Guardian"
+    ],
+    "primaryBeat": "Food & Dining",
+    "homeMarketDMA": "Charlotte",
+    "trustSignals": [],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Home & Garden",
+      "Travel",
+      "Science"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-01-14",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Levi%20Lockwood&size=300"
+  },
+  {
+    "id": "CR-152",
+    "name": "Maya Cho",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Maya Cho is a food journalist and creator, formerly of Axios, covering food & dining for an engaged, national audience. Known for home & garden and clear, trusted reporting.",
+    "priorOutlets": [
+      "Axios"
+    ],
+    "primaryBeat": "Food & Dining",
+    "homeMarketDMA": "Philadelphia",
+    "trustSignals": [],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Home & Garden",
+      "Food & Cooking",
+      "Music"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-04-27",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Maya%20Cho&size=300"
+  },
+  {
+    "id": "CR-153",
+    "name": "Esme Falk",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Esme Falk is a food journalist and creator, formerly of The New York Times, covering food & dining for an engaged, national audience. Known for travel and clear, trusted reporting.",
+    "priorOutlets": [
+      "The New York Times"
+    ],
+    "primaryBeat": "Food & Dining",
+    "homeMarketDMA": "Chicago",
+    "trustSignals": [
+      "Verified"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Travel",
+      "Home & Garden",
+      "Wellness"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-01-19",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Esme%20Falk&size=300"
+  },
+  {
+    "id": "CR-154",
+    "name": "Sofia Lockwood",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Sofia Lockwood is a food journalist and creator, formerly of Newsweek, covering food & dining for an engaged, national audience. Known for food & cooking and clear, trusted reporting.",
+    "priorOutlets": [
+      "Newsweek"
+    ],
+    "primaryBeat": "Food & Dining",
+    "homeMarketDMA": "New York",
+    "trustSignals": [],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Food & Cooking",
+      "Travel",
+      "Arts & Design"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-05-23",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Sofia%20Lockwood&size=300"
+  },
+  {
+    "id": "CR-155",
+    "name": "Kenji Crews",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Kenji Crews is a food journalist and creator, formerly of CNN, covering food & dining for an engaged, national audience. Known for travel and clear, trusted reporting.",
+    "priorOutlets": [
+      "CNN"
+    ],
+    "primaryBeat": "Food & Dining",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "SPJ Award"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Use-with-context",
+    "categoryAffinities": [
+      "Travel",
+      "Home & Garden",
+      "Outdoors"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-01-12",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Kenji%20Crews&size=300"
+  },
+  {
+    "id": "CR-156",
+    "name": "Sergio Mendez",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Sergio Mendez is a food journalist and creator, formerly of Reuters, covering food & dining for an engaged, national audience. Known for food & cooking and clear, trusted reporting.",
+    "priorOutlets": [
+      "Reuters",
+      "NPR"
+    ],
+    "primaryBeat": "Food & Dining",
+    "homeMarketDMA": "National",
+    "trustSignals": [],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Food & Cooking",
+      "Home & Garden",
+      "Auto"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-03-17",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Sergio%20Mendez&size=300"
+  },
+  {
+    "id": "CR-157",
+    "name": "Brendan Cho",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Brendan Cho is a travel journalist and creator, formerly of The Atlantic, covering travel for an engaged, national audience. Known for outdoors and clear, trusted reporting.",
+    "priorOutlets": [
+      "The Atlantic",
+      "The New York Times"
+    ],
+    "primaryBeat": "Travel",
+    "homeMarketDMA": "Kansas City",
+    "trustSignals": [
+      "Murrow Award"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Outdoors",
+      "Travel",
+      "Music"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-04-17",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Brendan%20Cho&size=300"
+  },
+  {
+    "id": "CR-158",
+    "name": "Imani Stockton",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Imani Stockton is a travel journalist and creator, formerly of Reuters, covering travel for an engaged, national audience. Known for travel and clear, trusted reporting.",
+    "priorOutlets": [
+      "Reuters",
+      "Time"
+    ],
+    "primaryBeat": "Travel",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "SPJ Award"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Travel",
+      "Outdoors",
+      "Home & Garden"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-05-15",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Imani%20Stockton&size=300"
+  },
+  {
+    "id": "CR-159",
+    "name": "Leila Delgado",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Leila Delgado is a travel journalist and creator, formerly of Axios, covering travel for an engaged, national audience. Known for travel and clear, trusted reporting.",
+    "priorOutlets": [
+      "Axios",
+      "The Washington Post"
+    ],
+    "primaryBeat": "Travel",
+    "homeMarketDMA": "Miami",
+    "trustSignals": [
+      "Pulitzer Finalist",
+      "Murrow Award"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Travel",
+      "Food & Cooking",
+      "Pets"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-01-27",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Leila%20Delgado&size=300"
+  },
+  {
+    "id": "CR-160",
+    "name": "Camille Orozco",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Camille Orozco is a travel journalist and creator, formerly of Newsweek, covering travel for an engaged, national audience. Known for travel and clear, trusted reporting.",
+    "priorOutlets": [
+      "Newsweek",
+      "The Guardian"
+    ],
+    "primaryBeat": "Travel",
+    "homeMarketDMA": "Tampa",
+    "trustSignals": [],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Use-with-context",
+    "categoryAffinities": [
+      "Travel",
+      "Outdoors",
+      "Consumer Tech"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-03-12",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Camille%20Orozco&size=300"
+  },
+  {
+    "id": "CR-161",
+    "name": "Sofia Wexler",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Sofia Wexler is a travel journalist and creator, formerly of NBC News, covering travel for an engaged, national audience. Known for outdoors and clear, trusted reporting.",
+    "priorOutlets": [
+      "NBC News"
+    ],
+    "primaryBeat": "Travel",
+    "homeMarketDMA": "Washington DC",
+    "trustSignals": [],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Outdoors",
+      "Food & Cooking",
+      "Gaming"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-04-15",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Sofia%20Wexler&size=300"
+  },
+  {
+    "id": "CR-162",
+    "name": "Yara Marchetti",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Yara Marchetti is a travel journalist and creator, formerly of PBS NewsHour, covering travel for an engaged, national audience. Known for food & cooking and clear, trusted reporting.",
+    "priorOutlets": [
+      "PBS NewsHour"
+    ],
+    "primaryBeat": "Travel",
+    "homeMarketDMA": "Chicago",
+    "trustSignals": [
+      "Webby Award",
+      "Murrow Award"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Food & Cooking",
+      "Travel",
+      "Science"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-03-12",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Yara%20Marchetti&size=300"
+  },
+  {
+    "id": "CR-163",
+    "name": "Bianca Okafor",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Bianca Okafor is a travel journalist and creator, formerly of The New York Times, covering travel for an engaged, national audience. Known for food & cooking and clear, trusted reporting.",
+    "priorOutlets": [
+      "The New York Times"
+    ],
+    "primaryBeat": "Travel",
+    "homeMarketDMA": "Chicago",
+    "trustSignals": [],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Food & Cooking",
+      "Outdoors",
+      "Personal Finance"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-01-19",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Bianca%20Okafor&size=300"
+  },
+  {
+    "id": "CR-164",
+    "name": "Diego Maguire",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Diego Maguire is a travel journalist and creator, formerly of The Guardian, covering travel for an engaged, national audience. Known for travel and clear, trusted reporting.",
+    "priorOutlets": [
+      "The Guardian"
+    ],
+    "primaryBeat": "Travel",
+    "homeMarketDMA": "Boston",
+    "trustSignals": [
+      "Pulitzer Finalist",
+      "Verified"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Travel",
+      "Outdoors"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-03-15",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Diego%20Maguire&size=300"
+  },
+  {
+    "id": "CR-165",
+    "name": "Darius Falk",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Darius Falk is a style journalist and creator, formerly of NPR, covering style & fashion for an engaged, national audience. Known for wellness and clear, trusted reporting.",
+    "priorOutlets": [
+      "NPR"
+    ],
+    "primaryBeat": "Style & Fashion",
+    "homeMarketDMA": "National",
+    "trustSignals": [],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Wellness",
+      "Arts & Design",
+      "Parenting"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-04-13",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Darius%20Falk&size=300"
+  },
+  {
+    "id": "CR-166",
+    "name": "Hannah Hartley",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Hannah Hartley is a style journalist and creator, formerly of The Atlantic, covering style & fashion for an engaged, national audience. Known for fashion and clear, trusted reporting.",
+    "priorOutlets": [
+      "The Atlantic"
+    ],
+    "primaryBeat": "Style & Fashion",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "Webby Award"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Fashion",
+      "Arts & Design",
+      "Sustainability"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-02-14",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Hannah%20Hartley&size=300"
+  },
+  {
+    "id": "CR-167",
+    "name": "Cyrus Cho",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Cyrus Cho is a style journalist and creator, formerly of PBS NewsHour, covering style & fashion for an engaged, national audience. Known for arts & design and clear, trusted reporting.",
+    "priorOutlets": [
+      "PBS NewsHour"
+    ],
+    "primaryBeat": "Style & Fashion",
+    "homeMarketDMA": "Portland",
+    "trustSignals": [],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Arts & Design",
+      "Wellness",
+      "Outdoors"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-03-11",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Cyrus%20Cho&size=300"
+  },
+  {
+    "id": "CR-168",
+    "name": "Esme Brennan",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Esme Brennan is a style journalist and creator, formerly of ABC News, covering style & fashion for an engaged, national audience. Known for wellness and clear, trusted reporting.",
+    "priorOutlets": [
+      "ABC News",
+      "NPR"
+    ],
+    "primaryBeat": "Style & Fashion",
+    "homeMarketDMA": "Portland",
+    "trustSignals": [
+      "Pulitzer Finalist"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Wellness",
+      "Fashion",
+      "Fitness"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-05-18",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Esme%20Brennan&size=300"
+  },
+  {
+    "id": "CR-169",
+    "name": "Greta Sorensen",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Greta Sorensen is a style journalist and creator, formerly of The Guardian, covering style & fashion for an engaged, national audience. Known for fashion and clear, trusted reporting.",
+    "priorOutlets": [
+      "The Guardian",
+      "The Atlantic"
+    ],
+    "primaryBeat": "Style & Fashion",
+    "homeMarketDMA": "Nashville",
+    "trustSignals": [],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Fashion",
+      "Wellness",
+      "Parenting"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-02-12",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Greta%20Sorensen&size=300"
+  },
+  {
+    "id": "CR-170",
+    "name": "Daniel Falk",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Daniel Falk is a style journalist and creator, formerly of Reuters, covering style & fashion for an engaged, national audience. Known for wellness and clear, trusted reporting.",
+    "priorOutlets": [
+      "Reuters",
+      "Time"
+    ],
+    "primaryBeat": "Style & Fashion",
+    "homeMarketDMA": "San Francisco Bay Area",
+    "trustSignals": [],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Wellness",
+      "Fashion",
+      "Food & Cooking"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-03-22",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Daniel%20Falk&size=300"
+  },
+  {
+    "id": "CR-171",
+    "name": "Liam Albright",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Liam Albright is a style journalist and creator, formerly of The Washington Post, covering style & fashion for an engaged, national audience. Known for arts & design and clear, trusted reporting.",
+    "priorOutlets": [
+      "The Washington Post",
+      "The New York Times"
+    ],
+    "primaryBeat": "Style & Fashion",
+    "homeMarketDMA": "Salt Lake City",
+    "trustSignals": [
+      "SPJ Award"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Use-with-context",
+    "categoryAffinities": [
+      "Arts & Design",
+      "Fashion",
+      "Books & Literature"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-05-23",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Liam%20Albright&size=300"
+  },
+  {
+    "id": "CR-172",
+    "name": "Andre Stockton",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Andre Stockton is a style journalist and creator, formerly of CNN, covering style & fashion for an engaged, national audience. Known for wellness and clear, trusted reporting.",
+    "priorOutlets": [
+      "CNN"
+    ],
+    "primaryBeat": "Style & Fashion",
+    "homeMarketDMA": "Miami",
+    "trustSignals": [
+      "SPJ Award",
+      "Peabody Award"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Wellness",
+      "Arts & Design",
+      "Consumer Tech"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-02-23",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Andre%20Stockton&size=300"
+  },
+  {
+    "id": "CR-173",
+    "name": "Farah Abara",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Farah Abara is a parenting journalist and creator, formerly of Reuters, covering parenting & family for an engaged, national audience. Known for pets and clear, trusted reporting.",
+    "priorOutlets": [
+      "Reuters",
+      "NPR"
+    ],
+    "primaryBeat": "Parenting & Family",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "SPJ Award",
+      "Emmy Award"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Pets",
+      "Parenting",
+      "Arts & Design"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-05-27",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Farah%20Abara&size=300"
+  },
+  {
+    "id": "CR-174",
+    "name": "Mateo Okafor",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Mateo Okafor is a parenting journalist and creator, formerly of Vice News, covering parenting & family for an engaged, national audience. Known for parenting and clear, trusted reporting.",
+    "priorOutlets": [
+      "Vice News"
+    ],
+    "primaryBeat": "Parenting & Family",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "Murrow Award",
+      "Peabody Award"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Use-with-context",
+    "categoryAffinities": [
+      "Parenting",
+      "Pets",
+      "Music"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-04-15",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Mateo%20Okafor&size=300"
+  },
+  {
+    "id": "CR-175",
+    "name": "Talia Kessler",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Talia Kessler is a parenting journalist and creator, formerly of Reuters, covering parenting & family for an engaged, national audience. Known for pets and clear, trusted reporting.",
+    "priorOutlets": [
+      "Reuters",
+      "The Atlantic"
+    ],
+    "primaryBeat": "Parenting & Family",
+    "homeMarketDMA": "Tampa",
+    "trustSignals": [],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Pets",
+      "Home & Garden",
+      "Science"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-05-15",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Talia%20Kessler&size=300"
+  },
+  {
+    "id": "CR-176",
+    "name": "Adrian Ferreira",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Adrian Ferreira is a parenting journalist and creator, formerly of The Guardian, covering parenting & family for an engaged, national audience. Known for parenting and clear, trusted reporting.",
+    "priorOutlets": [
+      "The Guardian"
+    ],
+    "primaryBeat": "Parenting & Family",
+    "homeMarketDMA": "New York",
+    "trustSignals": [
+      "Emmy Award",
+      "Verified"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Use-with-context",
+    "categoryAffinities": [
+      "Parenting",
+      "Home & Garden",
+      "Pets"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-05-12",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Adrian%20Ferreira&size=300"
+  },
+  {
+    "id": "CR-177",
+    "name": "Anika Carrington",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Anika Carrington is a parenting journalist and creator, formerly of ABC News, covering parenting & family for an engaged, national audience. Known for parenting and clear, trusted reporting.",
+    "priorOutlets": [
+      "ABC News",
+      "Time"
+    ],
+    "primaryBeat": "Parenting & Family",
+    "homeMarketDMA": "National",
+    "trustSignals": [],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Use-with-context",
+    "categoryAffinities": [
+      "Parenting",
+      "Pets",
+      "Consumer Tech"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-03-12",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Anika%20Carrington&size=300"
+  },
+  {
+    "id": "CR-178",
+    "name": "Ingrid Calloway",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Ingrid Calloway is a parenting journalist and creator, formerly of Time, covering parenting & family for an engaged, national audience. Known for parenting and clear, trusted reporting.",
+    "priorOutlets": [
+      "Time",
+      "CNN"
+    ],
+    "primaryBeat": "Parenting & Family",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "Emmy Award"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Parenting",
+      "Pets",
+      "Travel"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-04-27",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Ingrid%20Calloway&size=300"
+  },
+  {
+    "id": "CR-179",
+    "name": "Hugo Nawaz",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Hugo Nawaz is a parenting journalist and creator, formerly of The Guardian, covering parenting & family for an engaged, national audience. Known for pets and clear, trusted reporting.",
+    "priorOutlets": [
+      "The Guardian",
+      "NBC News"
+    ],
+    "primaryBeat": "Parenting & Family",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "Webby Award"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Pets",
+      "Home & Garden",
+      "Gaming"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-01-26",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Hugo%20Nawaz&size=300"
+  },
+  {
+    "id": "CR-180",
+    "name": "Owen Lockwood",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Owen Lockwood is a parenting journalist and creator, formerly of ABC News, covering parenting & family for an engaged, national audience. Known for parenting and clear, trusted reporting.",
+    "priorOutlets": [
+      "ABC News"
+    ],
+    "primaryBeat": "Parenting & Family",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "Emmy Award",
+      "Verified"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Parenting",
+      "Pets",
+      "Books & Literature"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-02-18",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Owen%20Lockwood&size=300"
+  },
+  {
+    "id": "CR-181",
+    "name": "Bianca Bauer",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Bianca Bauer is a local journalist and creator, formerly of The New York Times, covering local & regional news for an engaged, national audience. Known for food & cooking and clear, trusted reporting.",
+    "priorOutlets": [
+      "The New York Times"
+    ],
+    "primaryBeat": "Local & Regional News",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "Emmy Award",
+      "SPJ Award"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Food & Cooking",
+      "Home & Garden",
+      "Books & Literature"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-04-28",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Bianca%20Bauer&size=300"
+  },
+  {
+    "id": "CR-182",
+    "name": "Malik Dovan",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Malik Dovan is a local journalist and creator, formerly of The Washington Post, covering local & regional news for an engaged, national audience. Known for home & garden and clear, trusted reporting.",
+    "priorOutlets": [
+      "The Washington Post",
+      "The New York Times"
+    ],
+    "primaryBeat": "Local & Regional News",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "Verified",
+      "Peabody Award"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Home & Garden",
+      "Food & Cooking",
+      "Books & Literature"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-04-26",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Malik%20Dovan&size=300"
+  },
+  {
+    "id": "CR-183",
+    "name": "Maren Vance",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Maren Vance is a local journalist and creator, formerly of NBC News, covering local & regional news for an engaged, national audience. Known for food & cooking and clear, trusted reporting.",
+    "priorOutlets": [
+      "NBC News",
+      "Time"
+    ],
+    "primaryBeat": "Local & Regional News",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "Webby Award",
+      "Murrow Award"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Use-with-context",
+    "categoryAffinities": [
+      "Food & Cooking",
+      "Home & Garden",
+      "Books & Literature"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-03-10",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Maren%20Vance&size=300"
+  },
+  {
+    "id": "CR-184",
+    "name": "Damon Abara",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Damon Abara is a local journalist and creator, formerly of NPR, covering local & regional news for an engaged, national audience. Known for home & garden and clear, trusted reporting.",
+    "priorOutlets": [
+      "NPR"
+    ],
+    "primaryBeat": "Local & Regional News",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "Verified",
+      "Pulitzer Finalist"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Home & Garden",
+      "Food & Cooking",
+      "Wellness"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-01-27",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Damon%20Abara&size=300"
+  },
+  {
+    "id": "CR-185",
+    "name": "Soledad Haddad",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Soledad Haddad is a local journalist and creator, formerly of NPR, covering local & regional news for an engaged, national audience. Known for food & cooking and clear, trusted reporting.",
+    "priorOutlets": [
+      "NPR",
+      "The New York Times"
+    ],
+    "primaryBeat": "Local & Regional News",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "Verified"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Food & Cooking",
+      "Home & Garden",
+      "Science"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-02-19",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Soledad%20Haddad&size=300"
+  },
+  {
+    "id": "CR-186",
+    "name": "Carmen Voss",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Carmen Voss is a local journalist and creator, formerly of BuzzFeed News, covering local & regional news for an engaged, national audience. Known for home & garden and clear, trusted reporting.",
+    "priorOutlets": [
+      "BuzzFeed News",
+      "NPR"
+    ],
+    "primaryBeat": "Local & Regional News",
+    "homeMarketDMA": "National",
+    "trustSignals": [],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Home & Garden",
+      "Food & Cooking",
+      "Gaming"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-01-10",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Carmen%20Voss&size=300"
+  },
+  {
+    "id": "CR-187",
+    "name": "Heidi Brennan",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Heidi Brennan is a local journalist and creator, formerly of NBC News, covering local & regional news for an engaged, national audience. Known for home & garden and clear, trusted reporting.",
+    "priorOutlets": [
+      "NBC News"
+    ],
+    "primaryBeat": "Local & Regional News",
+    "homeMarketDMA": "National",
+    "trustSignals": [],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Home & Garden",
+      "Food & Cooking",
+      "Travel"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-03-28",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Heidi%20Brennan&size=300"
+  },
+  {
+    "id": "CR-188",
+    "name": "Asher Ferreira",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Asher Ferreira is a local journalist and creator, formerly of Time, covering local & regional news for an engaged, national audience. Known for food & cooking and clear, trusted reporting.",
+    "priorOutlets": [
+      "Time"
+    ],
+    "primaryBeat": "Local & Regional News",
+    "homeMarketDMA": "New York",
+    "trustSignals": [
+      "Peabody Award",
+      "Verified"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Food & Cooking",
+      "Home & Garden",
+      "Travel"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-05-16",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Asher%20Ferreira&size=300"
+  },
+  {
+    "id": "CR-189",
+    "name": "Priya Stein",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Priya Stein is a education journalist and creator, formerly of Vice News, covering education for an engaged, national audience. Known for science and clear, trusted reporting.",
+    "priorOutlets": [
+      "Vice News",
+      "CNN"
+    ],
+    "primaryBeat": "Education",
+    "homeMarketDMA": "National",
+    "trustSignals": [],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Use-with-context",
+    "categoryAffinities": [
+      "Science",
+      "Books & Literature",
+      "Pets"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-03-15",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Priya%20Stein&size=300"
+  },
+  {
+    "id": "CR-190",
+    "name": "Layla Ishikawa",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Layla Ishikawa is a education journalist and creator, formerly of Axios, covering education for an engaged, national audience. Known for science and clear, trusted reporting.",
+    "priorOutlets": [
+      "Axios",
+      "PBS NewsHour"
+    ],
+    "primaryBeat": "Education",
+    "homeMarketDMA": "Phoenix",
+    "trustSignals": [
+      "Peabody Award"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Science",
+      "Books & Literature",
+      "Travel"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-02-17",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Layla%20Ishikawa&size=300"
+  },
+  {
+    "id": "CR-191",
+    "name": "Lucas Escobar",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Lucas Escobar is a education journalist and creator, formerly of Newsweek, covering education for an engaged, national audience. Known for books & literature and clear, trusted reporting.",
+    "priorOutlets": [
+      "Newsweek"
+    ],
+    "primaryBeat": "Education",
+    "homeMarketDMA": "Denver",
+    "trustSignals": [],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Books & Literature",
+      "Science",
+      "Personal Finance"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-02-15",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Lucas%20Escobar&size=300"
+  },
+  {
+    "id": "CR-192",
+    "name": "Maya Ishikawa",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Maya Ishikawa is a education journalist and creator, formerly of The Atlantic, covering education for an engaged, national audience. Known for books & literature and clear, trusted reporting.",
+    "priorOutlets": [
+      "The Atlantic",
+      "Reuters"
+    ],
+    "primaryBeat": "Education",
+    "homeMarketDMA": "Salt Lake City",
+    "trustSignals": [],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Books & Literature",
+      "Science",
+      "Arts & Design"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-01-26",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Maya%20Ishikawa&size=300"
+  },
+  {
+    "id": "CR-193",
+    "name": "Diego Adeyemi",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Diego Adeyemi is a education journalist and creator, formerly of BuzzFeed News, covering education for an engaged, national audience. Known for science and clear, trusted reporting.",
+    "priorOutlets": [
+      "BuzzFeed News",
+      "NPR"
+    ],
+    "primaryBeat": "Education",
+    "homeMarketDMA": "Atlanta",
+    "trustSignals": [
+      "SPJ Award",
+      "Peabody Award"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Science",
+      "Books & Literature",
+      "Wellness"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-01-11",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Diego%20Adeyemi&size=300"
+  },
+  {
+    "id": "CR-194",
+    "name": "Hannah Cho",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Hannah Cho is a education journalist and creator, formerly of NBC News, covering education for an engaged, national audience. Known for science and clear, trusted reporting.",
+    "priorOutlets": [
+      "NBC News",
+      "Axios"
+    ],
+    "primaryBeat": "Education",
+    "homeMarketDMA": "Boston",
+    "trustSignals": [
+      "Murrow Award",
+      "Verified"
+    ],
+    "politicalLean": "Nonpartisan",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Science",
+      "Books & Literature",
+      "Fitness"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-03-22",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Hannah%20Cho&size=300"
+  },
+  {
+    "id": "CR-195",
+    "name": "Anaya Wexler",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Anaya Wexler is a media journalist and creator, formerly of The Guardian, covering media & tech policy for an engaged, national audience. Known for books & literature and clear, trusted reporting.",
+    "priorOutlets": [
+      "The Guardian"
+    ],
+    "primaryBeat": "Media & Tech Policy",
+    "homeMarketDMA": "Atlanta",
+    "trustSignals": [
+      "Webby Award",
+      "Murrow Award"
+    ],
+    "politicalLean": "Center-Right",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Books & Literature",
+      "Consumer Tech",
+      "Gaming"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-04-21",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Anaya%20Wexler&size=300"
+  },
+  {
+    "id": "CR-196",
+    "name": "Kenji Sorensen",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Kenji Sorensen is a media journalist and creator, formerly of PBS NewsHour, covering media & tech policy for an engaged, national audience. Known for consumer tech and clear, trusted reporting.",
+    "priorOutlets": [
+      "PBS NewsHour",
+      "Time"
+    ],
+    "primaryBeat": "Media & Tech Policy",
+    "homeMarketDMA": "Kansas City",
+    "trustSignals": [
+      "Webby Award"
+    ],
+    "politicalLean": "Center-Left",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Consumer Tech",
+      "Books & Literature",
+      "Wellness"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-01-23",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Kenji%20Sorensen&size=300"
+  },
+  {
+    "id": "CR-197",
+    "name": "Theo Calloway",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Theo Calloway is a media journalist and creator, formerly of WIRED, covering media & tech policy for an engaged, national audience. Known for consumer tech and clear, trusted reporting.",
+    "priorOutlets": [
+      "WIRED"
+    ],
+    "primaryBeat": "Media & Tech Policy",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "Peabody Award"
+    ],
+    "politicalLean": "Center",
+    "brandSafetyTier": "Premium",
+    "categoryAffinities": [
+      "Consumer Tech",
+      "Books & Literature",
+      "Home & Garden"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-05-19",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Theo%20Calloway&size=300"
+  },
+  {
+    "id": "CR-198",
+    "name": "Soledad Albright",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Soledad Albright is a media journalist and creator, formerly of The Guardian, covering media & tech policy for an engaged, national audience. Known for consumer tech and clear, trusted reporting.",
+    "priorOutlets": [
+      "The Guardian",
+      "The Wall Street Journal"
+    ],
+    "primaryBeat": "Media & Tech Policy",
+    "homeMarketDMA": "San Francisco Bay Area",
+    "trustSignals": [
+      "Peabody Award",
+      "Webby Award"
+    ],
+    "politicalLean": "Center",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Consumer Tech",
+      "Books & Literature",
+      "Fashion"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-02-11",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Soledad%20Albright&size=300"
+  },
+  {
+    "id": "CR-199",
+    "name": "Phoebe Cho",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Phoebe Cho is a media journalist and creator, formerly of Reuters, covering media & tech policy for an engaged, national audience. Known for consumer tech and clear, trusted reporting.",
+    "priorOutlets": [
+      "Reuters",
+      "ABC News"
+    ],
+    "primaryBeat": "Media & Tech Policy",
+    "homeMarketDMA": "San Francisco Bay Area",
+    "trustSignals": [
+      "Webby Award"
+    ],
+    "politicalLean": "Left",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Consumer Tech",
+      "Books & Literature",
+      "Parenting"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-01-27",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Phoebe%20Cho&size=300"
+  },
+  {
+    "id": "CR-200",
+    "name": "Liam Achterberg",
+    "personaType": "Fictional",
+    "isDemoPersona": true,
+    "bio": "Liam Achterberg is a media journalist and creator, formerly of Time, covering media & tech policy for an engaged, national audience. Known for books & literature and clear, trusted reporting.",
+    "priorOutlets": [
+      "Time",
+      "The Washington Post"
+    ],
+    "primaryBeat": "Media & Tech Policy",
+    "homeMarketDMA": "National",
+    "trustSignals": [
+      "Emmy Award"
+    ],
+    "politicalLean": "Left",
+    "brandSafetyTier": "Standard",
+    "categoryAffinities": [
+      "Books & Literature",
+      "Consumer Tech",
+      "Arts & Design"
+    ],
+    "status": "Active",
+    "applicationFeePaid": true,
+    "dateApproved": "2026-04-13",
+    "headshot": "https://api.dicebear.com/7.x/personas/png?seed=Liam%20Achterberg&size=300"
+  }
+]

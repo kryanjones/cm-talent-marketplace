@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * BRAND.md — Collective Media design tokens.
+ * This is the single source of truth for color, type, spacing, radius, and
+ * motion. Re-skinning the app is a change to this block only.
+ */
+:root {
+  /* Color — palette */
+  --cm-white: #ffffff;
+  --cm-light-grey: #f3f3f6;
+  --cm-red: #ff4c2d;
+  --cm-black: #000000;
+  --cm-placeholder-grey: #cfcfcf;
+  --cm-indigo: #544cfc;
+  --cm-sage: #bed5be;
+
+  /* Color — functional aliases */
+  --cm-bg: var(--cm-white);
+  --cm-bg-alt: var(--cm-light-grey);
+  --cm-accent: var(--cm-red);
+  --cm-ink: var(--cm-black);
+  --cm-ink-inverse: var(--cm-white);
+  --cm-hairline: rgba(0, 0, 0, 0.12);
+
+  /* Color — semantic (restrained defaults; not in the core system) */
+  --cm-success: #1a7a4a;
+  --cm-warning: #b45309;
+  --cm-error: #ff4c2d;
+  --cm-info: #544cfc;
+
+  /* Typography — families (next/font supplies the variable values) */
+  --cm-font-serif: var(--font-serif), "Playfair Display", Georgia, serif;
+  --cm-font-sans: var(--font-sans), "Helvetica Neue", Arial, sans-serif;
+  --cm-font-mono: var(--font-mono), "Spline Sans Mono", ui-monospace, monospace;
+
+  /* Spacing */
+  --cm-space-unit: 8px;
+  --cm-slide-gutter: 60px;
+
+  /* Shape */
+  --cm-radius: 0px;
+
+  /* Motion */
+  --cm-ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --cm-dur-micro: 120ms;
+  --cm-dur-standard: 280ms;
+  --cm-dur-expressive: 450ms;
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    background-color: var(--cm-bg);
+    color: var(--cm-ink);
+    font-family: var(--cm-font-sans);
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  /* Backgrounds are always light. Black is editorial-only — never a page bg. */
+  ::selection {
+    background: var(--cm-accent);
+    color: var(--cm-ink-inverse);
+  }
+}
+
+@layer components {
+  /* --- Type helpers, mirroring BRAND.md helper classes --- */
+  .cm-serif { font-family: var(--cm-font-serif); font-weight: 400; }
+  .cm-sans { font-family: var(--cm-font-sans); }
+  .cm-mono { font-family: var(--cm-font-mono); }
+
+  .cm-display {
+    font-family: var(--cm-font-serif);
+    font-weight: 400;
+    font-size: clamp(3.5rem, 8vw, 6rem);
+    line-height: 1;
+    letter-spacing: -0.015em;
+  }
+  .cm-title {
+    font-family: var(--cm-font-serif);
+    font-weight: 400;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+  .cm-h1 {
+    font-family: var(--cm-font-sans);
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 1.04;
+    letter-spacing: -0.02em;
+  }
+  .cm-h2 {
+    font-family: var(--cm-font-sans);
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+  .cm-h3 {
+    font-family: var(--cm-font-sans);
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+  }
+  .cm-body { font-family: var(--cm-font-sans); font-weight: 400; }
+  /* Eyebrows / roles / captions — mono, uppercase, tracked out */
+  .cm-label {
+    font-family: var(--cm-font-mono);
+    font-weight: 400;
+    font-size: 0.8125rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .cm-fine {
+    font-family: var(--cm-font-mono);
+    font-weight: 400;
+    font-size: 0.6875rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  /* Signature red rule — 6px tall, 64px wide */
+  .cm-rule-red {
+    display: block;
+    height: 6px;
+    width: 64px;
+    background: var(--cm-accent);
+  }
+
+  /* Hairline divider */
+  .cm-hairline {
+    border-color: var(--cm-hairline);
+  }
+}
+
+/* Respect reduced-motion preference globally. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Thin, editorial scrollbars for the bundle/criteria panels */
+.cm-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: var(--cm-placeholder-grey) transparent;
+}
+.cm-scroll::-webkit-scrollbar { width: 8px; height: 8px; }
+.cm-scroll::-webkit-scrollbar-thumb {
+  background: var(--cm-placeholder-grey);
+}
+.cm-scroll::-webkit-scrollbar-track { background: transparent; }

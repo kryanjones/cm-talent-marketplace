@@ -1,0 +1,3383 @@
+[
+  {
+    "id": "BB-001",
+    "creatorId": "CR-001",
+    "creatorName": "Patrick Salinas",
+    "noGoCategories": [
+      "Crypto",
+      "Political Advocacy"
+    ],
+    "conditionalCategories": [
+      "Pharma",
+      "Tobacco"
+    ],
+    "conditionsNotes": "No category exclusivity offered.",
+    "pastBrandPartners": "Squarespace, Delta",
+    "activeExclusivities": "Auto category through 2026-08-15",
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-002",
+    "creatorId": "CR-002",
+    "creatorName": "Diego Quinn",
+    "noGoCategories": [
+      "Alcohol",
+      "Political Advocacy"
+    ],
+    "conditionalCategories": [
+      "Crypto"
+    ],
+    "conditionsNotes": "Sponsor dollars only on sensitive topics.",
+    "pastBrandPartners": "Allbirds",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-003",
+    "creatorId": "CR-003",
+    "creatorName": "Grace Nakamura",
+    "noGoCategories": [
+      "Political Advocacy",
+      "Sports Betting"
+    ],
+    "conditionalCategories": [
+      "Fast Food"
+    ],
+    "conditionsNotes": "Sponsor dollars only on sensitive topics.",
+    "pastBrandPartners": "Fidelity",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-004",
+    "creatorId": "CR-004",
+    "creatorName": "Heidi Pruitt",
+    "noGoCategories": [
+      "Fast Food",
+      "Gambling",
+      "Political Advocacy",
+      "Sports Betting"
+    ],
+    "conditionalCategories": [
+      "Political Advocacy",
+      "Tobacco"
+    ],
+    "conditionsNotes": "Will run but no talent ad-read.",
+    "pastBrandPartners": "Bose, Fidelity, Allbirds",
+    "activeExclusivities": "Auto category through 2026-08-15",
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-005",
+    "creatorId": "CR-005",
+    "creatorName": "Dana Maguire",
+    "noGoCategories": [
+      "Payday Loans",
+      "Political Advocacy"
+    ],
+    "conditionalCategories": [
+      "Tobacco"
+    ],
+    "conditionsNotes": "Sponsor dollars only on sensitive topics.",
+    "pastBrandPartners": "Casper, Notion, Allbirds",
+    "activeExclusivities": "Telecom through 2026-12-31",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-006",
+    "creatorId": "CR-006",
+    "creatorName": "Theo Crews",
+    "noGoCategories": [
+      "Crypto",
+      "Fast Food",
+      "Political Advocacy",
+      "Tobacco"
+    ],
+    "conditionalCategories": [
+      "Adult Content",
+      "Alcohol"
+    ],
+    "conditionsNotes": "Sponsor dollars only on sensitive topics.",
+    "pastBrandPartners": "Athletic Greens",
+    "activeExclusivities": "Finance category through 2026-09-30",
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-007",
+    "creatorId": "CR-007",
+    "creatorName": "Carmen Kessler",
+    "noGoCategories": [
+      "Political Advocacy",
+      "Weapons"
+    ],
+    "conditionalCategories": [
+      "Political Advocacy",
+      "Tobacco"
+    ],
+    "conditionsNotes": "Sponsor dollars only on sensitive topics.",
+    "pastBrandPartners": "Casper, Chase",
+    "activeExclusivities": "Finance category through 2026-09-30",
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-008",
+    "creatorId": "CR-008",
+    "creatorName": "Elena Delgado",
+    "noGoCategories": [
+      "Payday Loans",
+      "Political Advocacy",
+      "Tobacco"
+    ],
+    "conditionalCategories": [
+      "Fast Fashion"
+    ],
+    "conditionsNotes": "Open to integrated reads with 2-week review.",
+    "pastBrandPartners": "Squarespace, Delta, Notion",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-009",
+    "creatorId": "CR-009",
+    "creatorName": "Nathan Haddad",
+    "noGoCategories": [
+      "Payday Loans",
+      "Political Advocacy"
+    ],
+    "conditionalCategories": [
+      "Sports Betting"
+    ],
+    "conditionsNotes": "Sponsor dollars only on sensitive topics.",
+    "pastBrandPartners": "Chase",
+    "activeExclusivities": "Finance category through 2026-09-30",
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-010",
+    "creatorId": "CR-010",
+    "creatorName": "Nadia Donnelly",
+    "noGoCategories": [
+      "Gambling",
+      "Political Advocacy"
+    ],
+    "conditionalCategories": [
+      "Crypto",
+      "Payday Loans"
+    ],
+    "conditionsNotes": "No category exclusivity offered.",
+    "pastBrandPartners": "Squarespace, Notion",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-011",
+    "creatorId": "CR-011",
+    "creatorName": "Jordan Sorensen",
+    "noGoCategories": [
+      "Adult Content",
+      "Political Advocacy"
+    ],
+    "conditionalCategories": [
+      "Fast Food"
+    ],
+    "conditionsNotes": "Sponsor dollars only on sensitive topics.",
+    "pastBrandPartners": "Mailchimp, Delta",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-012",
+    "creatorId": "CR-012",
+    "creatorName": "Beatriz Bauer",
+    "noGoCategories": [
+      "Crypto",
+      "Political Advocacy",
+      "Weapons"
+    ],
+    "conditionalCategories": [
+      "Gambling",
+      "Pharma"
+    ],
+    "conditionsNotes": "Sponsor dollars only on sensitive topics.",
+    "pastBrandPartners": "Fidelity, Allbirds, Squarespace",
+    "activeExclusivities": "Finance category through 2026-09-30",
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-013",
+    "creatorId": "CR-013",
+    "creatorName": "Roman Halloran",
+    "noGoCategories": [
+      "Adult Content",
+      "Fast Fashion",
+      "Pharma",
+      "Political Advocacy"
+    ],
+    "conditionalCategories": [
+      "Tobacco"
+    ],
+    "conditionsNotes": "Sponsor dollars only on sensitive topics.",
+    "pastBrandPartners": "Allbirds, Notion",
+    "activeExclusivities": "Finance category through 2026-09-30",
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-014",
+    "creatorId": "CR-014",
+    "creatorName": "Chloe Bashir",
+    "noGoCategories": [
+      "Pharma",
+      "Political Advocacy"
+    ],
+    "conditionalCategories": [
+      "Alcohol"
+    ],
+    "conditionsNotes": "Sponsor dollars only on sensitive topics.",
+    "pastBrandPartners": "Fidelity, Toyota, Allbirds",
+    "activeExclusivities": "Finance category through 2026-09-30",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-015",
+    "creatorId": "CR-015",
+    "creatorName": "Damon Salinas",
+    "noGoCategories": [
+      "Fast Food",
+      "Payday Loans",
+      "Political Advocacy",
+      "Tobacco"
+    ],
+    "conditionalCategories": [
+      "Gambling",
+      "Weapons"
+    ],
+    "conditionsNotes": "No category exclusivity offered.",
+    "pastBrandPartners": "Casper, Mailchimp",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-016",
+    "creatorId": "CR-016",
+    "creatorName": "Theo Tran",
+    "noGoCategories": [
+      "Fast Food",
+      "Payday Loans",
+      "Pharma",
+      "Political Advocacy"
+    ],
+    "conditionalCategories": [
+      "Fast Fashion"
+    ],
+    "conditionsNotes": "No category exclusivity offered.",
+    "pastBrandPartners": "Squarespace, Patagonia, Mailchimp",
+    "activeExclusivities": "Telecom through 2026-12-31",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-017",
+    "creatorId": "CR-017",
+    "creatorName": "Damon Quinn",
+    "noGoCategories": [
+      "Fast Fashion",
+      "Political Advocacy"
+    ],
+    "conditionalCategories": [
+      "Alcohol"
+    ],
+    "conditionsNotes": "Sponsor dollars only on sensitive topics.",
+    "pastBrandPartners": "Bose, Delta, Patagonia",
+    "activeExclusivities": "Telecom through 2026-12-31",
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-018",
+    "creatorId": "CR-018",
+    "creatorName": "Grace Rios",
+    "noGoCategories": [
+      "Fast Fashion",
+      "Gambling",
+      "Political Advocacy",
+      "Tobacco"
+    ],
+    "conditionalCategories": [
+      "Crypto",
+      "Sports Betting"
+    ],
+    "conditionsNotes": "Sponsor dollars only on sensitive topics.",
+    "pastBrandPartners": "Chase, Mailchimp, Athletic Greens",
+    "activeExclusivities": "Finance category through 2026-09-30",
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-019",
+    "creatorId": "CR-019",
+    "creatorName": "Omar Sorensen",
+    "noGoCategories": [
+      "Adult Content",
+      "Pharma",
+      "Political Advocacy",
+      "Tobacco"
+    ],
+    "conditionalCategories": [
+      "Crypto",
+      "Fast Food"
+    ],
+    "conditionsNotes": "No category exclusivity offered.",
+    "pastBrandPartners": "Allbirds, Toyota",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-020",
+    "creatorId": "CR-020",
+    "creatorName": "Andre Beaumont",
+    "noGoCategories": [
+      "Adult Content",
+      "Fast Food",
+      "Gambling",
+      "Political Advocacy"
+    ],
+    "conditionalCategories": [
+      "Crypto",
+      "Fast Fashion"
+    ],
+    "conditionsNotes": "Requires editorial separation note.",
+    "pastBrandPartners": "Squarespace",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-021",
+    "creatorId": "CR-021",
+    "creatorName": "Owen Brennan",
+    "noGoCategories": [
+      "Fast Food",
+      "Pharma",
+      "Political Advocacy"
+    ],
+    "conditionalCategories": [
+      "Crypto"
+    ],
+    "conditionsNotes": "No category exclusivity offered.",
+    "pastBrandPartners": "Patagonia",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-022",
+    "creatorId": "CR-022",
+    "creatorName": "Tomas Halloran",
+    "noGoCategories": [
+      "Fast Food",
+      "Gambling",
+      "Political Advocacy"
+    ],
+    "conditionalCategories": [
+      "Weapons"
+    ],
+    "conditionsNotes": "Requires editorial separation note.",
+    "pastBrandPartners": "Patagonia, Bose, Allbirds",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-023",
+    "creatorId": "CR-023",
+    "creatorName": "Selma Mwangi",
+    "noGoCategories": [
+      "Alcohol",
+      "Fast Food"
+    ],
+    "conditionalCategories": [
+      "Gambling",
+      "Weapons"
+    ],
+    "conditionsNotes": "No category exclusivity offered.",
+    "pastBrandPartners": "Notion, Mailchimp",
+    "activeExclusivities": "Telecom through 2026-12-31",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-024",
+    "creatorId": "CR-024",
+    "creatorName": "Phoebe Abara",
+    "noGoCategories": [
+      "Fast Food"
+    ],
+    "conditionalCategories": [
+      "Crypto"
+    ],
+    "conditionsNotes": "Sponsor dollars only on sensitive topics.",
+    "pastBrandPartners": "Notion, Mailchimp, Casper",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-025",
+    "creatorId": "CR-025",
+    "creatorName": "Lucas Pruitt",
+    "noGoCategories": [
+      "Adult Content",
+      "Pharma"
+    ],
+    "conditionalCategories": [
+      "Political Advocacy"
+    ],
+    "conditionsNotes": "Open to integrated reads with 2-week review.",
+    "pastBrandPartners": "Delta, Allbirds",
+    "activeExclusivities": "Auto category through 2026-08-15",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-026",
+    "creatorId": "CR-026",
+    "creatorName": "Damon Tran",
+    "noGoCategories": [
+      "Adult Content",
+      "Fast Fashion"
+    ],
+    "conditionalCategories": [
+      "Crypto"
+    ],
+    "conditionsNotes": "Sponsor dollars only on sensitive topics.",
+    "pastBrandPartners": "Chase, Mailchimp, Toyota",
+    "activeExclusivities": "Finance category through 2026-09-30",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-027",
+    "creatorId": "CR-027",
+    "creatorName": "Farah Petrova",
+    "noGoCategories": [
+      "Alcohol",
+      "Payday Loans",
+      "Sports Betting"
+    ],
+    "conditionalCategories": [
+      "Adult Content",
+      "Political Advocacy"
+    ],
+    "conditionsNotes": "No category exclusivity offered.",
+    "pastBrandPartners": "Delta, Toyota, Casper",
+    "activeExclusivities": "Telecom through 2026-12-31",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-028",
+    "creatorId": "CR-028",
+    "creatorName": "Aisha Sorensen",
+    "noGoCategories": [
+      "Fast Fashion",
+      "Gambling",
+      "Sports Betting"
+    ],
+    "conditionalCategories": [
+      "Fast Food"
+    ],
+    "conditionsNotes": "Will run but no talent ad-read.",
+    "pastBrandPartners": "Toyota, Casper, Fidelity",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-029",
+    "creatorId": "CR-029",
+    "creatorName": "Nadia Tran",
+    "noGoCategories": [
+      "Fast Food",
+      "Gambling",
+      "Payday Loans"
+    ],
+    "conditionalCategories": [
+      "Alcohol",
+      "Crypto"
+    ],
+    "conditionsNotes": "Will run but no talent ad-read.",
+    "pastBrandPartners": "Toyota",
+    "activeExclusivities": "Telecom through 2026-12-31",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-030",
+    "creatorId": "CR-030",
+    "creatorName": "Theo Hartley",
+    "noGoCategories": [
+      "Fast Food"
+    ],
+    "conditionalCategories": [
+      "Adult Content",
+      "Alcohol"
+    ],
+    "conditionsNotes": "Will run but no talent ad-read.",
+    "pastBrandPartners": "Mailchimp, Allbirds, Chase",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-031",
+    "creatorId": "CR-031",
+    "creatorName": "Lila Maddox",
+    "noGoCategories": [
+      "Gambling",
+      "Payday Loans"
+    ],
+    "conditionalCategories": [
+      "Adult Content",
+      "Fast Food"
+    ],
+    "conditionsNotes": "Requires editorial separation note.",
+    "pastBrandPartners": "Fidelity, Casper, Delta",
+    "activeExclusivities": "Finance category through 2026-09-30",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-032",
+    "creatorId": "CR-032",
+    "creatorName": "Heidi Stockton",
+    "noGoCategories": [
+      "Gambling",
+      "Payday Loans"
+    ],
+    "conditionalCategories": [
+      "Adult Content",
+      "Fast Fashion"
+    ],
+    "conditionsNotes": "Will run but no talent ad-read.",
+    "pastBrandPartners": "Athletic Greens, Delta, Squarespace",
+    "activeExclusivities": "Auto category through 2026-08-15",
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-033",
+    "creatorId": "CR-033",
+    "creatorName": "Saanvi Orozco",
+    "noGoCategories": [
+      "Fast Food",
+      "Political Advocacy"
+    ],
+    "conditionalCategories": [
+      "Payday Loans"
+    ],
+    "conditionsNotes": "Open to integrated reads with 2-week review.",
+    "pastBrandPartners": "Fidelity, Notion, Patagonia",
+    "activeExclusivities": "Finance category through 2026-09-30",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-034",
+    "creatorId": "CR-034",
+    "creatorName": "Damon Ngata",
+    "noGoCategories": [
+      "Adult Content"
+    ],
+    "conditionalCategories": [
+      "Gambling"
+    ],
+    "conditionsNotes": "Sponsor dollars only on sensitive topics.",
+    "pastBrandPartners": "Casper, Chase, Toyota",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-035",
+    "creatorId": "CR-035",
+    "creatorName": "Maren Petrova",
+    "noGoCategories": [
+      "Alcohol",
+      "Fast Food"
+    ],
+    "conditionalCategories": [
+      "Crypto"
+    ],
+    "conditionsNotes": "Requires editorial separation note.",
+    "pastBrandPartners": "Athletic Greens, Squarespace",
+    "activeExclusivities": "Auto category through 2026-08-15",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-036",
+    "creatorId": "CR-036",
+    "creatorName": "Vera Donnelly",
+    "noGoCategories": [
+      "Adult Content",
+      "Fast Fashion",
+      "Pharma"
+    ],
+    "conditionalCategories": [
+      "Alcohol",
+      "Tobacco"
+    ],
+    "conditionsNotes": "Sponsor dollars only on sensitive topics.",
+    "pastBrandPartners": "Athletic Greens",
+    "activeExclusivities": "Auto category through 2026-08-15",
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-037",
+    "creatorId": "CR-037",
+    "creatorName": "Lucas Rourke",
+    "noGoCategories": [
+      "Adult Content",
+      "Gambling",
+      "Tobacco"
+    ],
+    "conditionalCategories": [
+      "Fast Fashion",
+      "Fast Food"
+    ],
+    "conditionsNotes": "Will run but no talent ad-read.",
+    "pastBrandPartners": "Mailchimp",
+    "activeExclusivities": "Auto category through 2026-08-15",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-038",
+    "creatorId": "CR-038",
+    "creatorName": "Ronan Delgado",
+    "noGoCategories": [
+      "Alcohol",
+      "Gambling",
+      "Sports Betting"
+    ],
+    "conditionalCategories": [
+      "Fast Food"
+    ],
+    "conditionsNotes": "Will run but no talent ad-read.",
+    "pastBrandPartners": "Chase, Allbirds, Toyota",
+    "activeExclusivities": "Telecom through 2026-12-31",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-039",
+    "creatorId": "CR-039",
+    "creatorName": "Asher Maddox",
+    "noGoCategories": [
+      "Fast Fashion",
+      "Fast Food",
+      "Payday Loans"
+    ],
+    "conditionalCategories": [
+      "Weapons"
+    ],
+    "conditionsNotes": "Will run but no talent ad-read.",
+    "pastBrandPartners": "Athletic Greens, Mailchimp",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-040",
+    "creatorId": "CR-040",
+    "creatorName": "Garrett Wexler",
+    "noGoCategories": [
+      "Gambling",
+      "Pharma"
+    ],
+    "conditionalCategories": [
+      "Crypto",
+      "Fast Food"
+    ],
+    "conditionsNotes": "Sponsor dollars only on sensitive topics.",
+    "pastBrandPartners": "Fidelity, Delta, Patagonia",
+    "activeExclusivities": "Telecom through 2026-12-31",
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-041",
+    "creatorId": "CR-041",
+    "creatorName": "Quentin Beaumont",
+    "noGoCategories": [
+      "Pharma"
+    ],
+    "conditionalCategories": [
+      "Fast Food",
+      "Payday Loans"
+    ],
+    "conditionsNotes": "Requires editorial separation note.",
+    "pastBrandPartners": "Notion, Squarespace",
+    "activeExclusivities": "Finance category through 2026-09-30",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-042",
+    "creatorId": "CR-042",
+    "creatorName": "Margot Nakamura",
+    "noGoCategories": [
+      "Sports Betting",
+      "Weapons"
+    ],
+    "conditionalCategories": [
+      "Political Advocacy",
+      "Tobacco"
+    ],
+    "conditionsNotes": "Sponsor dollars only on sensitive topics.",
+    "pastBrandPartners": "Bose, Casper",
+    "activeExclusivities": "Telecom through 2026-12-31",
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-043",
+    "creatorId": "CR-043",
+    "creatorName": "Kenji Ferreira",
+    "noGoCategories": [
+      "Fast Fashion",
+      "Gambling"
+    ],
+    "conditionalCategories": [
+      "Payday Loans"
+    ],
+    "conditionsNotes": "No category exclusivity offered.",
+    "pastBrandPartners": "Mailchimp",
+    "activeExclusivities": "Finance category through 2026-09-30",
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-044",
+    "creatorId": "CR-044",
+    "creatorName": "Owen Marchetti",
+    "noGoCategories": [
+      "Fast Fashion",
+      "Payday Loans"
+    ],
+    "conditionalCategories": [
+      "Fast Food"
+    ],
+    "conditionsNotes": "Will run but no talent ad-read.",
+    "pastBrandPartners": "Notion",
+    "activeExclusivities": "Telecom through 2026-12-31",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-045",
+    "creatorId": "CR-045",
+    "creatorName": "Garrett Brennan",
+    "noGoCategories": [
+      "Pharma",
+      "Weapons"
+    ],
+    "conditionalCategories": [
+      "Gambling",
+      "Sports Betting"
+    ],
+    "conditionsNotes": "No category exclusivity offered.",
+    "pastBrandPartners": "Allbirds, Patagonia",
+    "activeExclusivities": "Auto category through 2026-08-15",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-046",
+    "creatorId": "CR-046",
+    "creatorName": "Petra Haddad",
+    "noGoCategories": [
+      "Gambling",
+      "Political Advocacy"
+    ],
+    "conditionalCategories": [
+      "Weapons"
+    ],
+    "conditionsNotes": "No category exclusivity offered.",
+    "pastBrandPartners": "Casper",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-047",
+    "creatorId": "CR-047",
+    "creatorName": "Omar Behrend",
+    "noGoCategories": [
+      "Alcohol",
+      "Crypto",
+      "Pharma"
+    ],
+    "conditionalCategories": [
+      "Fast Food",
+      "Political Advocacy"
+    ],
+    "conditionsNotes": "Will run but no talent ad-read.",
+    "pastBrandPartners": "Athletic Greens, Bose, Notion",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-048",
+    "creatorId": "CR-048",
+    "creatorName": "Caleb Carrington",
+    "noGoCategories": [
+      "Pharma",
+      "Political Advocacy"
+    ],
+    "conditionalCategories": [
+      "Adult Content"
+    ],
+    "conditionsNotes": "Will run but no talent ad-read.",
+    "pastBrandPartners": "Notion, Chase, Fidelity",
+    "activeExclusivities": "Telecom through 2026-12-31",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-049",
+    "creatorId": "CR-049",
+    "creatorName": "Phoebe Tran",
+    "noGoCategories": [
+      "Tobacco"
+    ],
+    "conditionalCategories": [
+      "Alcohol",
+      "Weapons"
+    ],
+    "conditionsNotes": "No category exclusivity offered.",
+    "pastBrandPartners": "Notion, Fidelity, Chase",
+    "activeExclusivities": "Auto category through 2026-08-15",
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-050",
+    "creatorId": "CR-050",
+    "creatorName": "Saanvi Fontaine",
+    "noGoCategories": [
+      "Tobacco"
+    ],
+    "conditionalCategories": [
+      "Adult Content",
+      "Fast Fashion"
+    ],
+    "conditionsNotes": "Sponsor dollars only on sensitive topics.",
+    "pastBrandPartners": "Fidelity, Bose",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-051",
+    "creatorId": "CR-051",
+    "creatorName": "Esme Escobar",
+    "noGoCategories": [
+      "Alcohol"
+    ],
+    "conditionalCategories": [
+      "Gambling",
+      "Political Advocacy"
+    ],
+    "conditionsNotes": "Requires editorial separation note.",
+    "pastBrandPartners": "Toyota, Fidelity",
+    "activeExclusivities": "Finance category through 2026-09-30",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-052",
+    "creatorId": "CR-052",
+    "creatorName": "Isaiah Maguire",
+    "noGoCategories": [
+      "Adult Content",
+      "Fast Food",
+      "Weapons"
+    ],
+    "conditionalCategories": [
+      "Payday Loans"
+    ],
+    "conditionsNotes": "Open to integrated reads with 2-week review.",
+    "pastBrandPartners": "Delta, Patagonia, Athletic Greens",
+    "activeExclusivities": "Telecom through 2026-12-31",
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-053",
+    "creatorId": "CR-053",
+    "creatorName": "Maren Nakamura",
+    "noGoCategories": [
+      "Adult Content",
+      "Alcohol",
+      "Sports Betting"
+    ],
+    "conditionalCategories": [
+      "Payday Loans"
+    ],
+    "conditionsNotes": "Requires editorial separation note.",
+    "pastBrandPartners": "Fidelity, Squarespace, Allbirds",
+    "activeExclusivities": "Auto category through 2026-08-15",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-054",
+    "creatorId": "CR-054",
+    "creatorName": "Jordan Salinas",
+    "noGoCategories": [
+      "Tobacco"
+    ],
+    "conditionalCategories": [
+      "Alcohol",
+      "Fast Fashion"
+    ],
+    "conditionsNotes": "Will run but no talent ad-read.",
+    "pastBrandPartners": "Squarespace, Notion, Athletic Greens",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-055",
+    "creatorId": "CR-055",
+    "creatorName": "Simone Cho",
+    "noGoCategories": [
+      "Adult Content",
+      "Tobacco"
+    ],
+    "conditionalCategories": [
+      "Political Advocacy"
+    ],
+    "conditionsNotes": "No category exclusivity offered.",
+    "pastBrandPartners": "Allbirds, Patagonia, Squarespace",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-056",
+    "creatorId": "CR-056",
+    "creatorName": "Nadia Bauer",
+    "noGoCategories": [
+      "Pharma"
+    ],
+    "conditionalCategories": [
+      "Crypto",
+      "Sports Betting"
+    ],
+    "conditionsNotes": "No category exclusivity offered.",
+    "pastBrandPartners": "Chase",
+    "activeExclusivities": "Auto category through 2026-08-15",
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-057",
+    "creatorId": "CR-057",
+    "creatorName": "Cole Lindgren",
+    "noGoCategories": [
+      "Alcohol"
+    ],
+    "conditionalCategories": [
+      "Gambling",
+      "Pharma"
+    ],
+    "conditionsNotes": "No category exclusivity offered.",
+    "pastBrandPartners": "Bose, Chase",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-058",
+    "creatorId": "CR-058",
+    "creatorName": "Selma Okonkwo",
+    "noGoCategories": [
+      "Adult Content",
+      "Sports Betting"
+    ],
+    "conditionalCategories": [
+      "Crypto",
+      "Political Advocacy"
+    ],
+    "conditionsNotes": "Will run but no talent ad-read.",
+    "pastBrandPartners": "Toyota, Delta, Athletic Greens",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-059",
+    "creatorId": "CR-059",
+    "creatorName": "Sergio Achterberg",
+    "noGoCategories": [
+      "Political Advocacy"
+    ],
+    "conditionalCategories": [
+      "Pharma",
+      "Sports Betting"
+    ],
+    "conditionsNotes": "Sponsor dollars only on sensitive topics.",
+    "pastBrandPartners": "Athletic Greens",
+    "activeExclusivities": "Auto category through 2026-08-15",
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-060",
+    "creatorId": "CR-060",
+    "creatorName": "Esme Okafor",
+    "noGoCategories": [
+      "Alcohol",
+      "Fast Food",
+      "Sports Betting"
+    ],
+    "conditionalCategories": [
+      "Adult Content",
+      "Weapons"
+    ],
+    "conditionsNotes": "Will run but no talent ad-read.",
+    "pastBrandPartners": "Squarespace, Casper, Patagonia",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-061",
+    "creatorId": "CR-061",
+    "creatorName": "Darius Sharpe",
+    "noGoCategories": [
+      "Adult Content"
+    ],
+    "conditionalCategories": [
+      "Fast Food"
+    ],
+    "conditionsNotes": "Open to integrated reads with 2-week review.",
+    "pastBrandPartners": "Notion, Patagonia",
+    "activeExclusivities": "Finance category through 2026-09-30",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-062",
+    "creatorId": "CR-062",
+    "creatorName": "Spencer Hartley",
+    "noGoCategories": [
+      "Fast Fashion",
+      "Sports Betting",
+      "Tobacco"
+    ],
+    "conditionalCategories": [
+      "Payday Loans"
+    ],
+    "conditionsNotes": "No category exclusivity offered.",
+    "pastBrandPartners": "Notion, Casper, Toyota",
+    "activeExclusivities": "Finance category through 2026-09-30",
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-063",
+    "creatorId": "CR-063",
+    "creatorName": "Renata Maddox",
+    "noGoCategories": [
+      "Adult Content",
+      "Fast Food",
+      "Pharma",
+      "Sports Betting",
+      "Tobacco"
+    ],
+    "conditionalCategories": [
+      "Gambling",
+      "Political Advocacy"
+    ],
+    "conditionsNotes": "Open to integrated reads with 2-week review.",
+    "pastBrandPartners": "Patagonia",
+    "activeExclusivities": "Telecom through 2026-12-31",
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-064",
+    "creatorId": "CR-064",
+    "creatorName": "Theo Kessler",
+    "noGoCategories": [
+      "Crypto",
+      "Fast Food",
+      "Payday Loans",
+      "Pharma",
+      "Tobacco"
+    ],
+    "conditionalCategories": [
+      "Alcohol",
+      "Tobacco"
+    ],
+    "conditionsNotes": "Sponsor dollars only on sensitive topics.",
+    "pastBrandPartners": "Delta",
+    "activeExclusivities": "Auto category through 2026-08-15",
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-065",
+    "creatorId": "CR-065",
+    "creatorName": "Noor Voss",
+    "noGoCategories": [
+      "Fast Food",
+      "Gambling",
+      "Pharma",
+      "Tobacco",
+      "Weapons"
+    ],
+    "conditionalCategories": [
+      "Alcohol",
+      "Fast Fashion"
+    ],
+    "conditionsNotes": "Open to integrated reads with 2-week review.",
+    "pastBrandPartners": "Casper, Mailchimp, Allbirds",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-066",
+    "creatorId": "CR-066",
+    "creatorName": "Ronan Quinn",
+    "noGoCategories": [
+      "Fast Fashion",
+      "Fast Food",
+      "Pharma",
+      "Tobacco",
+      "Weapons"
+    ],
+    "conditionalCategories": [
+      "Tobacco"
+    ],
+    "conditionsNotes": "Sponsor dollars only on sensitive topics.",
+    "pastBrandPartners": "Toyota",
+    "activeExclusivities": "Telecom through 2026-12-31",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-067",
+    "creatorId": "CR-067",
+    "creatorName": "Camille Crews",
+    "noGoCategories": [
+      "Alcohol",
+      "Fast Food",
+      "Pharma",
+      "Sports Betting",
+      "Tobacco",
+      "Weapons"
+    ],
+    "conditionalCategories": [
+      "Crypto"
+    ],
+    "conditionsNotes": "Will run but no talent ad-read.",
+    "pastBrandPartners": "Squarespace, Chase",
+    "activeExclusivities": "Finance category through 2026-09-30",
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-068",
+    "creatorId": "CR-068",
+    "creatorName": "Isaiah Delgado",
+    "noGoCategories": [
+      "Fast Fashion",
+      "Fast Food",
+      "Pharma",
+      "Tobacco"
+    ],
+    "conditionalCategories": [
+      "Alcohol",
+      "Gambling"
+    ],
+    "conditionsNotes": "Sponsor dollars only on sensitive topics.",
+    "pastBrandPartners": "Chase",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-069",
+    "creatorId": "CR-069",
+    "creatorName": "Spencer Bellamy",
+    "noGoCategories": [
+      "Fast Food",
+      "Payday Loans",
+      "Pharma",
+      "Tobacco"
+    ],
+    "conditionalCategories": [
+      "Gambling",
+      "Weapons"
+    ],
+    "conditionsNotes": "Will run but no talent ad-read.",
+    "pastBrandPartners": "Bose",
+    "activeExclusivities": "Telecom through 2026-12-31",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-070",
+    "creatorId": "CR-070",
+    "creatorName": "Trevor Sorensen",
+    "noGoCategories": [
+      "Adult Content",
+      "Fast Food",
+      "Gambling",
+      "Pharma",
+      "Sports Betting",
+      "Tobacco"
+    ],
+    "conditionalCategories": [
+      "Fast Food",
+      "Political Advocacy"
+    ],
+    "conditionsNotes": "Sponsor dollars only on sensitive topics.",
+    "pastBrandPartners": "Bose, Squarespace",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-071",
+    "creatorId": "CR-071",
+    "creatorName": "Wesley Achterberg",
+    "noGoCategories": [
+      "Fast Food",
+      "Pharma",
+      "Tobacco"
+    ],
+    "conditionalCategories": [
+      "Pharma"
+    ],
+    "conditionsNotes": "No category exclusivity offered.",
+    "pastBrandPartners": "Chase",
+    "activeExclusivities": "Finance category through 2026-09-30",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-072",
+    "creatorId": "CR-072",
+    "creatorName": "Andre Abara",
+    "noGoCategories": [
+      "Fast Food",
+      "Gambling",
+      "Pharma",
+      "Political Advocacy",
+      "Tobacco"
+    ],
+    "conditionalCategories": [
+      "Alcohol",
+      "Sports Betting"
+    ],
+    "conditionsNotes": "Will run but no talent ad-read.",
+    "pastBrandPartners": "Mailchimp, Casper",
+    "activeExclusivities": "Telecom through 2026-12-31",
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-073",
+    "creatorId": "CR-073",
+    "creatorName": "Nathan Stein",
+    "noGoCategories": [
+      "Crypto",
+      "Fast Food",
+      "Pharma",
+      "Tobacco"
+    ],
+    "conditionalCategories": [
+      "Political Advocacy"
+    ],
+    "conditionsNotes": "Requires editorial separation note.",
+    "pastBrandPartners": "Chase, Notion, Athletic Greens",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-074",
+    "creatorId": "CR-074",
+    "creatorName": "Greta Lindqvist",
+    "noGoCategories": [
+      "Adult Content",
+      "Fast Food",
+      "Gambling",
+      "Payday Loans",
+      "Pharma",
+      "Tobacco"
+    ],
+    "conditionalCategories": [
+      "Pharma",
+      "Tobacco"
+    ],
+    "conditionsNotes": "No category exclusivity offered.",
+    "pastBrandPartners": "Bose, Patagonia",
+    "activeExclusivities": "Auto category through 2026-08-15",
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-075",
+    "creatorId": "CR-075",
+    "creatorName": "Owen Sharpe",
+    "noGoCategories": [
+      "Crypto",
+      "Fast Food",
+      "Gambling",
+      "Pharma",
+      "Tobacco"
+    ],
+    "conditionalCategories": [
+      "Weapons"
+    ],
+    "conditionsNotes": "Open to integrated reads with 2-week review.",
+    "pastBrandPartners": "Chase, Bose",
+    "activeExclusivities": "Auto category through 2026-08-15",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-076",
+    "creatorId": "CR-076",
+    "creatorName": "Ruth Behrend",
+    "noGoCategories": [
+      "Adult Content",
+      "Alcohol",
+      "Fast Food",
+      "Pharma",
+      "Tobacco"
+    ],
+    "conditionalCategories": [
+      "Sports Betting"
+    ],
+    "conditionsNotes": "No category exclusivity offered.",
+    "pastBrandPartners": "Mailchimp, Casper, Squarespace",
+    "activeExclusivities": "Telecom through 2026-12-31",
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-077",
+    "creatorId": "CR-077",
+    "creatorName": "Devin Brennan",
+    "noGoCategories": [
+      "Adult Content",
+      "Fast Food",
+      "Payday Loans",
+      "Pharma",
+      "Tobacco"
+    ],
+    "conditionalCategories": [
+      "Gambling"
+    ],
+    "conditionsNotes": "Open to integrated reads with 2-week review.",
+    "pastBrandPartners": "Delta, Toyota",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-078",
+    "creatorId": "CR-078",
+    "creatorName": "Sofia Adeyemi",
+    "noGoCategories": [
+      "Fast Food",
+      "Gambling",
+      "Payday Loans",
+      "Pharma",
+      "Sports Betting",
+      "Tobacco"
+    ],
+    "conditionalCategories": [
+      "Fast Food"
+    ],
+    "conditionsNotes": "No category exclusivity offered.",
+    "pastBrandPartners": "Patagonia, Chase",
+    "activeExclusivities": "Telecom through 2026-12-31",
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-079",
+    "creatorId": "CR-079",
+    "creatorName": "Diego Rios",
+    "noGoCategories": [
+      "Fast Food",
+      "Pharma",
+      "Tobacco"
+    ],
+    "conditionalCategories": [
+      "Gambling",
+      "Political Advocacy"
+    ],
+    "conditionsNotes": "Sponsor dollars only on sensitive topics.",
+    "pastBrandPartners": "Mailchimp, Casper, Fidelity",
+    "activeExclusivities": "Auto category through 2026-08-15",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-080",
+    "creatorId": "CR-080",
+    "creatorName": "Devin Whitfield",
+    "noGoCategories": [
+      "Sports Betting"
+    ],
+    "conditionalCategories": [
+      "Pharma"
+    ],
+    "conditionsNotes": "Will run but no talent ad-read.",
+    "pastBrandPartners": "Allbirds, Squarespace",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-081",
+    "creatorId": "CR-081",
+    "creatorName": "Petra Lockwood",
+    "noGoCategories": [
+      "Alcohol"
+    ],
+    "conditionalCategories": [
+      "Payday Loans"
+    ],
+    "conditionsNotes": "Will run but no talent ad-read.",
+    "pastBrandPartners": "Bose, Allbirds, Chase",
+    "activeExclusivities": "Telecom through 2026-12-31",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-082",
+    "creatorId": "CR-082",
+    "creatorName": "Ingrid Adeyemi",
+    "noGoCategories": [
+      "Gambling"
+    ],
+    "conditionalCategories": [
+      "Sports Betting"
+    ],
+    "conditionsNotes": "No category exclusivity offered.",
+    "pastBrandPartners": "Patagonia, Fidelity",
+    "activeExclusivities": "Telecom through 2026-12-31",
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-083",
+    "creatorId": "CR-083",
+    "creatorName": "Hugo Beaumont",
+    "noGoCategories": [
+      "Fast Fashion",
+      "Tobacco"
+    ],
+    "conditionalCategories": [
+      "Alcohol",
+      "Payday Loans"
+    ],
+    "conditionsNotes": "Will run but no talent ad-read.",
+    "pastBrandPartners": "Fidelity, Squarespace",
+    "activeExclusivities": "Telecom through 2026-12-31",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-084",
+    "creatorId": "CR-084",
+    "creatorName": "Maya Brennan",
+    "noGoCategories": [
+      "Crypto",
+      "Sports Betting"
+    ],
+    "conditionalCategories": [
+      "Adult Content",
+      "Alcohol"
+    ],
+    "conditionsNotes": "Sponsor dollars only on sensitive topics.",
+    "pastBrandPartners": "Squarespace, Patagonia",
+    "activeExclusivities": "Auto category through 2026-08-15",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-085",
+    "creatorId": "CR-085",
+    "creatorName": "Owen Nawaz",
+    "noGoCategories": [
+      "Crypto",
+      "Tobacco"
+    ],
+    "conditionalCategories": [
+      "Fast Fashion",
+      "Pharma"
+    ],
+    "conditionsNotes": "No category exclusivity offered.",
+    "pastBrandPartners": "Casper, Notion",
+    "activeExclusivities": "Finance category through 2026-09-30",
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-086",
+    "creatorId": "CR-086",
+    "creatorName": "Felix Hartley",
+    "noGoCategories": [
+      "Fast Food"
+    ],
+    "conditionalCategories": [
+      "Adult Content"
+    ],
+    "conditionsNotes": "Requires editorial separation note.",
+    "pastBrandPartners": "Squarespace",
+    "activeExclusivities": "Auto category through 2026-08-15",
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-087",
+    "creatorId": "CR-087",
+    "creatorName": "Roman Calloway",
+    "noGoCategories": [
+      "Crypto",
+      "Sports Betting"
+    ],
+    "conditionalCategories": [
+      "Adult Content"
+    ],
+    "conditionsNotes": "Sponsor dollars only on sensitive topics.",
+    "pastBrandPartners": "Squarespace",
+    "activeExclusivities": "Finance category through 2026-09-30",
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-088",
+    "creatorId": "CR-088",
+    "creatorName": "Bianca Rourke",
+    "noGoCategories": [
+      "Pharma"
+    ],
+    "conditionalCategories": [
+      "Fast Fashion",
+      "Fast Food"
+    ],
+    "conditionsNotes": "No category exclusivity offered.",
+    "pastBrandPartners": "Mailchimp",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-089",
+    "creatorId": "CR-089",
+    "creatorName": "Reid Salinas",
+    "noGoCategories": [
+      "Payday Loans"
+    ],
+    "conditionalCategories": [
+      "Fast Food",
+      "Political Advocacy"
+    ],
+    "conditionsNotes": "Open to integrated reads with 2-week review.",
+    "pastBrandPartners": "Squarespace, Fidelity, Notion",
+    "activeExclusivities": "Auto category through 2026-08-15",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-090",
+    "creatorId": "CR-090",
+    "creatorName": "Anaya Lindgren",
+    "noGoCategories": [
+      "Crypto",
+      "Fast Food",
+      "Sports Betting"
+    ],
+    "conditionalCategories": [
+      "Weapons"
+    ],
+    "conditionsNotes": "Sponsor dollars only on sensitive topics.",
+    "pastBrandPartners": "Chase, Toyota",
+    "activeExclusivities": "Finance category through 2026-09-30",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-091",
+    "creatorId": "CR-091",
+    "creatorName": "Grace Orozco",
+    "noGoCategories": [
+      "Crypto"
+    ],
+    "conditionalCategories": [
+      "Political Advocacy"
+    ],
+    "conditionsNotes": "Will run but no talent ad-read.",
+    "pastBrandPartners": "Squarespace",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-092",
+    "creatorId": "CR-092",
+    "creatorName": "Phoebe Quinn",
+    "noGoCategories": [
+      "Sports Betting"
+    ],
+    "conditionalCategories": [
+      "Pharma",
+      "Weapons"
+    ],
+    "conditionsNotes": "Open to integrated reads with 2-week review.",
+    "pastBrandPartners": "Chase",
+    "activeExclusivities": "Auto category through 2026-08-15",
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-093",
+    "creatorId": "CR-093",
+    "creatorName": "Camille Quinn",
+    "noGoCategories": [
+      "Crypto"
+    ],
+    "conditionalCategories": [
+      "Adult Content"
+    ],
+    "conditionsNotes": "Will run but no talent ad-read.",
+    "pastBrandPartners": "Athletic Greens",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-094",
+    "creatorId": "CR-094",
+    "creatorName": "Camille Pruitt",
+    "noGoCategories": [
+      "Crypto",
+      "Fast Food",
+      "Payday Loans"
+    ],
+    "conditionalCategories": [
+      "Pharma"
+    ],
+    "conditionsNotes": "Requires editorial separation note.",
+    "pastBrandPartners": "Casper, Athletic Greens",
+    "activeExclusivities": "Finance category through 2026-09-30",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-095",
+    "creatorId": "CR-095",
+    "creatorName": "Victor Bashir",
+    "noGoCategories": [
+      "Fast Fashion",
+      "Fast Food",
+      "Gambling"
+    ],
+    "conditionalCategories": [
+      "Weapons"
+    ],
+    "conditionsNotes": "Will run but no talent ad-read.",
+    "pastBrandPartners": "Allbirds, Patagonia",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-096",
+    "creatorId": "CR-096",
+    "creatorName": "Trevor Bauer",
+    "noGoCategories": [
+      "Fast Fashion",
+      "Pharma",
+      "Tobacco"
+    ],
+    "conditionalCategories": [
+      "Alcohol"
+    ],
+    "conditionsNotes": "Will run but no talent ad-read.",
+    "pastBrandPartners": "Athletic Greens",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-097",
+    "creatorId": "CR-097",
+    "creatorName": "Farah Nakamura",
+    "noGoCategories": [
+      "Adult Content",
+      "Political Advocacy",
+      "Tobacco"
+    ],
+    "conditionalCategories": [
+      "Pharma"
+    ],
+    "conditionsNotes": "Open to integrated reads with 2-week review.",
+    "pastBrandPartners": "Squarespace",
+    "activeExclusivities": "Finance category through 2026-09-30",
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-098",
+    "creatorId": "CR-098",
+    "creatorName": "Lila Bellamy",
+    "noGoCategories": [
+      "Payday Loans"
+    ],
+    "conditionalCategories": [
+      "Fast Fashion",
+      "Political Advocacy"
+    ],
+    "conditionsNotes": "No category exclusivity offered.",
+    "pastBrandPartners": "Squarespace, Bose",
+    "activeExclusivities": "Auto category through 2026-08-15",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-099",
+    "creatorId": "CR-099",
+    "creatorName": "Yara Halloran",
+    "noGoCategories": [
+      "Adult Content"
+    ],
+    "conditionalCategories": [
+      "Crypto",
+      "Fast Food"
+    ],
+    "conditionsNotes": "Requires editorial separation note.",
+    "pastBrandPartners": "Allbirds, Toyota",
+    "activeExclusivities": "Auto category through 2026-08-15",
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-100",
+    "creatorId": "CR-100",
+    "creatorName": "Garrett Escobar",
+    "noGoCategories": [
+      "Alcohol",
+      "Tobacco",
+      "Weapons"
+    ],
+    "conditionalCategories": [
+      "Fast Food",
+      "Payday Loans"
+    ],
+    "conditionsNotes": "Will run but no talent ad-read.",
+    "pastBrandPartners": "Mailchimp, Delta",
+    "activeExclusivities": "Finance category through 2026-09-30",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-101",
+    "creatorId": "CR-101",
+    "creatorName": "Grace Pruitt",
+    "noGoCategories": [
+      "Crypto",
+      "Gambling",
+      "Political Advocacy"
+    ],
+    "conditionalCategories": [
+      "Alcohol"
+    ],
+    "conditionsNotes": "No category exclusivity offered.",
+    "pastBrandPartners": "Patagonia",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-102",
+    "creatorId": "CR-102",
+    "creatorName": "Maya Tran",
+    "noGoCategories": [
+      "Crypto",
+      "Fast Food",
+      "Gambling"
+    ],
+    "conditionalCategories": [
+      "Adult Content"
+    ],
+    "conditionsNotes": "Requires editorial separation note.",
+    "pastBrandPartners": "Chase, Squarespace, Allbirds",
+    "activeExclusivities": "Auto category through 2026-08-15",
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-103",
+    "creatorId": "CR-103",
+    "creatorName": "Diego Nawaz",
+    "noGoCategories": [
+      "Alcohol",
+      "Payday Loans"
+    ],
+    "conditionalCategories": [
+      "Adult Content",
+      "Tobacco"
+    ],
+    "conditionsNotes": "Will run but no talent ad-read.",
+    "pastBrandPartners": "Toyota, Chase, Athletic Greens",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-104",
+    "creatorId": "CR-104",
+    "creatorName": "Aisha Salinas",
+    "noGoCategories": [
+      "Adult Content",
+      "Crypto",
+      "Political Advocacy"
+    ],
+    "conditionalCategories": [
+      "Pharma",
+      "Sports Betting"
+    ],
+    "conditionsNotes": "No category exclusivity offered.",
+    "pastBrandPartners": "Squarespace, Notion",
+    "activeExclusivities": "Finance category through 2026-09-30",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-105",
+    "creatorId": "CR-105",
+    "creatorName": "Dana Hartley",
+    "noGoCategories": [
+      "Fast Food",
+      "Payday Loans"
+    ],
+    "conditionalCategories": [
+      "Tobacco"
+    ],
+    "conditionsNotes": "Will run but no talent ad-read.",
+    "pastBrandPartners": "Squarespace, Toyota",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-106",
+    "creatorId": "CR-106",
+    "creatorName": "Marcus Nakamura",
+    "noGoCategories": [
+      "Alcohol",
+      "Political Advocacy"
+    ],
+    "conditionalCategories": [
+      "Gambling",
+      "Sports Betting"
+    ],
+    "conditionsNotes": "Open to integrated reads with 2-week review.",
+    "pastBrandPartners": "Athletic Greens, Allbirds",
+    "activeExclusivities": "Telecom through 2026-12-31",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-107",
+    "creatorId": "CR-107",
+    "creatorName": "Lila Hartley",
+    "noGoCategories": [
+      "Adult Content",
+      "Weapons"
+    ],
+    "conditionalCategories": [
+      "Gambling"
+    ],
+    "conditionsNotes": "No category exclusivity offered.",
+    "pastBrandPartners": "Fidelity, Squarespace",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-108",
+    "creatorId": "CR-108",
+    "creatorName": "Ruth Brennan",
+    "noGoCategories": [
+      "Adult Content",
+      "Alcohol"
+    ],
+    "conditionalCategories": [
+      "Gambling",
+      "Pharma"
+    ],
+    "conditionsNotes": "Requires editorial separation note.",
+    "pastBrandPartners": "Casper",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-109",
+    "creatorId": "CR-109",
+    "creatorName": "Talia Behrend",
+    "noGoCategories": [
+      "Fast Food",
+      "Sports Betting"
+    ],
+    "conditionalCategories": [
+      "Crypto"
+    ],
+    "conditionsNotes": "Will run but no talent ad-read.",
+    "pastBrandPartners": "Patagonia",
+    "activeExclusivities": "Telecom through 2026-12-31",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-110",
+    "creatorId": "CR-110",
+    "creatorName": "Dana Cho",
+    "noGoCategories": [
+      "Fast Fashion"
+    ],
+    "conditionalCategories": [
+      "Sports Betting"
+    ],
+    "conditionsNotes": "Sponsor dollars only on sensitive topics.",
+    "pastBrandPartners": "Delta, Casper, Mailchimp",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-111",
+    "creatorId": "CR-111",
+    "creatorName": "Kenji Halloran",
+    "noGoCategories": [
+      "Fast Fashion",
+      "Political Advocacy",
+      "Sports Betting"
+    ],
+    "conditionalCategories": [
+      "Weapons"
+    ],
+    "conditionsNotes": "Sponsor dollars only on sensitive topics.",
+    "pastBrandPartners": "Notion, Toyota, Athletic Greens",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-112",
+    "creatorId": "CR-112",
+    "creatorName": "Petra Orozco",
+    "noGoCategories": [
+      "Gambling",
+      "Political Advocacy"
+    ],
+    "conditionalCategories": [
+      "Political Advocacy",
+      "Weapons"
+    ],
+    "conditionsNotes": "No category exclusivity offered.",
+    "pastBrandPartners": "Bose, Delta",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-113",
+    "creatorId": "CR-113",
+    "creatorName": "Victor Cho",
+    "noGoCategories": [
+      "Gambling",
+      "Political Advocacy",
+      "Tobacco"
+    ],
+    "conditionalCategories": [
+      "Crypto"
+    ],
+    "conditionsNotes": "Sponsor dollars only on sensitive topics.",
+    "pastBrandPartners": "Squarespace, Chase",
+    "activeExclusivities": "Auto category through 2026-08-15",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-114",
+    "creatorId": "CR-114",
+    "creatorName": "Cole Delgado",
+    "noGoCategories": [
+      "Alcohol",
+      "Political Advocacy",
+      "Sports Betting",
+      "Tobacco"
+    ],
+    "conditionalCategories": [
+      "Fast Fashion",
+      "Weapons"
+    ],
+    "conditionsNotes": "No category exclusivity offered.",
+    "pastBrandPartners": "Chase, Delta",
+    "activeExclusivities": "Finance category through 2026-09-30",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-115",
+    "creatorId": "CR-115",
+    "creatorName": "Hannah Pruitt",
+    "noGoCategories": [
+      "Adult Content",
+      "Crypto",
+      "Political Advocacy"
+    ],
+    "conditionalCategories": [
+      "Pharma"
+    ],
+    "conditionsNotes": "Open to integrated reads with 2-week review.",
+    "pastBrandPartners": "Notion, Bose",
+    "activeExclusivities": "Telecom through 2026-12-31",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-116",
+    "creatorId": "CR-116",
+    "creatorName": "Garrett Dembele",
+    "noGoCategories": [
+      "Adult Content",
+      "Pharma",
+      "Political Advocacy",
+      "Weapons"
+    ],
+    "conditionalCategories": [
+      "Political Advocacy"
+    ],
+    "conditionsNotes": "Sponsor dollars only on sensitive topics.",
+    "pastBrandPartners": "Athletic Greens, Allbirds, Patagonia",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-117",
+    "creatorId": "CR-117",
+    "creatorName": "Hugo Cho",
+    "noGoCategories": [
+      "Adult Content",
+      "Payday Loans",
+      "Political Advocacy",
+      "Weapons"
+    ],
+    "conditionalCategories": [
+      "Fast Food"
+    ],
+    "conditionsNotes": "Open to integrated reads with 2-week review.",
+    "pastBrandPartners": "Mailchimp, Toyota",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-118",
+    "creatorId": "CR-118",
+    "creatorName": "Yara Albright",
+    "noGoCategories": [
+      "Adult Content",
+      "Crypto",
+      "Political Advocacy"
+    ],
+    "conditionalCategories": [
+      "Pharma"
+    ],
+    "conditionsNotes": "Sponsor dollars only on sensitive topics.",
+    "pastBrandPartners": "Delta, Chase, Mailchimp",
+    "activeExclusivities": "Auto category through 2026-08-15",
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-119",
+    "creatorId": "CR-119",
+    "creatorName": "Priya Kessler",
+    "noGoCategories": [
+      "Alcohol",
+      "Fast Fashion",
+      "Political Advocacy"
+    ],
+    "conditionalCategories": [
+      "Tobacco"
+    ],
+    "conditionsNotes": "No category exclusivity offered.",
+    "pastBrandPartners": "Bose, Delta",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-120",
+    "creatorId": "CR-120",
+    "creatorName": "Asher Petrova",
+    "noGoCategories": [
+      "Political Advocacy"
+    ],
+    "conditionalCategories": [
+      "Alcohol",
+      "Fast Fashion"
+    ],
+    "conditionsNotes": "Open to integrated reads with 2-week review.",
+    "pastBrandPartners": "Toyota, Chase, Mailchimp",
+    "activeExclusivities": "Telecom through 2026-12-31",
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-121",
+    "creatorId": "CR-121",
+    "creatorName": "Hannah Rourke",
+    "noGoCategories": [
+      "Alcohol",
+      "Gambling",
+      "Political Advocacy"
+    ],
+    "conditionalCategories": [
+      "Tobacco",
+      "Weapons"
+    ],
+    "conditionsNotes": "Will run but no talent ad-read.",
+    "pastBrandPartners": "Casper",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-122",
+    "creatorId": "CR-122",
+    "creatorName": "Tomas Crews",
+    "noGoCategories": [
+      "Payday Loans",
+      "Political Advocacy"
+    ],
+    "conditionalCategories": [
+      "Political Advocacy",
+      "Sports Betting"
+    ],
+    "conditionsNotes": "Open to integrated reads with 2-week review.",
+    "pastBrandPartners": "Casper, Delta",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-123",
+    "creatorId": "CR-123",
+    "creatorName": "Marcus Carrington",
+    "noGoCategories": [
+      "Alcohol",
+      "Political Advocacy"
+    ],
+    "conditionalCategories": [
+      "Crypto",
+      "Fast Fashion"
+    ],
+    "conditionsNotes": "No category exclusivity offered.",
+    "pastBrandPartners": "Casper, Notion, Toyota",
+    "activeExclusivities": "Finance category through 2026-09-30",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-124",
+    "creatorId": "CR-124",
+    "creatorName": "Asher Mwangi",
+    "noGoCategories": [
+      "Political Advocacy",
+      "Weapons"
+    ],
+    "conditionalCategories": [
+      "Gambling",
+      "Pharma"
+    ],
+    "conditionsNotes": "Requires editorial separation note.",
+    "pastBrandPartners": "Chase, Mailchimp",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-125",
+    "creatorId": "CR-125",
+    "creatorName": "Jordan Rourke",
+    "noGoCategories": [
+      "Fast Food",
+      "Pharma"
+    ],
+    "conditionalCategories": [
+      "Gambling",
+      "Payday Loans"
+    ],
+    "conditionsNotes": "Requires editorial separation note.",
+    "pastBrandPartners": "Delta",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-126",
+    "creatorId": "CR-126",
+    "creatorName": "Hugo Albright",
+    "noGoCategories": [
+      "Fast Food",
+      "Pharma",
+      "Political Advocacy"
+    ],
+    "conditionalCategories": [
+      "Adult Content",
+      "Gambling"
+    ],
+    "conditionsNotes": "Open to integrated reads with 2-week review.",
+    "pastBrandPartners": "Patagonia",
+    "activeExclusivities": "Finance category through 2026-09-30",
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-127",
+    "creatorId": "CR-127",
+    "creatorName": "Dana Crews",
+    "noGoCategories": [
+      "Payday Loans"
+    ],
+    "conditionalCategories": [
+      "Pharma",
+      "Tobacco"
+    ],
+    "conditionsNotes": "Sponsor dollars only on sensitive topics.",
+    "pastBrandPartners": "Toyota, Mailchimp, Chase",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-128",
+    "creatorId": "CR-128",
+    "creatorName": "Spencer Sharpe",
+    "noGoCategories": [
+      "Sports Betting"
+    ],
+    "conditionalCategories": [
+      "Gambling",
+      "Political Advocacy"
+    ],
+    "conditionsNotes": "Open to integrated reads with 2-week review.",
+    "pastBrandPartners": "Chase, Allbirds",
+    "activeExclusivities": "Finance category through 2026-09-30",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-129",
+    "creatorId": "CR-129",
+    "creatorName": "Chloe Nawaz",
+    "noGoCategories": [
+      "Adult Content",
+      "Gambling"
+    ],
+    "conditionalCategories": [
+      "Alcohol",
+      "Payday Loans"
+    ],
+    "conditionsNotes": "Will run but no talent ad-read.",
+    "pastBrandPartners": "Patagonia",
+    "activeExclusivities": "Auto category through 2026-08-15",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-130",
+    "creatorId": "CR-130",
+    "creatorName": "Tomas Ishikawa",
+    "noGoCategories": [
+      "Adult Content",
+      "Crypto",
+      "Fast Fashion"
+    ],
+    "conditionalCategories": [
+      "Pharma",
+      "Political Advocacy"
+    ],
+    "conditionsNotes": "Will run but no talent ad-read.",
+    "pastBrandPartners": "Delta, Squarespace, Notion",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-131",
+    "creatorId": "CR-131",
+    "creatorName": "Carmen Fontaine",
+    "noGoCategories": [
+      "Fast Food"
+    ],
+    "conditionalCategories": [
+      "Adult Content",
+      "Political Advocacy"
+    ],
+    "conditionsNotes": "No category exclusivity offered.",
+    "pastBrandPartners": "Toyota, Notion, Mailchimp",
+    "activeExclusivities": "Telecom through 2026-12-31",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-132",
+    "creatorId": "CR-132",
+    "creatorName": "Chloe Hartley",
+    "noGoCategories": [
+      "Weapons"
+    ],
+    "conditionalCategories": [
+      "Alcohol",
+      "Pharma"
+    ],
+    "conditionsNotes": "Will run but no talent ad-read.",
+    "pastBrandPartners": "Squarespace, Notion, Mailchimp",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-133",
+    "creatorId": "CR-133",
+    "creatorName": "Farah Falk",
+    "noGoCategories": [
+      "Pharma"
+    ],
+    "conditionalCategories": [
+      "Adult Content",
+      "Tobacco"
+    ],
+    "conditionsNotes": "Open to integrated reads with 2-week review.",
+    "pastBrandPartners": "Bose, Delta",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-134",
+    "creatorId": "CR-134",
+    "creatorName": "Anika Abara",
+    "noGoCategories": [
+      "Fast Fashion",
+      "Gambling",
+      "Tobacco"
+    ],
+    "conditionalCategories": [
+      "Adult Content",
+      "Weapons"
+    ],
+    "conditionsNotes": "Sponsor dollars only on sensitive topics.",
+    "pastBrandPartners": "Squarespace, Allbirds",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-135",
+    "creatorId": "CR-135",
+    "creatorName": "Trevor Dembele",
+    "noGoCategories": [
+      "Alcohol"
+    ],
+    "conditionalCategories": [
+      "Fast Food",
+      "Political Advocacy"
+    ],
+    "conditionsNotes": "Open to integrated reads with 2-week review.",
+    "pastBrandPartners": "Fidelity",
+    "activeExclusivities": "Auto category through 2026-08-15",
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-136",
+    "creatorId": "CR-136",
+    "creatorName": "Devin Sandoval",
+    "noGoCategories": [
+      "Adult Content",
+      "Crypto",
+      "Political Advocacy"
+    ],
+    "conditionalCategories": [
+      "Fast Fashion",
+      "Weapons"
+    ],
+    "conditionsNotes": "No category exclusivity offered.",
+    "pastBrandPartners": "Notion",
+    "activeExclusivities": "Telecom through 2026-12-31",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-137",
+    "creatorId": "CR-137",
+    "creatorName": "Soledad Maddox",
+    "noGoCategories": [
+      "Fast Food",
+      "Pharma",
+      "Political Advocacy"
+    ],
+    "conditionalCategories": [
+      "Gambling",
+      "Payday Loans"
+    ],
+    "conditionsNotes": "Requires editorial separation note.",
+    "pastBrandPartners": "Squarespace",
+    "activeExclusivities": "Telecom through 2026-12-31",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-138",
+    "creatorId": "CR-138",
+    "creatorName": "Malik Wexler",
+    "noGoCategories": [
+      "Crypto",
+      "Political Advocacy"
+    ],
+    "conditionalCategories": [
+      "Sports Betting"
+    ],
+    "conditionsNotes": "Open to integrated reads with 2-week review.",
+    "pastBrandPartners": "Fidelity, Toyota",
+    "activeExclusivities": "Auto category through 2026-08-15",
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-139",
+    "creatorId": "CR-139",
+    "creatorName": "Marcus Okafor",
+    "noGoCategories": [
+      "Alcohol",
+      "Political Advocacy"
+    ],
+    "conditionalCategories": [
+      "Weapons"
+    ],
+    "conditionsNotes": "No category exclusivity offered.",
+    "pastBrandPartners": "Delta",
+    "activeExclusivities": "Auto category through 2026-08-15",
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-140",
+    "creatorId": "CR-140",
+    "creatorName": "Wesley Cho",
+    "noGoCategories": [
+      "Political Advocacy",
+      "Tobacco"
+    ],
+    "conditionalCategories": [
+      "Sports Betting",
+      "Weapons"
+    ],
+    "conditionsNotes": "Will run but no talent ad-read.",
+    "pastBrandPartners": "Squarespace, Bose",
+    "activeExclusivities": "Telecom through 2026-12-31",
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-141",
+    "creatorId": "CR-141",
+    "creatorName": "Hugo Sandoval",
+    "noGoCategories": [
+      "Fast Food",
+      "Political Advocacy",
+      "Sports Betting",
+      "Weapons"
+    ],
+    "conditionalCategories": [
+      "Pharma"
+    ],
+    "conditionsNotes": "No category exclusivity offered.",
+    "pastBrandPartners": "Delta, Athletic Greens",
+    "activeExclusivities": "Telecom through 2026-12-31",
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-142",
+    "creatorId": "CR-142",
+    "creatorName": "Margot Behrend",
+    "noGoCategories": [
+      "Crypto",
+      "Payday Loans",
+      "Political Advocacy"
+    ],
+    "conditionalCategories": [
+      "Adult Content",
+      "Gambling"
+    ],
+    "conditionsNotes": "Will run but no talent ad-read.",
+    "pastBrandPartners": "Bose, Squarespace",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-143",
+    "creatorId": "CR-143",
+    "creatorName": "Esme Bellamy",
+    "noGoCategories": [
+      "Adult Content",
+      "Payday Loans",
+      "Pharma",
+      "Political Advocacy"
+    ],
+    "conditionalCategories": [
+      "Crypto"
+    ],
+    "conditionsNotes": "Sponsor dollars only on sensitive topics.",
+    "pastBrandPartners": "Bose, Notion, Patagonia",
+    "activeExclusivities": "Auto category through 2026-08-15",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-144",
+    "creatorId": "CR-144",
+    "creatorName": "Esme Behrend",
+    "noGoCategories": [
+      "Payday Loans",
+      "Pharma",
+      "Political Advocacy",
+      "Tobacco"
+    ],
+    "conditionalCategories": [
+      "Fast Food",
+      "Sports Betting"
+    ],
+    "conditionsNotes": "Open to integrated reads with 2-week review.",
+    "pastBrandPartners": "Squarespace",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-145",
+    "creatorId": "CR-145",
+    "creatorName": "Dana Delgado",
+    "noGoCategories": [
+      "Crypto",
+      "Gambling",
+      "Political Advocacy",
+      "Tobacco"
+    ],
+    "conditionalCategories": [
+      "Political Advocacy"
+    ],
+    "conditionsNotes": "No category exclusivity offered.",
+    "pastBrandPartners": "Notion, Delta",
+    "activeExclusivities": "Telecom through 2026-12-31",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-146",
+    "creatorId": "CR-146",
+    "creatorName": "Chloe Pruitt",
+    "noGoCategories": [
+      "Fast Fashion",
+      "Political Advocacy",
+      "Weapons"
+    ],
+    "conditionalCategories": [
+      "Tobacco"
+    ],
+    "conditionsNotes": "Sponsor dollars only on sensitive topics.",
+    "pastBrandPartners": "Casper, Bose",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-147",
+    "creatorId": "CR-147",
+    "creatorName": "Devin Cho",
+    "noGoCategories": [
+      "Adult Content"
+    ],
+    "conditionalCategories": [
+      "Political Advocacy",
+      "Weapons"
+    ],
+    "conditionsNotes": "Will run but no talent ad-read.",
+    "pastBrandPartners": "Chase",
+    "activeExclusivities": "Finance category through 2026-09-30",
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-148",
+    "creatorId": "CR-148",
+    "creatorName": "Brendan Fontaine",
+    "noGoCategories": [
+      "Fast Food",
+      "Pharma",
+      "Tobacco"
+    ],
+    "conditionalCategories": [
+      "Alcohol",
+      "Fast Fashion"
+    ],
+    "conditionsNotes": "Requires editorial separation note.",
+    "pastBrandPartners": "Bose, Toyota, Allbirds",
+    "activeExclusivities": "Finance category through 2026-09-30",
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-149",
+    "creatorId": "CR-149",
+    "creatorName": "Lila Cho",
+    "noGoCategories": [
+      "Alcohol",
+      "Fast Fashion",
+      "Tobacco"
+    ],
+    "conditionalCategories": [
+      "Fast Food",
+      "Pharma"
+    ],
+    "conditionsNotes": "No category exclusivity offered.",
+    "pastBrandPartners": "Allbirds",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-150",
+    "creatorId": "CR-150",
+    "creatorName": "Anaya Dovan",
+    "noGoCategories": [
+      "Sports Betting"
+    ],
+    "conditionalCategories": [
+      "Pharma",
+      "Weapons"
+    ],
+    "conditionsNotes": "No category exclusivity offered.",
+    "pastBrandPartners": "Bose, Notion, Casper",
+    "activeExclusivities": "Finance category through 2026-09-30",
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-151",
+    "creatorId": "CR-151",
+    "creatorName": "Levi Lockwood",
+    "noGoCategories": [
+      "Weapons"
+    ],
+    "conditionalCategories": [
+      "Tobacco"
+    ],
+    "conditionsNotes": "Requires editorial separation note.",
+    "pastBrandPartners": "Toyota, Fidelity",
+    "activeExclusivities": "Auto category through 2026-08-15",
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-152",
+    "creatorId": "CR-152",
+    "creatorName": "Maya Cho",
+    "noGoCategories": [
+      "Adult Content",
+      "Alcohol",
+      "Payday Loans"
+    ],
+    "conditionalCategories": [
+      "Fast Food"
+    ],
+    "conditionsNotes": "Sponsor dollars only on sensitive topics.",
+    "pastBrandPartners": "Allbirds",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-153",
+    "creatorId": "CR-153",
+    "creatorName": "Esme Falk",
+    "noGoCategories": [
+      "Payday Loans"
+    ],
+    "conditionalCategories": [
+      "Crypto"
+    ],
+    "conditionsNotes": "Requires editorial separation note.",
+    "pastBrandPartners": "Allbirds, Notion",
+    "activeExclusivities": "Telecom through 2026-12-31",
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-154",
+    "creatorId": "CR-154",
+    "creatorName": "Sofia Lockwood",
+    "noGoCategories": [
+      "Gambling",
+      "Pharma",
+      "Tobacco"
+    ],
+    "conditionalCategories": [
+      "Fast Fashion",
+      "Fast Food"
+    ],
+    "conditionsNotes": "No category exclusivity offered.",
+    "pastBrandPartners": "Patagonia, Athletic Greens",
+    "activeExclusivities": "Auto category through 2026-08-15",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-155",
+    "creatorId": "CR-155",
+    "creatorName": "Kenji Crews",
+    "noGoCategories": [
+      "Payday Loans",
+      "Political Advocacy"
+    ],
+    "conditionalCategories": [
+      "Fast Fashion",
+      "Gambling"
+    ],
+    "conditionsNotes": "No category exclusivity offered.",
+    "pastBrandPartners": "Delta",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-156",
+    "creatorId": "CR-156",
+    "creatorName": "Sergio Mendez",
+    "noGoCategories": [
+      "Fast Food",
+      "Payday Loans",
+      "Sports Betting"
+    ],
+    "conditionalCategories": [
+      "Gambling"
+    ],
+    "conditionsNotes": "No category exclusivity offered.",
+    "pastBrandPartners": "Notion, Delta, Chase",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-157",
+    "creatorId": "CR-157",
+    "creatorName": "Brendan Cho",
+    "noGoCategories": [
+      "Alcohol",
+      "Fast Fashion",
+      "Pharma"
+    ],
+    "conditionalCategories": [
+      "Sports Betting"
+    ],
+    "conditionsNotes": "Will run but no talent ad-read.",
+    "pastBrandPartners": "Chase",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-158",
+    "creatorId": "CR-158",
+    "creatorName": "Imani Stockton",
+    "noGoCategories": [
+      "Adult Content",
+      "Gambling"
+    ],
+    "conditionalCategories": [
+      "Fast Fashion",
+      "Pharma"
+    ],
+    "conditionsNotes": "Sponsor dollars only on sensitive topics.",
+    "pastBrandPartners": "Delta, Toyota",
+    "activeExclusivities": "Auto category through 2026-08-15",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-159",
+    "creatorId": "CR-159",
+    "creatorName": "Leila Delgado",
+    "noGoCategories": [
+      "Adult Content",
+      "Fast Food"
+    ],
+    "conditionalCategories": [
+      "Pharma",
+      "Political Advocacy"
+    ],
+    "conditionsNotes": "Open to integrated reads with 2-week review.",
+    "pastBrandPartners": "Squarespace",
+    "activeExclusivities": "Auto category through 2026-08-15",
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-160",
+    "creatorId": "CR-160",
+    "creatorName": "Camille Orozco",
+    "noGoCategories": [
+      "Sports Betting"
+    ],
+    "conditionalCategories": [
+      "Fast Fashion",
+      "Political Advocacy"
+    ],
+    "conditionsNotes": "Will run but no talent ad-read.",
+    "pastBrandPartners": "Toyota, Delta",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-161",
+    "creatorId": "CR-161",
+    "creatorName": "Sofia Wexler",
+    "noGoCategories": [
+      "Pharma"
+    ],
+    "conditionalCategories": [
+      "Fast Food"
+    ],
+    "conditionsNotes": "Will run but no talent ad-read.",
+    "pastBrandPartners": "Delta, Mailchimp, Bose",
+    "activeExclusivities": "Finance category through 2026-09-30",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-162",
+    "creatorId": "CR-162",
+    "creatorName": "Yara Marchetti",
+    "noGoCategories": [
+      "Alcohol"
+    ],
+    "conditionalCategories": [
+      "Fast Food"
+    ],
+    "conditionsNotes": "No category exclusivity offered.",
+    "pastBrandPartners": "Allbirds, Patagonia, Fidelity",
+    "activeExclusivities": "Telecom through 2026-12-31",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-163",
+    "creatorId": "CR-163",
+    "creatorName": "Bianca Okafor",
+    "noGoCategories": [
+      "Adult Content",
+      "Gambling",
+      "Pharma"
+    ],
+    "conditionalCategories": [
+      "Fast Fashion",
+      "Tobacco"
+    ],
+    "conditionsNotes": "Sponsor dollars only on sensitive topics.",
+    "pastBrandPartners": "Notion, Fidelity",
+    "activeExclusivities": "Finance category through 2026-09-30",
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-164",
+    "creatorId": "CR-164",
+    "creatorName": "Diego Maguire",
+    "noGoCategories": [
+      "Weapons"
+    ],
+    "conditionalCategories": [
+      "Gambling",
+      "Tobacco"
+    ],
+    "conditionsNotes": "Sponsor dollars only on sensitive topics.",
+    "pastBrandPartners": "Delta",
+    "activeExclusivities": "Telecom through 2026-12-31",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-165",
+    "creatorId": "CR-165",
+    "creatorName": "Darius Falk",
+    "noGoCategories": [
+      "Fast Fashion",
+      "Tobacco"
+    ],
+    "conditionalCategories": [
+      "Crypto"
+    ],
+    "conditionsNotes": "Open to integrated reads with 2-week review.",
+    "pastBrandPartners": "Athletic Greens, Patagonia, Delta",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-166",
+    "creatorId": "CR-166",
+    "creatorName": "Hannah Hartley",
+    "noGoCategories": [
+      "Crypto"
+    ],
+    "conditionalCategories": [
+      "Adult Content",
+      "Fast Food"
+    ],
+    "conditionsNotes": "Requires editorial separation note.",
+    "pastBrandPartners": "Notion",
+    "activeExclusivities": "Auto category through 2026-08-15",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-167",
+    "creatorId": "CR-167",
+    "creatorName": "Cyrus Cho",
+    "noGoCategories": [
+      "Gambling",
+      "Political Advocacy"
+    ],
+    "conditionalCategories": [
+      "Weapons"
+    ],
+    "conditionsNotes": "No category exclusivity offered.",
+    "pastBrandPartners": "Squarespace, Notion",
+    "activeExclusivities": "Auto category through 2026-08-15",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-168",
+    "creatorId": "CR-168",
+    "creatorName": "Esme Brennan",
+    "noGoCategories": [
+      "Gambling",
+      "Payday Loans"
+    ],
+    "conditionalCategories": [
+      "Fast Fashion",
+      "Tobacco"
+    ],
+    "conditionsNotes": "No category exclusivity offered.",
+    "pastBrandPartners": "Delta",
+    "activeExclusivities": "Finance category through 2026-09-30",
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-169",
+    "creatorId": "CR-169",
+    "creatorName": "Greta Sorensen",
+    "noGoCategories": [
+      "Adult Content",
+      "Fast Fashion",
+      "Weapons"
+    ],
+    "conditionalCategories": [
+      "Tobacco"
+    ],
+    "conditionsNotes": "Will run but no talent ad-read.",
+    "pastBrandPartners": "Toyota, Squarespace",
+    "activeExclusivities": "Finance category through 2026-09-30",
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-170",
+    "creatorId": "CR-170",
+    "creatorName": "Daniel Falk",
+    "noGoCategories": [
+      "Pharma",
+      "Sports Betting",
+      "Tobacco"
+    ],
+    "conditionalCategories": [
+      "Weapons"
+    ],
+    "conditionsNotes": "Sponsor dollars only on sensitive topics.",
+    "pastBrandPartners": "Notion",
+    "activeExclusivities": "Auto category through 2026-08-15",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-171",
+    "creatorId": "CR-171",
+    "creatorName": "Liam Albright",
+    "noGoCategories": [
+      "Alcohol",
+      "Fast Fashion"
+    ],
+    "conditionalCategories": [
+      "Crypto"
+    ],
+    "conditionsNotes": "Requires editorial separation note.",
+    "pastBrandPartners": "Athletic Greens",
+    "activeExclusivities": "Finance category through 2026-09-30",
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-172",
+    "creatorId": "CR-172",
+    "creatorName": "Andre Stockton",
+    "noGoCategories": [
+      "Adult Content",
+      "Crypto"
+    ],
+    "conditionalCategories": [
+      "Gambling",
+      "Political Advocacy"
+    ],
+    "conditionsNotes": "No category exclusivity offered.",
+    "pastBrandPartners": "Chase",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-173",
+    "creatorId": "CR-173",
+    "creatorName": "Farah Abara",
+    "noGoCategories": [
+      "Adult Content",
+      "Alcohol",
+      "Payday Loans"
+    ],
+    "conditionalCategories": [
+      "Pharma",
+      "Sports Betting"
+    ],
+    "conditionsNotes": "Will run but no talent ad-read.",
+    "pastBrandPartners": "Toyota, Patagonia",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-174",
+    "creatorId": "CR-174",
+    "creatorName": "Mateo Okafor",
+    "noGoCategories": [
+      "Adult Content",
+      "Gambling",
+      "Tobacco"
+    ],
+    "conditionalCategories": [
+      "Sports Betting"
+    ],
+    "conditionsNotes": "Requires editorial separation note.",
+    "pastBrandPartners": "Fidelity, Mailchimp",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-175",
+    "creatorId": "CR-175",
+    "creatorName": "Talia Kessler",
+    "noGoCategories": [
+      "Tobacco"
+    ],
+    "conditionalCategories": [
+      "Alcohol"
+    ],
+    "conditionsNotes": "Open to integrated reads with 2-week review.",
+    "pastBrandPartners": "Patagonia",
+    "activeExclusivities": "Finance category through 2026-09-30",
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-176",
+    "creatorId": "CR-176",
+    "creatorName": "Adrian Ferreira",
+    "noGoCategories": [
+      "Gambling"
+    ],
+    "conditionalCategories": [
+      "Fast Food",
+      "Sports Betting"
+    ],
+    "conditionsNotes": "Open to integrated reads with 2-week review.",
+    "pastBrandPartners": "Fidelity",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-177",
+    "creatorId": "CR-177",
+    "creatorName": "Anika Carrington",
+    "noGoCategories": [
+      "Alcohol",
+      "Tobacco"
+    ],
+    "conditionalCategories": [
+      "Crypto",
+      "Weapons"
+    ],
+    "conditionsNotes": "Sponsor dollars only on sensitive topics.",
+    "pastBrandPartners": "Athletic Greens, Chase, Squarespace",
+    "activeExclusivities": "Auto category through 2026-08-15",
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-178",
+    "creatorId": "CR-178",
+    "creatorName": "Ingrid Calloway",
+    "noGoCategories": [
+      "Gambling"
+    ],
+    "conditionalCategories": [
+      "Adult Content"
+    ],
+    "conditionsNotes": "Requires editorial separation note.",
+    "pastBrandPartners": "Allbirds, Fidelity",
+    "activeExclusivities": "Telecom through 2026-12-31",
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-179",
+    "creatorId": "CR-179",
+    "creatorName": "Hugo Nawaz",
+    "noGoCategories": [
+      "Alcohol",
+      "Gambling",
+      "Payday Loans"
+    ],
+    "conditionalCategories": [
+      "Weapons"
+    ],
+    "conditionsNotes": "No category exclusivity offered.",
+    "pastBrandPartners": "Athletic Greens",
+    "activeExclusivities": "Auto category through 2026-08-15",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-180",
+    "creatorId": "CR-180",
+    "creatorName": "Owen Lockwood",
+    "noGoCategories": [
+      "Crypto",
+      "Fast Fashion"
+    ],
+    "conditionalCategories": [
+      "Payday Loans"
+    ],
+    "conditionsNotes": "Will run but no talent ad-read.",
+    "pastBrandPartners": "Fidelity",
+    "activeExclusivities": "Finance category through 2026-09-30",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-181",
+    "creatorId": "CR-181",
+    "creatorName": "Bianca Bauer",
+    "noGoCategories": [
+      "Fast Fashion",
+      "Political Advocacy",
+      "Weapons"
+    ],
+    "conditionalCategories": [
+      "Adult Content"
+    ],
+    "conditionsNotes": "Requires editorial separation note.",
+    "pastBrandPartners": "Mailchimp",
+    "activeExclusivities": "Telecom through 2026-12-31",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-182",
+    "creatorId": "CR-182",
+    "creatorName": "Malik Dovan",
+    "noGoCategories": [
+      "Fast Food",
+      "Weapons"
+    ],
+    "conditionalCategories": [
+      "Fast Fashion",
+      "Tobacco"
+    ],
+    "conditionsNotes": "No category exclusivity offered.",
+    "pastBrandPartners": "Fidelity, Patagonia",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-183",
+    "creatorId": "CR-183",
+    "creatorName": "Maren Vance",
+    "noGoCategories": [
+      "Gambling"
+    ],
+    "conditionalCategories": [
+      "Political Advocacy"
+    ],
+    "conditionsNotes": "No category exclusivity offered.",
+    "pastBrandPartners": "Patagonia",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-184",
+    "creatorId": "CR-184",
+    "creatorName": "Damon Abara",
+    "noGoCategories": [
+      "Weapons"
+    ],
+    "conditionalCategories": [
+      "Adult Content",
+      "Gambling"
+    ],
+    "conditionsNotes": "No category exclusivity offered.",
+    "pastBrandPartners": "Athletic Greens, Bose, Fidelity",
+    "activeExclusivities": "Auto category through 2026-08-15",
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-185",
+    "creatorId": "CR-185",
+    "creatorName": "Soledad Haddad",
+    "noGoCategories": [
+      "Crypto",
+      "Fast Food",
+      "Political Advocacy"
+    ],
+    "conditionalCategories": [
+      "Sports Betting"
+    ],
+    "conditionsNotes": "Open to integrated reads with 2-week review.",
+    "pastBrandPartners": "Allbirds, Fidelity, Chase",
+    "activeExclusivities": "Telecom through 2026-12-31",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-186",
+    "creatorId": "CR-186",
+    "creatorName": "Carmen Voss",
+    "noGoCategories": [
+      "Crypto"
+    ],
+    "conditionalCategories": [
+      "Weapons"
+    ],
+    "conditionsNotes": "No category exclusivity offered.",
+    "pastBrandPartners": "Athletic Greens, Bose, Fidelity",
+    "activeExclusivities": "Auto category through 2026-08-15",
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-187",
+    "creatorId": "CR-187",
+    "creatorName": "Heidi Brennan",
+    "noGoCategories": [
+      "Fast Food",
+      "Political Advocacy",
+      "Weapons"
+    ],
+    "conditionalCategories": [
+      "Payday Loans",
+      "Sports Betting"
+    ],
+    "conditionsNotes": "Will run but no talent ad-read.",
+    "pastBrandPartners": "Mailchimp, Delta, Casper",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-188",
+    "creatorId": "CR-188",
+    "creatorName": "Asher Ferreira",
+    "noGoCategories": [
+      "Adult Content"
+    ],
+    "conditionalCategories": [
+      "Fast Fashion",
+      "Payday Loans"
+    ],
+    "conditionsNotes": "Requires editorial separation note.",
+    "pastBrandPartners": "Allbirds",
+    "activeExclusivities": "Finance category through 2026-09-30",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-189",
+    "creatorId": "CR-189",
+    "creatorName": "Priya Stein",
+    "noGoCategories": [
+      "Gambling",
+      "Tobacco"
+    ],
+    "conditionalCategories": [
+      "Political Advocacy",
+      "Sports Betting"
+    ],
+    "conditionsNotes": "No category exclusivity offered.",
+    "pastBrandPartners": "Athletic Greens, Patagonia, Bose",
+    "activeExclusivities": "Telecom through 2026-12-31",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-190",
+    "creatorId": "CR-190",
+    "creatorName": "Layla Ishikawa",
+    "noGoCategories": [
+      "Crypto",
+      "Tobacco"
+    ],
+    "conditionalCategories": [
+      "Fast Food"
+    ],
+    "conditionsNotes": "Sponsor dollars only on sensitive topics.",
+    "pastBrandPartners": "Allbirds, Athletic Greens",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-191",
+    "creatorId": "CR-191",
+    "creatorName": "Lucas Escobar",
+    "noGoCategories": [
+      "Weapons"
+    ],
+    "conditionalCategories": [
+      "Crypto"
+    ],
+    "conditionsNotes": "Open to integrated reads with 2-week review.",
+    "pastBrandPartners": "Fidelity, Mailchimp, Patagonia",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-192",
+    "creatorId": "CR-192",
+    "creatorName": "Maya Ishikawa",
+    "noGoCategories": [
+      "Gambling"
+    ],
+    "conditionalCategories": [
+      "Sports Betting"
+    ],
+    "conditionsNotes": "Sponsor dollars only on sensitive topics.",
+    "pastBrandPartners": "Athletic Greens",
+    "activeExclusivities": "Auto category through 2026-08-15",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-193",
+    "creatorId": "CR-193",
+    "creatorName": "Diego Adeyemi",
+    "noGoCategories": [
+      "Tobacco"
+    ],
+    "conditionalCategories": [
+      "Sports Betting",
+      "Weapons"
+    ],
+    "conditionsNotes": "Will run but no talent ad-read.",
+    "pastBrandPartners": "Squarespace, Chase, Patagonia",
+    "activeExclusivities": "Finance category through 2026-09-30",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-194",
+    "creatorId": "CR-194",
+    "creatorName": "Hannah Cho",
+    "noGoCategories": [
+      "Sports Betting"
+    ],
+    "conditionalCategories": [
+      "Crypto",
+      "Fast Fashion"
+    ],
+    "conditionsNotes": "No category exclusivity offered.",
+    "pastBrandPartners": "Toyota",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-195",
+    "creatorId": "CR-195",
+    "creatorName": "Anaya Wexler",
+    "noGoCategories": [
+      "Adult Content"
+    ],
+    "conditionalCategories": [
+      "Fast Fashion",
+      "Political Advocacy"
+    ],
+    "conditionsNotes": "Open to integrated reads with 2-week review.",
+    "pastBrandPartners": "Chase",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-196",
+    "creatorId": "CR-196",
+    "creatorName": "Kenji Sorensen",
+    "noGoCategories": [
+      "Pharma"
+    ],
+    "conditionalCategories": [
+      "Adult Content",
+      "Fast Fashion"
+    ],
+    "conditionsNotes": "Requires editorial separation note.",
+    "pastBrandPartners": "Casper, Fidelity",
+    "activeExclusivities": "Auto category through 2026-08-15",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-197",
+    "creatorId": "CR-197",
+    "creatorName": "Theo Calloway",
+    "noGoCategories": [
+      "Alcohol",
+      "Payday Loans",
+      "Pharma"
+    ],
+    "conditionalCategories": [
+      "Adult Content",
+      "Gambling"
+    ],
+    "conditionsNotes": "Requires editorial separation note.",
+    "pastBrandPartners": "Allbirds, Delta",
+    "activeExclusivities": null,
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-198",
+    "creatorId": "CR-198",
+    "creatorName": "Soledad Albright",
+    "noGoCategories": [
+      "Sports Betting",
+      "Tobacco"
+    ],
+    "conditionalCategories": [
+      "Weapons"
+    ],
+    "conditionsNotes": "No category exclusivity offered.",
+    "pastBrandPartners": "Patagonia, Fidelity, Delta",
+    "activeExclusivities": "Telecom through 2026-12-31",
+    "categoryExclusivityAvailable": false
+  },
+  {
+    "id": "BB-199",
+    "creatorId": "CR-199",
+    "creatorName": "Phoebe Cho",
+    "noGoCategories": [
+      "Political Advocacy"
+    ],
+    "conditionalCategories": [
+      "Gambling"
+    ],
+    "conditionsNotes": "Will run but no talent ad-read.",
+    "pastBrandPartners": "Notion, Athletic Greens",
+    "activeExclusivities": "Telecom through 2026-12-31",
+    "categoryExclusivityAvailable": true
+  },
+  {
+    "id": "BB-200",
+    "creatorId": "CR-200",
+    "creatorName": "Liam Achterberg",
+    "noGoCategories": [
+      "Political Advocacy"
+    ],
+    "conditionalCategories": [
+      "Fast Fashion"
+    ],
+    "conditionsNotes": "Open to integrated reads with 2-week review.",
+    "pastBrandPartners": "Delta",
+    "activeExclusivities": "Telecom through 2026-12-31",
+    "categoryExclusivityAvailable": false
+  }
+]
