@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { CMLogo } from "@/components/Logo";
 
 const NAV = [
   { href: "/", label: "Discover", match: (p: string) => p === "/" },
@@ -14,10 +15,8 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 border-b border-hairline bg-bg/90 backdrop-blur-sm">
       <div className="mx-auto flex max-w-content items-center justify-between px-6 py-4">
-        <Link href="/" className="group flex items-baseline gap-3">
-          {/* Wordmark lockup — the sunburst mark is reproduced from supplied
-              artwork only (BRAND.md), never redrawn, so we use the wordmark. */}
-          <span className="cm-h3 font-bold tracking-tight">Collective Media</span>
+        <Link href="/" className="group flex items-center gap-3">
+          <CMLogo className="h-10 w-auto shrink-0" />
           <span className="cm-label hidden text-accent sm:inline">Talent Marketplace</span>
         </Link>
         <nav className="flex items-center gap-1">

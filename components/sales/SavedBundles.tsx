@@ -8,6 +8,7 @@ import {
   type ResolvedComponent,
 } from "@/lib/reach";
 import { compactNumber } from "@/lib/format";
+import { bundleSharePath } from "@/lib/share";
 import { Chip, Eyebrow } from "@/components/ui";
 
 export function SavedBundles({
@@ -62,9 +63,17 @@ export function SavedBundles({
           <div key={b.id ?? b.bundleName} className="border border-hairline p-5">
             <div className="flex flex-wrap items-center justify-between gap-3">
               <h3 className="cm-h3 font-bold">{b.bundleName}</h3>
-              <span className="cm-fine text-ink/45">
-                {b.createdBy} · {b.createdAt ? new Date(b.createdAt).toLocaleString() : "—"}
-              </span>
+              <div className="flex items-center gap-4">
+                <span className="cm-fine text-ink/45">
+                  {b.createdBy} · {b.createdAt ? new Date(b.createdAt).toLocaleString() : "—"}
+                </span>
+                <a
+                  href={bundleSharePath(b.components)}
+                  className="cm-fine text-accent underline-offset-4 hover:underline"
+                >
+                  Open in Discover →
+                </a>
+              </div>
             </div>
             <div className="mt-3 flex flex-wrap gap-4">
               <Stat label="Components" v={String(b.components.length)} />

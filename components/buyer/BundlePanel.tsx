@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import type { BuyerCreator, OverlapAssumption } from "@/lib/types";
 import {
@@ -31,9 +31,29 @@ export function BundlePanel({
   const bundle = useBundle();
   const [goal, setGoal] = useState<OptimizationGoal>("Maximize Reach");
   const [pricingRequested, setPricingRequested] = useState(false);
+  const [copied, setCopied] = useState(false);
   const [saveState, setSaveState] = useState<"idle" | "saving" | "saved" | "error">(
     "idle"
   );
+
+  async function copyShareLink() {
+    // The URL always mirrors the bundle (bundle-context syncs it), so the
+    // address bar IS the share link.
+    try {
+      await navigator.clipboard.writeText(window.location.href);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      // Clipboard unavailable — the user can still copy the address bar.
+    }
+  }
+
+  // A changed bundle is a new bundle: stale "Saved ✓" / "Pricing sent ✓"
+  // states would misrepresent what sales actually received.
+  useEffect(() => {
+    setSaveState("idle");
+    setPricingRequested(false);
+  }, [bundle.components]);
 
   const creatorsById = useMemo(
     () => new Map(creators.map((c) => [c.id, c])),
@@ -296,6 +316,13 @@ export function BundlePanel({
               : saveState === "error"
               ? "Save failed — retry"
               : "Save bundle"}
+          </button>
+          <button
+            type="button"
+            onClick={copyShareLink}
+            className="cm-fine text-center text-ink/50 transition-colors duration-micro hover:text-accent"
+          >
+            {copied ? "Link copied ✓" : "Copy share link"}
           </button>
           <p className="cm-fine text-center text-ink/40">
             Rate cards are shared on request, not displayed here.
