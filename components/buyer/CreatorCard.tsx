@@ -47,16 +47,20 @@ export function CreatorCard({
             unoptimized
           />
         ) : null}
-        {creator.isDemoPersona && (
-          <div className="absolute left-3 top-3">
-            <FictionalBadge />
-          </div>
-        )}
-        {creator.brandSafetyTier && (
-          <div className="absolute right-3 top-3">
-            <span className="cm-fine border border-hairline bg-bg/85 px-2 py-1 text-ink/70 backdrop-blur-sm">
-              {creator.brandSafetyTier}
-            </span>
+        {/*
+          One row rather than two independently-positioned corners: pinning the
+          badge left and the tier right let them collide on narrow cards, so
+          "Use-with-context" rendered on top of "Fictional persona". Wrapping
+          keeps both readable at any width.
+        */}
+        {(creator.isDemoPersona || creator.brandSafetyTier) && (
+          <div className="absolute inset-x-3 top-3 flex flex-wrap items-start justify-between gap-1.5">
+            {creator.isDemoPersona ? <FictionalBadge /> : <span />}
+            {creator.brandSafetyTier && (
+              <span className="cm-fine whitespace-nowrap border border-hairline bg-bg/85 px-2 py-1 text-ink/70 backdrop-blur-sm">
+                {creator.brandSafetyTier}
+              </span>
+            )}
           </div>
         )}
         {selectedCount > 0 && (
@@ -117,24 +121,34 @@ export function CreatorCard({
           </div>
         )}
 
-        {/* Actions */}
-        <div className="mt-1 flex items-center gap-2">
+        {/*
+          Three actions do not fit one line at card width. `ml-auto` on the last
+          one pushed it past the card edge, and the middle label broke mid-phrase
+          ("VIEW" / "CHANNELS"). Wrapping the row and keeping each label
+          unbreakable lets them reflow as whole units instead.
+        */}
+        <div className="mt-1 flex flex-col items-start gap-2.5">
           <Pill active={allSelected} onClick={() => bundle.toggleCreator(creator)}>
             {allSelected ? "Remove all" : "Add creator"}
           </Pill>
-          <button
-            type="button"
-            onClick={() => setExpanded((e) => !e)}
-            className="cm-label text-ink/55 underline-offset-4 transition-colors duration-micro hover:text-ink hover:underline"
-          >
-            {expanded ? "Hide channels" : "View channels"}
-          </button>
-          <Link
-            href={`/creator/${creator.id}`}
-            className="cm-label ml-auto text-accent underline-offset-4 transition-opacity duration-micro hover:underline"
-          >
-            Media kit
-          </Link>
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5">
+            <button
+              type="button"
+              onClick={() => setExpanded((e) => !e)}
+              className="cm-label whitespace-nowrap text-ink/55 underline-offset-4 transition-colors duration-micro hover:text-ink hover:underline"
+            >
+              {/* "Channels" not "View channels": at 182px of usable card width
+                  the longer label needs 192px alongside "Media kit" and wraps.
+                  Two noun links also read more consistently together. */}
+              {expanded ? "Hide" : "Channels"}
+            </button>
+            <Link
+              href={`/creator/${creator.id}`}
+              className="cm-label whitespace-nowrap text-accent underline-offset-4 transition-opacity duration-micro hover:underline"
+            >
+              Media kit
+            </Link>
+          </div>
         </div>
       </div>
 
