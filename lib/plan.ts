@@ -20,7 +20,7 @@ import {
   type ResolvedComponent,
 } from "@/lib/reach";
 import type { OptimizationGoal } from "@/lib/recommend";
-import { compactNumber, percent, percentFromFraction } from "@/lib/format";
+import { compactNumber, percent } from "@/lib/format";
 
 export interface Brief {
   /**
@@ -340,11 +340,9 @@ function buildNarrative(
     )} audience overlap between these creators.`
   );
 
-  if (s.blendedEngagement !== null) {
-    points.push(
-      `Blended engagement of ${percentFromFraction(s.blendedEngagement)} across the selected channels.`
-    );
-  }
+  // No blended engagement claim here either: averaging an open rate with a
+  // social engagement rate reads well and measures nothing. Per-channel rates
+  // are on each creator's media kit, labelled by platform.
 
   // Category coherence or spread, depending on what was asked for. Only claims
   // concentration when the pool was genuinely restricted to that interest.

@@ -78,7 +78,15 @@ export interface BundleReach {
   grossReach: number;
   netReach: number; // estimated, deduplicated
   impliedOverlapPct: number; // 0..1
-  blendedEngagementRate: number | null; // reach-weighted, fraction
+  /**
+   * Reach-weighted engagement across components. Useful as an internal signal,
+   * but do NOT present it as a headline rate: it averages metrics that are not
+   * comparable (a newsletter open rate against a social engagement rate), which
+   * is exactly the flattening the channel schema exists to prevent.
+   */
+  blendedEngagementRate: number | null;
+  /** Distinct platforms represented — a shape-of-buy figure, safe to show. */
+  platformCount: number;
   combinedFormats: string[];
   demographicComposite: {
     ageBands: AgeBands | null;
@@ -205,6 +213,7 @@ export function calculateBundleReach(
     netReach: Math.round(netReach),
     impliedOverlapPct,
     blendedEngagementRate,
+    platformCount: new Set(components.map((c) => c.channel.platform)).size,
     combinedFormats: Array.from(formatSet).sort(),
     demographicComposite: { ageBands, genderSplit },
     geoFootprint: Array.from(geoSet),
