@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import type { Booking, Creator, RateCard } from "@/lib/types";
 import { compactNumber, percentFromFraction, usd } from "@/lib/format";
 import { Chip, Eyebrow } from "@/components/ui";
+import { AvailabilityGrid } from "@/components/calendar/AvailabilityGrid";
 import {
   computeFill,
   rollUp,
@@ -153,6 +154,27 @@ export function InventoryTable({
                             <RateCardView card={ch.rateCard} />
                           </div>
                         ))}
+
+                        {/* Six-month availability, plus a link the team can
+                            send to the creator's own people. */}
+                        <div className="border border-hairline bg-bg p-4">
+                          <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
+                            <Eyebrow>Availability · next 6 months</Eyebrow>
+                            <a
+                              href={`/availability/${c.id}`}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="cm-label text-accent underline-offset-4 hover:underline"
+                            >
+                              Shareable link →
+                            </a>
+                          </div>
+                          <AvailabilityGrid
+                            creatorName={c.name}
+                            channels={c.channels}
+                            bookings={bookings}
+                          />
+                        </div>
 
                         {c.brandBoundary && (
                           <div className="border border-hairline bg-bg p-4">
