@@ -6,6 +6,7 @@ import type { BuyerCreator, OverlapAssumption } from "@/lib/types";
 import { CreatorCard } from "./CreatorCard";
 import { FilterPanel } from "./FilterPanel";
 import { BundlePanel } from "./BundlePanel";
+import { BriefPanel } from "./BriefPanel";
 import { BundleProvider, useBundle } from "./bundle-context";
 import { arrangeForDisplay } from "@/lib/arrange";
 import {
@@ -68,6 +69,12 @@ function BuyerInner({
           creators and channels, and see real reach and engagement math — including a
           deduplicated estimate — as you go.
         </p>
+
+        {/* Guided entry point. Browsing stays available underneath — this
+            never blocks the array. */}
+        <div className="mt-7">
+          <BriefPanel onPlan={bundle.setBundle} />
+        </div>
       </section>
 
       <div className="grid grid-cols-1 gap-8 py-8 lg:grid-cols-[240px_minmax(0,1fr)_360px]">
