@@ -1,45 +1,45 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import type { BundleComponent, Creator } from "@/lib/types";
+import type { AdvertiserRelationship, BundleComponent, Creator } from "@/lib/types";
 import {
   priceDeal,
   primaryFormat,
+  COMMISSION_RATE,
   type DealLineInput,
-  type PricingModel,
+  type Treatment,
 } from "@/lib/deal";
 import { compactNumber, usd } from "@/lib/format";
-import { Eyebrow, Pill } from "@/components/ui";
-
-const TAKE_RATES = [0.2, 0.25, 0.3, 0.35, 0.4];
-const PREMIUMS = [0, 0.1, 0.2, 0.3];
+import { Eyebrow } from "@/components/ui";
 
 /**
- * Prices a saved buyer bundle and shows how the money divides.
+ * Prices a saved buyer bundle under the executed agreement.
  *
- * SALES-ONLY — reads rate cards. Cost-up is the default because it is what we
- * can explain to a creator in one sentence: you are paid your rate for what you
- * sold. The floor+premium model is available for when a bundle sells above the
- * sum of its parts; it never pays anyone below their rate card, so the only
- * thing dividing on performance is the premium itself.
+ * SALES-ONLY — reads rate cards.
+ *
+ * There is no commission control here on purpose. MSA §6.1 fixes the rate at
+ * 20 / 15 / 0 depending on how the advertiser is treated on that creator's
+ * Schedule B, so the rate is looked up, not chosen. What sales does enter is
+ * what the contract says varies deal to deal: the advertiser, whatever a media
+ * buying agency takes off the top, and the pass-through costs.
  */
 export function DealCalculator({
   components,
   creators,
+  relationships,
 }: {
   components: BundleComponent[];
   creators: Creator[];
+  relationships: AdvertiserRelationship[];
 }) {
   const byId = useMemo(() => new Map(creators.map((c) => [c.id, c])), [creators]);
 
-  // Start each line at the channel's marquee format, one unit. Sales adjusts
-  // format and units from there before quoting.
   const [lines, setLines] = useState<DealLineInput[]>(() =>
     components
       .map((comp) => {
-        const channel = byId.get(comp.creatorId)?.channels.find(
-          (ch) => ch.id === comp.channelId
-        );
+        const channel = byId
+          .get(comp.creatorId)
+          ?.channels.find((ch) => ch.id === comp.channelId);
         const format = channel ? primaryFormat(channel) : null;
         return format
           ? { creatorId: comp.creatorId, channelId: comp.channelId, format, units: 1 }
@@ -47,18 +47,38 @@ export function DealCalculator({
       })
       .filter(Boolean) as DealLineInput[]
   );
-  const [takeRate, setTakeRate] = useState(0.3);
-  const [premium, setPremium] = useState(0);
-  const [model, setModel] = useState<PricingModel>("cost-up");
+  const [advertiser, setAdvertiser] = useState("");
+  const [agencyCut, setAgencyCut] = useState(0);
+  const [passThroughs, setPassThroughs] = useState(0);
+
+  /**
+   * Schedule B lookup. Matches the advertiser by brand or by parent company —
+   * the 15% rate follows a hand-it-to-us brand into sibling brands under the
+   * same parent, so a match on parent counts.
+   */
+  const treatments = useMemo(() => {
+    const q = advertiser.trim().toLowerCase();
+    const out: Record<string, Treatment> = {};
+    if (!q) return out;
+    for (const rel of relationships) {
+      if (!rel.creatorId) continue;
+      const brand = rel.brand.trim().toLowerCase();
+      const parent = (rel.parentCompany ?? "").trim().toLowerCase();
+      const hit = (brand && brand === q) || (parent && parent === q);
+      if (!hit) continue;
+      if (rel.treatment === "Keep it") out[rel.creatorId] = "Keep it";
+      else if (rel.treatment === "Hand it to us" && out[rel.creatorId] !== "Keep it")
+        out[rel.creatorId] = "Hand it to us";
+    }
+    return out;
+  }, [advertiser, relationships]);
 
   const deal = useMemo(
-    () => priceDeal(lines, creators, { takeRate, premium }),
-    [lines, creators, takeRate, premium]
+    () => priceDeal(lines, creators, { agencyCut, passThroughs, treatments }),
+    [lines, creators, agencyCut, passThroughs, treatments]
   );
 
-  const usingPremium = model === "floor-premium" && premium > 0;
-  const gross = usingPremium ? deal.grossWithPremium : deal.grossCostUp;
-  const cmCut = usingPremium ? deal.cmCutWithPremium : deal.cmCutCostUp;
+  const keepIt = deal.splits.filter((s) => s.treatment === "Keep it");
 
   function update(index: number, patch: Partial<DealLineInput>) {
     setLines((prev) => prev.map((l, i) => (i === index ? { ...l, ...patch } : l)));
@@ -74,18 +94,61 @@ export function DealCalculator({
 
   return (
     <div className="flex flex-col gap-5">
+      {/* Advertiser + the two deal-specific deductions */}
+      <div className="flex flex-wrap items-end gap-4">
+        <label className="flex flex-col gap-1.5">
+          <span className="cm-fine text-ink/45">Advertiser</span>
+          <input
+            value={advertiser}
+            onChange={(e) => setAdvertiser(e.target.value)}
+            placeholder="e.g. Patagonia"
+            className="cm-sans w-52 border border-hairline bg-bg px-3 py-2 text-sm outline-none focus:border-ink"
+          />
+        </label>
+        <label className="flex flex-col gap-1.5">
+          <span className="cm-fine text-ink/45">Agency cut</span>
+          <div className="flex items-center gap-1">
+            <input
+              type="number"
+              min={0}
+              max={90}
+              value={Math.round(agencyCut * 100)}
+              onChange={(e) =>
+                setAgencyCut(Math.min(90, Math.max(0, Number(e.target.value) || 0)) / 100)
+              }
+              className="cm-sans w-16 border border-hairline bg-bg px-2 py-2 text-right text-sm outline-none focus:border-ink"
+            />
+            <span className="cm-fine text-ink/45">%</span>
+          </div>
+        </label>
+        <label className="flex flex-col gap-1.5">
+          <span className="cm-fine text-ink/45">Pass-throughs</span>
+          <input
+            type="number"
+            min={0}
+            value={passThroughs}
+            onChange={(e) => setPassThroughs(Math.max(0, Number(e.target.value) || 0))}
+            className="cm-sans w-32 border border-hairline bg-bg px-3 py-2 text-right text-sm outline-none focus:border-ink"
+          />
+        </label>
+      </div>
+      <p className="cm-fine -mt-2 text-ink/40">
+        Agency cut is what a media buying agency retains before the money reaches
+        us. Pass-throughs are advertiser-funded costs outside the split — paid
+        media, production, travel, gifting.
+      </p>
+
       {/* Placements */}
       <div className="flex flex-col gap-2">
         <Eyebrow>Placements</Eyebrow>
         <div className="overflow-x-auto">
-          <table className="w-full min-w-[640px] border-collapse">
+          <table className="w-full min-w-[620px] border-collapse">
             <thead>
               <tr className="border-b border-hairline">
                 <Th>Creator</Th>
                 <Th>Format</Th>
                 <Th align="right">Units</Th>
                 <Th align="right">Reach</Th>
-                <Th align="right">Qual</Th>
                 <Th align="right">Rate card</Th>
               </tr>
             </thead>
@@ -93,9 +156,7 @@ export function DealCalculator({
               {deal.lines.map((l, i) => (
                 <tr key={l.channelId} className="border-b border-hairline/60">
                   <td className="py-2 pr-3">
-                    <span className="cm-sans text-sm font-semibold">
-                      {l.creatorName}
-                    </span>
+                    <span className="cm-sans text-sm font-semibold">{l.creatorName}</span>
                     <span className="cm-fine ml-2 text-ink/45">{l.platform}</span>
                   </td>
                   <td className="py-2 pr-3">
@@ -126,86 +187,53 @@ export function DealCalculator({
                   <td className="cm-fine py-2 pr-3 text-right tabular-nums text-ink/60">
                     {compactNumber(l.reach)}
                   </td>
-                  <td className="cm-fine py-2 pr-3 text-right tabular-nums text-ink/60">
-                    {l.weight.toFixed(2)}
-                  </td>
                   <td className="cm-fine py-2 text-right tabular-nums">
-                    {usd(l.price)}
+                    {usd(l.gross)}
+                    {l.belowFloor && (
+                      <span className="ml-2 text-accent">below floor</span>
+                    )}
                   </td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
-        <p className="cm-fine text-ink/40">
-          Qual is engagement divided by that platform&rsquo;s average. 1.00 is
-          typical for the surface.
-        </p>
       </div>
 
-      {/* Controls */}
-      <div className="flex flex-col gap-3 border-t border-hairline pt-4">
-        <div className="flex flex-wrap items-center gap-2">
-          <span className="cm-fine w-24 text-ink/45">CM take</span>
-          {TAKE_RATES.map((r) => (
-            <Pill key={r} active={takeRate === r} onClick={() => setTakeRate(r)}>
-              {Math.round(r * 100)}%
-            </Pill>
-          ))}
-        </div>
-        <div className="flex flex-wrap items-center gap-2">
-          <span className="cm-fine w-24 text-ink/45">Model</span>
-          <Pill active={model === "cost-up"} onClick={() => setModel("cost-up")}>
-            Cost-up
-          </Pill>
-          <Pill
-            active={model === "floor-premium"}
-            onClick={() => setModel("floor-premium")}
-          >
-            Floor + premium
-          </Pill>
-        </div>
-        {model === "floor-premium" && (
-          <div className="flex flex-wrap items-center gap-2">
-            <span className="cm-fine w-24 text-ink/45">Premium</span>
-            {PREMIUMS.map((p) => (
-              <Pill key={p} active={premium === p} onClick={() => setPremium(p)}>
-                {Math.round(p * 100)}%
-              </Pill>
-            ))}
-          </div>
-        )}
-      </div>
-
-      {/* Deal */}
+      {/* How the money resolves */}
       <div className="grid grid-cols-2 gap-px border border-hairline bg-hairline sm:grid-cols-4">
-        <Cell label="Creator cost" value={usd(deal.creatorTotal)} />
-        <Cell label="CM cut" value={usd(cmCut)} note={`${Math.round(takeRate * 100)}% of gross`} />
-        <Cell label="Brand pays" value={usd(gross)} accent />
+        <Cell label="Gross placements" value={usd(deal.grossPlacements)} />
         <Cell
-          label={usingPremium ? "Premium to split" : "Nothing to split"}
-          value={usingPremium ? usd(deal.surplus) : "—"}
-          note={
-            usingPremium
-              ? "divides on delivered performance"
-              : "cost-up pays rate card exactly"
-          }
+          label="Less agency cut"
+          value={deal.agencyDeduction ? `− ${usd(deal.agencyDeduction)}` : "—"}
         />
+        <Cell
+          label="Less pass-throughs"
+          value={deal.passThroughs ? `− ${usd(deal.passThroughs)}` : "—"}
+        />
+        <Cell label="Placement fee" value={usd(deal.placementFee)} accent
+          note="the base for commission" />
+      </div>
+      <div className="grid grid-cols-2 gap-px border border-hairline bg-hairline sm:grid-cols-3">
+        <Cell label="Advertiser pays" value={usd(deal.advertiserTotal)}
+          note="placements plus pass-throughs" />
+        <Cell label="CM commission" value={usd(deal.commission)} />
+        <Cell label="To creators" value={usd(deal.creatorTotal)} />
       </div>
 
       {/* Splits */}
       <div className="flex flex-col gap-2">
-        <Eyebrow>Creator payouts</Eyebrow>
+        <Eyebrow>Per creator</Eyebrow>
         <div className="overflow-x-auto">
-          <table className="w-full min-w-[520px] border-collapse">
+          <table className="w-full min-w-[560px] border-collapse">
             <thead>
               <tr className="border-b border-hairline">
                 <Th>Creator</Th>
-                <Th align="right">Reach</Th>
-                <Th align="right">Qual</Th>
-                <Th align="right">Payout</Th>
-                <Th align="right">Share</Th>
-                {usingPremium && <Th align="right">vs rate card</Th>}
+                <Th>Treatment</Th>
+                <Th align="right">Rate</Th>
+                <Th align="right">Placement fee</Th>
+                <Th align="right">CM</Th>
+                <Th align="right">Creator</Th>
               </tr>
             </thead>
             <tbody>
@@ -214,37 +242,50 @@ export function DealCalculator({
                   <td className="cm-sans py-2 pr-3 text-sm font-semibold">
                     {s.creatorName}
                   </td>
-                  <td className="cm-fine py-2 pr-3 text-right tabular-nums text-ink/60">
-                    {compactNumber(s.reach)}
-                  </td>
-                  <td className="cm-fine py-2 pr-3 text-right tabular-nums text-ink/60">
-                    {s.weight.toFixed(2)}
+                  <td className="cm-fine py-2 pr-3 text-ink/60">
+                    {s.treatment === "New" ? "New brand" : s.treatment}
                   </td>
                   <td className="cm-fine py-2 pr-3 text-right tabular-nums">
-                    {usd(usingPremium ? s.pool : s.costUp)}
+                    {Math.round(s.rate * 100)}%
                   </td>
                   <td className="cm-fine py-2 pr-3 text-right tabular-nums text-ink/60">
-                    {Math.round(
-                      (usingPremium ? s.poolPct : s.costUpPct) * 100
-                    )}
-                    %
+                    {usd(s.placementFee)}
                   </td>
-                  {usingPremium && (
-                    <td className="cm-fine py-2 text-right tabular-nums text-success">
-                      +{usd(s.delta)}
-                    </td>
-                  )}
+                  <td className="cm-fine py-2 pr-3 text-right tabular-nums">
+                    {usd(s.commission)}
+                  </td>
+                  <td className="cm-fine py-2 text-right tabular-nums">
+                    {usd(s.creatorShare)}
+                  </td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
-        <p className="cm-fine text-ink/40">
-          {usingPremium
-            ? "Every creator is floored at their rate card; only the premium divides on delivered performance, so nobody earns less for joining a bundle."
-            : "Each creator is paid their rate card for what was sold. CM's margin sits on top."}
-        </p>
       </div>
+
+      {keepIt.length > 0 && (
+        <p className="cm-fine border border-accent/40 bg-accent/5 px-4 py-3 text-accent">
+          {keepIt.map((s) => s.creatorName).join(", ")} —{" "}
+          {advertiser.trim() || "this advertiser"} is a keep-it brand. We take no
+          commission and must not solicit it; route the enquiry straight to the
+          creator.
+        </p>
+      )}
+      {deal.belowFloorCount > 0 && (
+        <p className="cm-fine text-warning">
+          {deal.belowFloorCount} placement
+          {deal.belowFloorCount === 1 ? " is" : "s are"} priced below the
+          creator&rsquo;s Schedule C floor. We should not bring a deal at this price.
+        </p>
+      )}
+
+      <p className="cm-fine text-ink/40">
+        Rates are fixed by the agreement — {Math.round(COMMISSION_RATE.New * 100)}%
+        for new advertisers, {Math.round(COMMISSION_RATE["Hand it to us"] * 100)}%
+        hand-it-to-us, 0% keep-it — and are looked up from Schedule B, not chosen
+        here. Commission is calculated on the placement fee only.
+      </p>
     </div>
   );
 }

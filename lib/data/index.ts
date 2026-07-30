@@ -51,6 +51,7 @@ export function toBuyerCreator(c: Creator): BuyerCreator {
     agreementStatus,
     agreementSignedDate,
     agreementEnvelopeId,
+    priceFloor,
     ...rest
   } = c;
   return {
