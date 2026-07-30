@@ -9,6 +9,7 @@ import { BundlePanel } from "./BundlePanel";
 import { BriefPanel } from "./BriefPanel";
 import { BundleProvider, useBundle } from "./bundle-context";
 import { arrangeForDisplay } from "@/lib/arrange";
+import type { Availability } from "@/lib/inventory";
 import {
   buildOptions,
   creatorMatches,
@@ -20,13 +21,20 @@ import {
 export function BuyerExperience({
   creators,
   overlap,
+  availability,
 }: {
   creators: BuyerCreator[];
   overlap: OverlapAssumption[];
+  /** channelId → qualitative state. Slot counts stay on the server. */
+  availability: Record<string, Availability>;
 }) {
   return (
     <BundleProvider creators={creators}>
-      <BuyerInner creators={creators} overlap={overlap} />
+      <BuyerInner
+        creators={creators}
+        overlap={overlap}
+        availability={availability}
+      />
     </BundleProvider>
   );
 }
@@ -34,9 +42,12 @@ export function BuyerExperience({
 function BuyerInner({
   creators,
   overlap,
+  availability,
 }: {
   creators: BuyerCreator[];
   overlap: OverlapAssumption[];
+  /** channelId → qualitative state. Slot counts stay on the server. */
+  availability: Record<string, Availability>;
 }) {
   const options = useMemo(() => buildOptions(creators), [creators]);
   const [filters, setFilters] = useState<FilterState>(() =>
@@ -113,7 +124,7 @@ function BuyerInner({
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.24, ease: [0.4, 0, 0.2, 1] }}
               >
-                <CreatorCard creator={c} />
+                <CreatorCard creator={c} availability={availability} />
               </motion.div>
             ))}
           </div>

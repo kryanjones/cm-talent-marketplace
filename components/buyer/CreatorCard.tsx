@@ -7,9 +7,17 @@ import { AnimatePresence, motion } from "framer-motion";
 import type { BuyerCreator } from "@/lib/types";
 import { compactNumber, percentFromFraction } from "@/lib/format";
 import { Chip, Eyebrow, FictionalBadge, Pill } from "@/components/ui";
+import { AVAILABILITY_TONE, type Availability } from "@/lib/inventory";
 import { useBundle } from "./bundle-context";
 
-export function CreatorCard({ creator }: { creator: BuyerCreator }) {
+export function CreatorCard({
+  creator,
+  availability = {},
+}: {
+  creator: BuyerCreator;
+  /** channelId → qualitative state, resolved server-side. */
+  availability?: Record<string, Availability>;
+}) {
   const [expanded, setExpanded] = useState(false);
   const bundle = useBundle();
 
@@ -147,9 +155,20 @@ export function CreatorCard({ creator }: { creator: BuyerCreator }) {
                   <div key={ch.id} className="flex flex-col gap-2 p-4">
                     <div className="flex items-start justify-between gap-3">
                       <div>
-                        <p className="cm-sans text-sm font-semibold">
-                          {ch.platform}
-                        </p>
+                        <div className="flex items-center gap-2">
+                          <p className="cm-sans text-sm font-semibold">
+                            {ch.platform}
+                          </p>
+                          {availability[ch.id] && (
+                            <span
+                              className={`cm-fine ${
+                                AVAILABILITY_TONE[availability[ch.id]]
+                              }`}
+                            >
+                              {availability[ch.id]}
+                            </span>
+                          )}
+                        </div>
                         {ch.handleUrl && (
                           <p className="cm-fine text-ink/45">{ch.handleUrl}</p>
                         )}

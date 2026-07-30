@@ -2,13 +2,33 @@
 
 import { useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import type { Creator, RateCard } from "@/lib/types";
+import type { Booking, Creator, RateCard } from "@/lib/types";
 import { compactNumber, percentFromFraction, usd } from "@/lib/format";
 import { Chip, Eyebrow } from "@/components/ui";
+import {
+  computeFill,
+  rollUp,
+  currentMonthKey,
+  AVAILABILITY_TONE,
+  type ChannelFill,
+} from "@/lib/inventory";
 
-export function InventoryTable({ creators }: { creators: Creator[] }) {
+export function InventoryTable({
+  creators,
+  bookings,
+}: {
+  creators: Creator[];
+  bookings: Booking[];
+}) {
   const [query, setQuery] = useState("");
   const [openId, setOpenId] = useState<string | null>(null);
+
+  const month = currentMonthKey();
+  const fills = useMemo(
+    () => computeFill(creators.flatMap((c) => c.channels), bookings, month),
+    [creators, bookings, month]
+  );
+  const anyBookings = bookings.length > 0;
 
   const filtered = useMemo(() => {
     const q = query.toLowerCase();
@@ -25,7 +45,14 @@ export function InventoryTable({ creators }: { creators: Creator[] }) {
   return (
     <div className="flex flex-col gap-4 py-6">
       <div className="flex flex-wrap items-center justify-between gap-3">
-        <Eyebrow>Inventory · {filtered.length} creators</Eyebrow>
+        <div className="flex flex-col gap-1">
+          <Eyebrow>Inventory · {filtered.length} creators</Eyebrow>
+          <span className="cm-fine text-ink/45">
+            Availability for {month}
+            {!anyBookings &&
+              " · no bookings recorded yet, so everything reads as open"}
+          </span>
+        </div>
         <input
           type="search"
           value={query}
@@ -41,16 +68,17 @@ export function InventoryTable({ creators }: { creators: Creator[] }) {
           <span className="cm-fine text-ink/45">Creator</span>
           <span className="cm-fine text-ink/45">Beat</span>
           <span className="cm-fine text-ink/45">Channels</span>
-          <span className="cm-fine text-ink/45">Total slots / mo</span>
+          <span className="cm-fine text-ink/45">Open this month</span>
           <span className="cm-fine text-ink/45">Detail</span>
         </div>
 
         <div className="divide-y divide-hairline">
           {filtered.map((c) => {
             const open = openId === c.id;
-            const totalSlots = c.channels.reduce(
-              (s, ch) => s + (ch.inventorySlotsPerMonth ?? 0),
-              0
+            const roll = rollUp(
+              c.channels
+                .map((ch) => fills.get(ch.id))
+                .filter(Boolean) as ChannelFill[]
             );
             return (
               <div key={c.id}>
@@ -62,7 +90,20 @@ export function InventoryTable({ creators }: { creators: Creator[] }) {
                   <span className="cm-sans font-semibold">{c.name}</span>
                   <span className="cm-fine text-ink/60">{c.primaryBeat}</span>
                   <span className="cm-fine text-ink/60">{c.channels.length}</span>
-                  <span className="cm-fine text-ink/60">{totalSlots || "—"}</span>
+                  <span className="cm-fine">
+                    {roll.capacity > 0 ? (
+                      <>
+                        <span className={AVAILABILITY_TONE[roll.availability]}>
+                          {roll.available} of {roll.capacity} open
+                        </span>
+                        {roll.booked > 0 && (
+                          <span className="text-ink/40"> · {roll.booked} booked</span>
+                        )}
+                      </>
+                    ) : (
+                      <span className="text-ink/40">—</span>
+                    )}
+                  </span>
                   <span className="cm-label text-accent">{open ? "Hide" : "View"}</span>
                 </button>
 
@@ -87,11 +128,20 @@ export function InventoryTable({ creators }: { creators: Creator[] }) {
                                 {ch.leadTimeDays != null && (
                                   <Chip tone="muted">{ch.leadTimeDays}d lead</Chip>
                                 )}
-                                {ch.inventorySlotsPerMonth != null && (
-                                  <Chip tone="muted">
-                                    {ch.inventorySlotsPerMonth} slots/mo
-                                  </Chip>
-                                )}
+                                {(() => {
+                                  const f = fills.get(ch.id);
+                                  if (!f || f.capacity === null) return null;
+                                  return (
+                                    <span
+                                      className={`cm-fine border border-hairline px-2 py-1 ${
+                                        AVAILABILITY_TONE[f.availability]
+                                      }`}
+                                    >
+                                      {f.available} of {f.capacity} open
+                                      {f.booked > 0 ? ` · ${f.booked} booked` : ""}
+                                    </span>
+                                  );
+                                })()}
                               </div>
                             </div>
                             <div className="mt-2 grid grid-cols-2 gap-2 sm:grid-cols-4">

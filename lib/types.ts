@@ -124,6 +124,26 @@ export interface BrandBoundary {
   categoryExclusivityAvailable: boolean;
 }
 
+/**
+ * One booked (or held) placement against a channel's monthly inventory.
+ *
+ * Capacity already exists per channel as `Inventory Slots Per Month`; this is
+ * the other half — what has actually been taken. Lives in an optional
+ * "Bookings" table. Until that table exists the app reports capacity with
+ * nothing booked, which is honest: we do not know of any bookings.
+ */
+export interface Booking {
+  id: string;
+  channelId: string | null;
+  /** Advertiser the slot is held for. */
+  brand: string | null;
+  /** Any date inside the booked month; normalised to a YYYY-MM key. */
+  month: string | null;
+  slots: number;
+  /** Held is provisional, Confirmed is sold. Both consume inventory. */
+  status: "Held" | "Confirmed" | string;
+}
+
 export type OverlapScenario =
   | "Same Creator Cross-Platform"
   | "Same Category Cross-Creator"

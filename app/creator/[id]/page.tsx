@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { data, toBuyerCreator } from "@/lib/data";
 import { MediaKit } from "@/components/creator/MediaKit";
+import { computeFill, type Availability } from "@/lib/inventory";
 
 export const dynamic = "force-dynamic";
 
@@ -35,11 +36,19 @@ export default async function CreatorPage({
 }: {
   params: { id: string };
 }) {
-  const [creator, overlap] = await Promise.all([
+  const [creator, overlap, bookings] = await Promise.all([
     getCreator(params.id),
     data.getOverlapAssumptions(),
+    data.getBookings(),
   ]);
   if (!creator) notFound();
+
+  // Qualitative only — the media kit is a public document.
+  const fills = computeFill(creator.channels, bookings);
+  const availability: Record<string, Availability> = {};
+  for (const [channelId, fill] of fills) {
+    if (fill.availability !== "Unknown") availability[channelId] = fill.availability;
+  }
 
   return (
     <div className="mx-auto max-w-content px-6">
@@ -51,7 +60,11 @@ export default async function CreatorPage({
           ← All creators
         </Link>
       </div>
-      <MediaKit creator={toBuyerCreator(creator)} overlap={overlap} />
+      <MediaKit
+        creator={toBuyerCreator(creator)}
+        overlap={overlap}
+        availability={availability}
+      />
     </div>
   );
 }

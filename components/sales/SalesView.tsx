@@ -1,7 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import type { Creator, OverlapAssumption, SavedBundle } from "@/lib/types";
+import type {
+  Booking,
+  Creator,
+  OverlapAssumption,
+  SavedBundle,
+} from "@/lib/types";
 import { InventoryTable } from "./InventoryTable";
 import { VettingQueue } from "./VettingQueue";
 import { SavedBundles } from "./SavedBundles";
@@ -13,11 +18,13 @@ export function SalesView({
   pending,
   bundles,
   overlap,
+  bookings,
 }: {
   active: Creator[];
   pending: Creator[];
   bundles: SavedBundle[];
   overlap: OverlapAssumption[];
+  bookings: Booking[];
 }) {
   const [tab, setTab] = useState<Tab>("inventory");
 
@@ -55,7 +62,9 @@ export function SalesView({
         ))}
       </nav>
 
-      {tab === "inventory" && <InventoryTable creators={active} />}
+      {tab === "inventory" && (
+        <InventoryTable creators={active} bookings={bookings} />
+      )}
       {tab === "applications" && <VettingQueue pending={pending} />}
       {tab === "bundles" && (
         <SavedBundles bundles={bundles} creators={active} overlap={overlap} />

@@ -10,6 +10,7 @@ import {
 } from "@/lib/reach";
 import { compactNumber, fullNumber, percentFromFraction } from "@/lib/format";
 import { Bar, Chip, Eyebrow, FictionalBadge } from "@/components/ui";
+import { AVAILABILITY_TONE, type Availability } from "@/lib/inventory";
 
 /**
  * A creator's digital media kit.
@@ -25,9 +26,12 @@ import { Bar, Chip, Eyebrow, FictionalBadge } from "@/components/ui";
 export function MediaKit({
   creator,
   overlap,
+  availability = {},
 }: {
   creator: BuyerCreator;
   overlap: OverlapAssumption[];
+  /** channelId → qualitative state. Slot counts never reach this document. */
+  availability?: Record<string, Availability>;
 }) {
   const coef = useMemo(() => coefficientsFromAssumptions(overlap), [overlap]);
 
@@ -241,6 +245,13 @@ export function MediaKit({
             >
               <div>
                 <p className="cm-h3 font-bold">{ch.platform}</p>
+                {availability[ch.id] && (
+                  <p
+                    className={`cm-fine mt-1 ${AVAILABILITY_TONE[availability[ch.id]]}`}
+                  >
+                    {availability[ch.id]}
+                  </p>
+                )}
                 {ch.handleUrl && (
                   <p className="cm-fine mt-1 break-all text-ink/45">{ch.handleUrl}</p>
                 )}

@@ -17,6 +17,7 @@ import type {
   SavedBundle,
   CreatorApplication,
   CreatorStatus,
+  Booking,
   RateCard,
   AgeBands,
   GenderSplit,
@@ -31,6 +32,7 @@ const TABLES = {
   boundaries: process.env.AIRTABLE_TABLE_BOUNDARIES || "Brand Boundaries",
   overlap: process.env.AIRTABLE_TABLE_OVERLAP || "Overlap Assumptions",
   bundles: process.env.AIRTABLE_TABLE_BUNDLES || "Saved Bundles",
+  bookings: process.env.AIRTABLE_TABLE_BOOKINGS || "Bookings",
 };
 
 interface AirtableRecord {
@@ -359,6 +361,32 @@ export const airtableAdapter: DataAdapter = {
     } catch (err) {
       // Reach math has sane defaults; don't take the page down over this table.
       console.error("overlap assumptions read failed, using defaults", err);
+      return [];
+    }
+  },
+
+  async getBookings() {
+    try {
+      const recs = await fetchAll(TABLES.bookings);
+      return recs.map<Booking>((r) => {
+        const f = r.fields;
+        // Channel may be a linked record (array of record ids) or plain text —
+        // the same duality the Channels table already shows for Creator.
+        const rawChannel = f["Channel"];
+        const channelId = Array.isArray(rawChannel)
+          ? String(rawChannel[0])
+          : str(rawChannel);
+        return {
+          id: r.id,
+          channelId,
+          brand: str(f["Brand"]),
+          month: str(f["Month"]),
+          slots: numOrNull(f["Slots"]) ?? 1,
+          status: (str(f["Status"]) as Booking["status"]) ?? "Confirmed",
+        };
+      });
+    } catch {
+      // No Bookings table yet — treat inventory as unbooked rather than failing.
       return [];
     }
   },
