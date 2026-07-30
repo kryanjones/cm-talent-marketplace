@@ -162,6 +162,7 @@ export const localAdapter: DataAdapter = {
       bio: app.bio,
       positioning: null, // sales writes this by hand after approval
       featuredPartnerships: null, // curated by sales; never auto-filled
+      teamEmail: null, // added by sales when the creator is onboarded
       priorOutlets: splitList(app.priorOutlets),
       primaryBeat: app.primaryBeat,
       homeMarketDMA: app.homeMarketDMA,
