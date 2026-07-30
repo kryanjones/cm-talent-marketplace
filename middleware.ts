@@ -18,8 +18,26 @@ export function middleware(req: NextRequest) {
 
   const { pathname, search } = req.nextUrl;
 
-  // Always allow the gate page + its unlock endpoint through.
-  if (pathname === "/gate" || pathname === "/api/site-unlock") {
+  /**
+   * Paths the password gate must not touch.
+   *
+   * The gate is a shared password held in a cookie, which only a browser can
+   * present. Machine callers cannot, so any endpoint a third-party service
+   * posts to has to be exempt or it silently receives a 307 to /gate and never
+   * runs — DocuSign Connect was being bounced exactly this way.
+   *
+   * Exempting the webhook does not weaken anything: it authenticates every
+   * request by HMAC against DOCUSIGN_CONNECT_SECRET and rejects unsigned
+   * callers, which is stronger than a shared password would have been.
+   *
+   * Exact matches only — a prefix test would expose anything below the path.
+   */
+  const OPEN_PATHS = new Set([
+    "/gate",
+    "/api/site-unlock",
+    "/api/docusign/webhook",
+  ]);
+  if (OPEN_PATHS.has(pathname)) {
     return NextResponse.next();
   }
 
