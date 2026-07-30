@@ -28,6 +28,9 @@ export type BrandSafetyTier = "Premium" | "Standard" | "Use-with-context";
 
 export type CreatorStatus = "Active" | "Pending Review" | "Rejected";
 
+/** Master representation agreement state. Only "Signed" clears a creator to sell. */
+export type AgreementStatus = "Not sent" | "Sent" | "Signed" | "Declined";
+
 export interface AgeBands {
   [band: string]: number; // e.g. { "18-24": 6, "25-34": 18, ... } percentages
 }
@@ -101,6 +104,16 @@ export interface Creator {
    * buyer should be able to lift out of the page source.
    */
   teamEmail: string | null;
+  /**
+   * Master representation agreement — the authority to sell on this creator's
+   * behalf. Under the agency model this is the thing that makes a pitch legal:
+   * without a signed agreement we are not their agent and cannot commit their
+   * inventory to a brand. INTERNAL.
+   */
+  agreementStatus: AgreementStatus | null;
+  agreementSignedDate: string | null;
+  /** DocuSign envelope, once the agreement has been sent for signature. */
+  agreementEnvelopeId: string | null;
   priorOutlets: string[];
   primaryBeat: string | null;
   homeMarketDMA: string | null;
@@ -181,7 +194,12 @@ export interface SavedBundle {
  */
 export type BuyerCreator = Omit<
   Creator,
-  "channels" | "brandBoundary" | "teamEmail"
+  | "channels"
+  | "brandBoundary"
+  | "teamEmail"
+  | "agreementStatus"
+  | "agreementSignedDate"
+  | "agreementEnvelopeId"
 > & {
   channels: Omit<Channel, "rateCard">[];
   brandBoundary: Omit<
