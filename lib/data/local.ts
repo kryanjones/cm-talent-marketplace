@@ -20,6 +20,7 @@ import type {
   SavedBundle,
   CreatorApplication,
   CreatorStatus,
+  Booking,
 } from "@/lib/types";
 import type { DataAdapter } from "./adapter";
 
@@ -34,6 +35,7 @@ interface Runtime {
   boundaries: BrandBoundary[];
   statusOverrides: Record<string, { status: CreatorStatus; dateApproved: string | null }>;
   bundles: SavedBundle[];
+  bookings?: Booking[];
 }
 
 function readSeed<T>(file: string): T {
@@ -128,6 +130,10 @@ export const localAdapter: DataAdapter = {
     return load().runtime.bundles;
   },
 
+  async getBookings() {
+    return readRuntime().bookings ?? [];
+  },
+
   async saveBundle(bundle: SavedBundle) {
     const rt = readRuntime();
     const id = nextId("BND", rt.bundles.map((b) => b.id ?? ""));
@@ -154,6 +160,8 @@ export const localAdapter: DataAdapter = {
       personaType: "Applicant",
       isDemoPersona: false,
       bio: app.bio,
+      positioning: null, // sales writes this by hand after approval
+      featuredPartnerships: null, // curated by sales; never auto-filled
       priorOutlets: splitList(app.priorOutlets),
       primaryBeat: app.primaryBeat,
       homeMarketDMA: app.homeMarketDMA,

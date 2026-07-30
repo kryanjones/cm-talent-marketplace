@@ -76,6 +76,25 @@ export interface Creator {
   personaType: string | null;
   isDemoPersona: boolean;
   bio: string | null;
+  /**
+   * Human-written sales positioning for the media kit. Optional: the field does
+   * not exist in the base yet, so this is null until someone adds a
+   * "Positioning" long-text column to Creators. The media kit falls back to Bio.
+   * Deliberately not automated — sales owns this copy.
+   */
+  positioning: string | null;
+  /**
+   * Cleared, client-facing partnership examples — the ONLY partner data that is
+   * safe to publish. Distinct from BrandBoundary.pastBrandPartners, which is the
+   * raw internal record and stays sales-only: some advertisers treat their
+   * creator spend as confidential, so a brand appears publicly only when
+   * somebody deliberately adds it to this field.
+   *
+   * Optional; the "Featured Partnerships" column does not exist in the base yet.
+   * One entry per line, or comma-separated. A line may carry a short note after
+   * an em dash or pipe, e.g. "Delta — three-part travel series".
+   */
+  featuredPartnerships: string | null;
   priorOutlets: string[];
   primaryBeat: string | null;
   homeMarketDMA: string | null;
@@ -103,6 +122,26 @@ export interface BrandBoundary {
   /** Sales-view detail. */
   activeExclusivities: string | null;
   categoryExclusivityAvailable: boolean;
+}
+
+/**
+ * One booked (or held) placement against a channel's monthly inventory.
+ *
+ * Capacity already exists per channel as `Inventory Slots Per Month`; this is
+ * the other half — what has actually been taken. Lives in an optional
+ * "Bookings" table. Until that table exists the app reports capacity with
+ * nothing booked, which is honest: we do not know of any bookings.
+ */
+export interface Booking {
+  id: string;
+  channelId: string | null;
+  /** Advertiser the slot is held for. */
+  brand: string | null;
+  /** Any date inside the booked month; normalised to a YYYY-MM key. */
+  month: string | null;
+  slots: number;
+  /** Held is provisional, Confirmed is sold. Both consume inventory. */
+  status: "Held" | "Confirmed" | string;
 }
 
 export type OverlapScenario =

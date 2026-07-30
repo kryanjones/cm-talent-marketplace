@@ -1,14 +1,28 @@
 import { getActiveBuyerCreators, data, dataSource } from "@/lib/data";
 import { BuyerExperience } from "@/components/buyer/BuyerExperience";
+import { computeFill, type Availability } from "@/lib/inventory";
 
 // Always render against fresh data so Airtable edits show up.
 export const dynamic = "force-dynamic";
 
 export default async function BuyerPage() {
-  const [creators, overlap] = await Promise.all([
+  const [creators, overlap, bookings] = await Promise.all([
     getActiveBuyerCreators(),
     data.getOverlapAssumptions(),
+    data.getBookings(),
   ]);
+
+  // Resolve availability on the server and hand the client only the qualitative
+  // label. Slot counts and booking records are commercial detail; a buyer needs
+  // to know whether they can buy, not how much room is left.
+  const fills = computeFill(
+    creators.flatMap((c) => c.channels),
+    bookings
+  );
+  const availability: Record<string, Availability> = {};
+  for (const [channelId, fill] of fills) {
+    if (fill.availability !== "Unknown") availability[channelId] = fill.availability;
+  }
 
   return (
     <>
@@ -20,7 +34,11 @@ export default async function BuyerPage() {
           </p>
         </div>
       )}
-      <BuyerExperience creators={creators} overlap={overlap} />
+      <BuyerExperience
+        creators={creators}
+        overlap={overlap}
+        availability={availability}
+      />
     </>
   );
 }

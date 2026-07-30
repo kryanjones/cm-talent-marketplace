@@ -2,20 +2,25 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import type { BuyerCreator } from "@/lib/types";
 import { compactNumber, percentFromFraction } from "@/lib/format";
 import { Chip, Eyebrow, FictionalBadge, Pill } from "@/components/ui";
+import { AVAILABILITY_TONE, type Availability } from "@/lib/inventory";
 import { useBundle } from "./bundle-context";
 
-export function CreatorCard({ creator }: { creator: BuyerCreator }) {
+export function CreatorCard({
+  creator,
+  availability = {},
+}: {
+  creator: BuyerCreator;
+  /** channelId → qualitative state, resolved server-side. */
+  availability?: Record<string, Availability>;
+}) {
   const [expanded, setExpanded] = useState(false);
   const bundle = useBundle();
 
-  const audience = Math.max(
-    0,
-    ...creator.channels.map((c) => c.audienceSize ?? 0)
-  );
   const totalReach = creator.channels.reduce(
     (s, c) => s + (c.avgReachPerUnit ?? 0),
     0
@@ -73,14 +78,22 @@ export function CreatorCard({ creator }: { creator: BuyerCreator }) {
           </p>
         </div>
 
-        {/* Headline metrics */}
-        <div className="grid grid-cols-3 gap-2 border-y border-hairline py-3">
-          <Metric label="Audience" value={compactNumber(audience)} />
-          <Metric label="Reach / run" value={compactNumber(totalReach)} />
-          <Metric label="Channels" value={String(creator.channels.length)} />
-        </div>
+        {/*
+          One number, stated as a sentence rather than a dashboard. The card's
+          job is to convey fit — beat, formats, credibility — and a buyer
+          comparing three creators does not read six figures per card. Audience
+          size, engagement, channel counts and lean all live one click away, in
+          the channel detail and the media kit.
+        */}
+        <p className="cm-body text-sm text-ink/65">
+          Reaches <strong className="font-semibold text-ink">
+            ~{compactNumber(totalReach)}
+          </strong>{" "}
+          per run across {creator.channels.length} channel
+          {creator.channels.length === 1 ? "" : "s"}.
+        </p>
 
-        {/* Platforms */}
+        {/* What you can actually buy */}
         <div className="flex flex-wrap gap-1">
           {platforms.map((p) => (
             <Chip key={p} tone="muted">
@@ -89,26 +102,20 @@ export function CreatorCard({ creator }: { creator: BuyerCreator }) {
           ))}
         </div>
 
-        {/* Affinities */}
-        {creator.categoryAffinities.length > 0 && (
-          <div className="flex flex-wrap gap-1">
-            {creator.categoryAffinities.slice(0, 4).map((a) => (
+        {/* Credibility and category fit, kept to one line */}
+        {(creator.trustSignals.length > 0 ||
+          creator.categoryAffinities.length > 0) && (
+          <div className="flex flex-wrap items-center gap-1">
+            {creator.trustSignals.slice(0, 2).map((t) => (
+              <Chip key={t} tone="accent">
+                {t}
+              </Chip>
+            ))}
+            {creator.categoryAffinities.slice(0, 2).map((a) => (
               <Chip key={a}>{a}</Chip>
             ))}
           </div>
         )}
-
-        {/* Trust signals + lean (audience context) */}
-        <div className="flex flex-wrap items-center gap-1">
-          {creator.trustSignals.slice(0, 3).map((t) => (
-            <Chip key={t} tone="accent">
-              {t}
-            </Chip>
-          ))}
-          {creator.politicalLean && (
-            <Chip tone="muted">Lean: {creator.politicalLean}</Chip>
-          )}
-        </div>
 
         {/* Actions */}
         <div className="mt-1 flex items-center gap-2">
@@ -122,6 +129,12 @@ export function CreatorCard({ creator }: { creator: BuyerCreator }) {
           >
             {expanded ? "Hide channels" : "View channels"}
           </button>
+          <Link
+            href={`/creator/${creator.id}`}
+            className="cm-label ml-auto text-accent underline-offset-4 transition-opacity duration-micro hover:underline"
+          >
+            Media kit
+          </Link>
         </div>
       </div>
 
@@ -142,9 +155,20 @@ export function CreatorCard({ creator }: { creator: BuyerCreator }) {
                   <div key={ch.id} className="flex flex-col gap-2 p-4">
                     <div className="flex items-start justify-between gap-3">
                       <div>
-                        <p className="cm-sans text-sm font-semibold">
-                          {ch.platform}
-                        </p>
+                        <div className="flex items-center gap-2">
+                          <p className="cm-sans text-sm font-semibold">
+                            {ch.platform}
+                          </p>
+                          {availability[ch.id] && (
+                            <span
+                              className={`cm-fine ${
+                                AVAILABILITY_TONE[availability[ch.id]]
+                              }`}
+                            >
+                              {availability[ch.id]}
+                            </span>
+                          )}
+                        </div>
                         {ch.handleUrl && (
                           <p className="cm-fine text-ink/45">{ch.handleUrl}</p>
                         )}

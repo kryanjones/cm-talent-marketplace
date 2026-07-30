@@ -6,8 +6,10 @@ import type { BuyerCreator, OverlapAssumption } from "@/lib/types";
 import { CreatorCard } from "./CreatorCard";
 import { FilterPanel } from "./FilterPanel";
 import { BundlePanel } from "./BundlePanel";
+import { BriefPanel } from "./BriefPanel";
 import { BundleProvider, useBundle } from "./bundle-context";
 import { arrangeForDisplay } from "@/lib/arrange";
+import type { Availability } from "@/lib/inventory";
 import {
   buildOptions,
   creatorMatches,
@@ -19,13 +21,20 @@ import {
 export function BuyerExperience({
   creators,
   overlap,
+  availability,
 }: {
   creators: BuyerCreator[];
   overlap: OverlapAssumption[];
+  /** channelId → qualitative state. Slot counts stay on the server. */
+  availability: Record<string, Availability>;
 }) {
   return (
     <BundleProvider creators={creators}>
-      <BuyerInner creators={creators} overlap={overlap} />
+      <BuyerInner
+        creators={creators}
+        overlap={overlap}
+        availability={availability}
+      />
     </BundleProvider>
   );
 }
@@ -33,9 +42,12 @@ export function BuyerExperience({
 function BuyerInner({
   creators,
   overlap,
+  availability,
 }: {
   creators: BuyerCreator[];
   overlap: OverlapAssumption[];
+  /** channelId → qualitative state. Slot counts stay on the server. */
+  availability: Record<string, Availability>;
 }) {
   const options = useMemo(() => buildOptions(creators), [creators]);
   const [filters, setFilters] = useState<FilterState>(() =>
@@ -68,6 +80,12 @@ function BuyerInner({
           creators and channels, and see real reach and engagement math — including a
           deduplicated estimate — as you go.
         </p>
+
+        {/* Guided entry point. Browsing stays available underneath — this
+            never blocks the array. */}
+        <div className="mt-7">
+          <BriefPanel onPlan={bundle.setBundle} />
+        </div>
       </section>
 
       <div className="grid grid-cols-1 gap-8 py-8 lg:grid-cols-[240px_minmax(0,1fr)_360px]">
@@ -106,7 +124,7 @@ function BuyerInner({
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.24, ease: [0.4, 0, 0.2, 1] }}
               >
-                <CreatorCard creator={c} />
+                <CreatorCard creator={c} availability={availability} />
               </motion.div>
             ))}
           </div>

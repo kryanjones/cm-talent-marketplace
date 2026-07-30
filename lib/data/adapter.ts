@@ -5,6 +5,7 @@ import type {
   SavedBundle,
   CreatorApplication,
   CreatorStatus,
+  Booking,
 } from "@/lib/types";
 
 /**
@@ -20,6 +21,12 @@ export interface DataAdapter {
   getCreatorById(id: string): Promise<Creator | null>;
 
   getOverlapAssumptions(): Promise<OverlapAssumption[]>;
+
+  /**
+   * Booked/held inventory. Returns [] when no Bookings table exists, so every
+   * channel simply reads as fully open rather than the app failing.
+   */
+  getBookings(): Promise<Booking[]>;
 
   getSavedBundles(): Promise<SavedBundle[]>;
   saveBundle(bundle: SavedBundle): Promise<SavedBundle>;

@@ -9,15 +9,16 @@ import {
   type ResolvedComponent,
 } from "@/lib/reach";
 import { recommend, type OptimizationGoal } from "@/lib/recommend";
-import {
-  compactNumber,
-  fullNumber,
-  percent,
-  percentFromFraction,
-} from "@/lib/format";
+import { compactNumber, fullNumber, percent } from "@/lib/format";
 import { AnimatedNumber, Bar, Eyebrow } from "@/components/ui";
 import { useBundle } from "./bundle-context";
 import { RecommendationList } from "./RecommendationList";
+
+// Where "talk to us" goes. Both are public by nature (they appear in a mailto
+// link and an anchor), so NEXT_PUBLIC_ is correct here — no secret involved.
+const SALES_EMAIL =
+  process.env.NEXT_PUBLIC_SALES_EMAIL || "partnerships@collective.media";
+const MEETING_URL = process.env.NEXT_PUBLIC_MEETING_URL || "";
 
 export function BundlePanel({
   creators,
@@ -35,6 +36,16 @@ export function BundlePanel({
   const [saveState, setSaveState] = useState<"idle" | "saving" | "saved" | "error">(
     "idle"
   );
+
+  /**
+   * Hand the bundle to a human. Saves it server-side so sales can see what was
+   * assembled, then offers email and (if configured) a meeting booker. It does
+   * not claim anything was "sent" until the buyer actually sends it.
+   */
+  async function requestPricing() {
+    setPricingRequested(true);
+    if (saveState !== "saved") await saveBundle();
+  }
 
   async function copyShareLink() {
     // The URL always mirrors the bundle (bundle-context syncs it), so the
@@ -109,6 +120,32 @@ export function BundlePanel({
     }
     return Array.from(map.entries());
   }, [resolved]);
+
+  /**
+   * A prefilled handoff email. Carries what the bundle is and what it reaches —
+   * never a rate, since the buyer has not been shown one.
+   */
+  const mailtoHref = useMemo(() => {
+    const lines = grouped.map(
+      ([, comps]) =>
+        `- ${comps[0].creator.name}: ${comps
+          .map((c) => c.channel.platform)
+          .join(", ")}`
+    );
+    const link =
+      typeof window !== "undefined" ? `\n\nBundle link: ${window.location.href}` : "";
+    const body =
+      `Hello,\n\nI've put together a bundle on the Talent Marketplace and would like ` +
+      `rates and availability.\n\n` +
+      `${grouped.length} creator${grouped.length === 1 ? "" : "s"}, ` +
+      `${resolved.length} channel${resolved.length === 1 ? "" : "s"}\n` +
+      `${lines.join("\n")}\n\n` +
+      `Estimated net reach: ${compactNumber(reach.netReach)} ` +
+      `(${compactNumber(reach.grossReach)} gross)${link}\n\nThank you.`;
+    return `mailto:${SALES_EMAIL}?subject=${encodeURIComponent(
+      "Pricing request — Talent Marketplace bundle"
+    )}&body=${encodeURIComponent(body)}`;
+  }, [grouped, resolved.length, reach.netReach, reach.grossReach]);
 
   async function saveBundle() {
     setSaveState("saving");
@@ -193,12 +230,16 @@ export function BundlePanel({
               </p>
             </div>
 
-            {/* Blended secondary stats */}
+            {/*
+              Deliberately not a single "blended engagement" figure. Averaging a
+              newsletter open rate with a social engagement rate produces a
+              number that flatters the bundle and measures nothing — the schema
+              keeps these metrics apart for that reason. Platform count and
+              format count describe the shape of the buy instead; per-channel
+              rates stay on each channel.
+            */}
             <div className="grid grid-cols-2 gap-3">
-              <MiniStat
-                label="Blended engagement"
-                value={percentFromFraction(reach.blendedEngagementRate)}
-              />
+              <MiniStat label="Platforms" value={String(reach.platformCount)} />
               <MiniStat label="Formats" value={String(reach.combinedFormats.length)} />
             </div>
 
@@ -296,13 +337,45 @@ export function BundlePanel({
       {/* Sticky actions */}
       {!empty && (
         <div className="flex flex-col gap-2 border-t border-hairline pt-3">
-          <button
-            type="button"
-            onClick={() => setPricingRequested(true)}
-            className="cm-label w-full bg-accent px-4 py-3 text-ink-inverse transition-opacity duration-micro hover:opacity-90"
-          >
-            {pricingRequested ? "Pricing request sent ✓" : "Request pricing"}
-          </button>
+          {pricingRequested ? (
+            <div className="flex flex-col gap-2 border border-hairline bg-bg-alt p-3">
+              <p className="cm-fine text-ink/60">
+                Your bundle is saved for our team. Send it over and we will come
+                back with rates and availability.
+              </p>
+              <a
+                href={mailtoHref}
+                className="cm-label w-full bg-accent px-4 py-3 text-center text-ink-inverse transition-opacity duration-micro hover:opacity-90"
+              >
+                Email the team
+              </a>
+              {MEETING_URL && (
+                <a
+                  href={MEETING_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="cm-label w-full border border-ink px-4 py-2.5 text-center text-ink transition-colors duration-micro hover:bg-ink hover:text-ink-inverse"
+                >
+                  Book a call
+                </a>
+              )}
+              <button
+                type="button"
+                onClick={() => setPricingRequested(false)}
+                className="cm-fine text-ink/45 hover:text-accent"
+              >
+                Back
+              </button>
+            </div>
+          ) : (
+            <button
+              type="button"
+              onClick={requestPricing}
+              className="cm-label w-full bg-accent px-4 py-3 text-ink-inverse transition-opacity duration-micro hover:opacity-90"
+            >
+              Request pricing
+            </button>
+          )}
           <button
             type="button"
             onClick={saveBundle}

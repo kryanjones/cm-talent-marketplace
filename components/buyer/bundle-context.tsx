@@ -21,6 +21,8 @@ interface BundleApi {
   toggleChannel: (creatorId: string, channelId: string) => void;
   toggleCreator: (creator: BuyerCreator) => void;
   remove: (channelId: string) => void;
+  /** Replace the whole bundle at once — used when a brief returns a plan. */
+  setBundle: (components: BundleComponent[]) => void;
   clear: () => void;
   count: number;
 }
@@ -130,10 +132,15 @@ export function BundleProvider({
         }),
       remove: (channelId) =>
         setComponents((prev) => prev.filter((c) => c.channelId !== channelId)),
+      setBundle: (next) => {
+        // Only keep channels that still exist in live data, same guarantee the
+        // share-link and localStorage restore paths give.
+        setComponents(next.filter((c) => channelOwner.has(c.channelId)));
+      },
       clear: () => setComponents([]),
       count: components.length,
     };
-  }, [components]);
+  }, [components, channelOwner]);
 
   return <Ctx.Provider value={api}>{children}</Ctx.Provider>;
 }
