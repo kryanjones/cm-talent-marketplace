@@ -15,7 +15,7 @@ export default async function SalesPage() {
     return <AccessGate role="sales" />;
   }
 
-  const [active, pending, bundles, overlap, bookings, relationships] =
+  const [active, pending, bundles, overlap, bookings, relationships, campaigns] =
     await Promise.all([
       getActiveCreators(),
       getPendingCreators(),
@@ -23,6 +23,7 @@ export default async function SalesPage() {
       data.getOverlapAssumptions(),
       data.getBookings(),
       data.getAdvertiserRelationships(),
+      data.getCampaigns(),
     ]);
 
   return (
@@ -33,6 +34,7 @@ export default async function SalesPage() {
       overlap={overlap}
       bookings={bookings}
       relationships={relationships}
+      campaigns={campaigns}
     />
   );
 }

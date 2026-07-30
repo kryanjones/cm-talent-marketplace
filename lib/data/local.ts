@@ -134,6 +134,10 @@ export const localAdapter: DataAdapter = {
     return [];
   },
 
+  async getCampaigns() {
+    return [];
+  },
+
   async getApprovals() {
     return [];
   },
