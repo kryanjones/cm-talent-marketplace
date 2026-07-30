@@ -8,6 +8,7 @@ import type {
   Booking,
   AdvertiserRelationship,
   Approval,
+  Campaign,
 } from "@/lib/types";
 
 /**
@@ -35,6 +36,9 @@ export interface DataAdapter {
    * Relationships table exists, in which case every advertiser is new (20%).
    */
   getAdvertiserRelationships(): Promise<AdvertiserRelationship[]>;
+
+  /** Campaigns. [] when no Campaigns table exists. */
+  getCampaigns(): Promise<Campaign[]>;
 
   /** Recorded §3.3 approval requests. [] when no Approvals table exists. */
   getApprovals(): Promise<Approval[]>;

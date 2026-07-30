@@ -21,6 +21,7 @@ import type {
   Booking,
   AdvertiserRelationship,
   Approval,
+  Campaign,
   RateCard,
   AgeBands,
   GenderSplit,
@@ -39,6 +40,7 @@ const TABLES = {
   relationships:
     process.env.AIRTABLE_TABLE_RELATIONSHIPS || "Advertiser Relationships",
   approvals: process.env.AIRTABLE_TABLE_APPROVALS || "Approvals",
+  campaigns: process.env.AIRTABLE_TABLE_CAMPAIGNS || "Campaigns",
 };
 
 interface AirtableRecord {
@@ -394,6 +396,15 @@ export const airtableAdapter: DataAdapter = {
           month: str(f["Month"]),
           slots: numOrNull(f["Slots"]) ?? 1,
           status: (str(f["Status"]) as Booking["status"]) ?? "Confirmed",
+          campaignId: Array.isArray(f["Campaign"])
+            ? String(f["Campaign"][0])
+            : str(f["Campaign"]),
+          liveUrl: str(f["Live URL"]),
+          publishedDate: str(f["Published Date"]),
+          // numOrNull keeps a blank as null: unknown, never zero.
+          impressions: numOrNull(f["Impressions"]),
+          clicks: numOrNull(f["Clicks"]),
+          deliveryNotes: str(f["Delivery Notes"]),
         };
       });
     } catch {
@@ -429,6 +440,27 @@ export const airtableAdapter: DataAdapter = {
       });
     } catch {
       // No Schedule B table yet — every advertiser is a new brand at 20%.
+      return [];
+    }
+  },
+
+  async getCampaigns() {
+    try {
+      const recs = await fetchAll(TABLES.campaigns);
+      return recs.map<Campaign>((r) => {
+        const f = r.fields;
+        return {
+          id: r.id,
+          name: str(f["Campaign Name"]) ?? "",
+          advertiser: str(f["Advertiser"]) ?? "",
+          status: str(f["Status"]) ?? "Planned",
+          startMonth: str(f["Start Month"]),
+          endMonth: str(f["End Month"]),
+          contractedReach: numOrNull(f["Contracted Reach"]),
+          notes: str(f["Notes"]),
+        };
+      });
+    } catch {
       return [];
     }
   },

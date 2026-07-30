@@ -3,6 +3,7 @@
 import { useState } from "react";
 import type {
   AdvertiserRelationship,
+  Campaign,
   Booking,
   Creator,
   OverlapAssumption,
@@ -11,8 +12,9 @@ import type {
 import { InventoryTable } from "./InventoryTable";
 import { VettingQueue } from "./VettingQueue";
 import { SavedBundles } from "./SavedBundles";
+import { CampaignList } from "./CampaignList";
 
-type Tab = "inventory" | "applications" | "bundles";
+type Tab = "inventory" | "applications" | "bundles" | "campaigns";
 
 export function SalesView({
   active,
@@ -21,6 +23,7 @@ export function SalesView({
   overlap,
   bookings,
   relationships,
+  campaigns,
 }: {
   active: Creator[];
   pending: Creator[];
@@ -28,6 +31,7 @@ export function SalesView({
   overlap: OverlapAssumption[];
   bookings: Booking[];
   relationships: AdvertiserRelationship[];
+  campaigns: Campaign[];
 }) {
   const [tab, setTab] = useState<Tab>("inventory");
 
@@ -35,6 +39,7 @@ export function SalesView({
     { id: "inventory", label: "Inventory", count: active.length },
     { id: "applications", label: "Applications", count: pending.length },
     { id: "bundles", label: "Saved bundles", count: bundles.length },
+    { id: "campaigns", label: "Campaigns", count: campaigns.length },
   ];
 
   return (
@@ -69,6 +74,13 @@ export function SalesView({
         <InventoryTable creators={active} bookings={bookings} />
       )}
       {tab === "applications" && <VettingQueue pending={pending} />}
+      {tab === "campaigns" && (
+        <CampaignList
+          campaigns={campaigns}
+          bookings={bookings}
+          creators={active}
+        />
+      )}
       {tab === "bundles" && (
         <SavedBundles
           bundles={bundles}

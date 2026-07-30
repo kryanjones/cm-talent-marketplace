@@ -166,6 +166,18 @@ export interface Booking {
   slots: number;
   /** Held is provisional, Confirmed is sold. Both consume inventory. */
   status: "Held" | "Confirmed" | string;
+  /** Campaign this placement belongs to; null when it is an unattached hold. */
+  campaignId: string | null;
+  liveUrl: string | null;
+  publishedDate: string | null;
+  /**
+   * Delivered figures. null means UNKNOWN, not zero — nothing collects these
+   * automatically, so an empty field is missing data and must never be
+   * reported as a zero result.
+   */
+  impressions: number | null;
+  clicks: number | null;
+  deliveryNotes: string | null;
 }
 
 /**
@@ -180,6 +192,23 @@ export interface AdvertiserRelationship {
   /** "Keep it" (0%, do not solicit) or "Hand it to us" (15%). */
   treatment: string;
   lastDealDate: string | null;
+  notes: string | null;
+}
+
+/**
+ * One advertiser's buy across creators. Placements are Bookings linked back to
+ * this record — a booking already consumes inventory, and now also carries what
+ * actually ran and how it performed.
+ */
+export interface Campaign {
+  id: string;
+  name: string;
+  advertiser: string;
+  status: string;
+  startMonth: string | null;
+  endMonth: string | null;
+  /** Net reach quoted to the advertiser, for measuring delivery against sale. */
+  contractedReach: number | null;
   notes: string | null;
 }
 
