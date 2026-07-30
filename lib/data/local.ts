@@ -155,6 +155,7 @@ export const localAdapter: DataAdapter = {
       isDemoPersona: false,
       bio: app.bio,
       positioning: null, // sales writes this by hand after approval
+      featuredPartnerships: null, // curated by sales; never auto-filled
       priorOutlets: splitList(app.priorOutlets),
       primaryBeat: app.primaryBeat,
       homeMarketDMA: app.homeMarketDMA,

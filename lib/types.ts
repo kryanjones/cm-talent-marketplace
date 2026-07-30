@@ -83,6 +83,18 @@ export interface Creator {
    * Deliberately not automated — sales owns this copy.
    */
   positioning: string | null;
+  /**
+   * Cleared, client-facing partnership examples — the ONLY partner data that is
+   * safe to publish. Distinct from BrandBoundary.pastBrandPartners, which is the
+   * raw internal record and stays sales-only: some advertisers treat their
+   * creator spend as confidential, so a brand appears publicly only when
+   * somebody deliberately adds it to this field.
+   *
+   * Optional; the "Featured Partnerships" column does not exist in the base yet.
+   * One entry per line, or comma-separated. A line may carry a short note after
+   * an em dash or pipe, e.g. "Delta — three-part travel series".
+   */
+  featuredPartnerships: string | null;
   priorOutlets: string[];
   primaryBeat: string | null;
   homeMarketDMA: string | null;

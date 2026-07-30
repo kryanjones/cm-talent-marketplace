@@ -237,8 +237,9 @@ function mapCreator(r: AirtableRecord): RawCreator {
     personaType: str(f["Persona Type"]),
     isDemoPersona: bool(f["Is Demo Persona"]),
     bio: str(f["Bio"]),
-    // Optional field — absent from the base today, read if it is ever added.
+    // Optional fields — absent from the base today, read if they are ever added.
     positioning: str(f["Positioning"]),
+    featuredPartnerships: str(f["Featured Partnerships"]),
     priorOutlets: arr(f["Prior Outlets"]),
     primaryBeat: str(f["Primary Beat"]),
     homeMarketDMA: str(f["Home Market / DMA"]),

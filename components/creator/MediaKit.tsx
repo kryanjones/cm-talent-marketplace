@@ -60,6 +60,13 @@ export function MediaKit({
   // a headline number that looks spectacular and means nothing. Instead we show
   // the single strongest channel and name the surface it belongs to, so the
   // figure stays comparable to something. Per-channel rates live below.
+  // Only ever the curated list. The raw internal partner record lives on
+  // BrandBoundary.pastBrandPartners and is stripped before it reaches here.
+  const partnerships = useMemo(
+    () => parsePartnerships(creator.featuredPartnerships),
+    [creator.featuredPartnerships]
+  );
+
   const strongest = useMemo(() => {
     const rated = creator.channels.filter((c) => c.avgEngagementRate != null);
     if (!rated.length) return null;
@@ -292,6 +299,26 @@ export function MediaKit({
         </div>
       </section>
 
+      {/* ---------- Recent partnerships (curated) ---------- */}
+      {partnerships.length > 0 && (
+        <section className="flex flex-col gap-6">
+          <div>
+            <Eyebrow>Proof</Eyebrow>
+            <h2 className="cm-h2 mt-2">Recent partnerships</h2>
+          </div>
+          <div className="grid grid-cols-1 gap-px border border-hairline bg-hairline sm:grid-cols-2 lg:grid-cols-3">
+            {partnerships.map((p) => (
+              <div key={p.brand} className="flex flex-col gap-1 bg-bg px-5 py-4">
+                <span className="cm-sans font-semibold">{p.brand}</span>
+                {p.note && (
+                  <span className="cm-fine text-ink/55">{p.note}</span>
+                )}
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
       {/* ---------- Working with them ---------- */}
       {creator.brandBoundary && (
         <section className="flex flex-col gap-4 border-t border-hairline pt-8">
@@ -369,6 +396,31 @@ export function MediaKit({
       </p>
     </article>
   );
+}
+
+/**
+ * Parse the curated "Featured Partnerships" field.
+ *
+ * One partnership per line (or comma-separated). An optional short note may
+ * follow an em dash, hyphen or pipe: "Delta — three-part travel series".
+ */
+export function parsePartnerships(
+  raw: string | null
+): { brand: string; note: string | null }[] {
+  if (!raw) return [];
+  // Split on newlines when the field is written one-per-line, and only fall
+  // back to commas for a plain single-line list. Splitting on both breaks any
+  // note that contains a comma ("newsletter takeover, Q3" became two entries).
+  const parts = raw.includes("\n") ? raw.split("\n") : raw.split(",");
+  return parts
+    .map((s) => s.trim())
+    .filter(Boolean)
+    .map((line) => {
+      const m = line.match(/^(.+?)\s*(?:—|–|\||\s-\s)\s*(.+)$/);
+      return m
+        ? { brand: m[1].trim(), note: m[2].trim() }
+        : { brand: line, note: null };
+    });
 }
 
 function Stat({
