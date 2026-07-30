@@ -20,6 +20,7 @@ import type {
   AgreementStatus,
   Booking,
   AdvertiserRelationship,
+  Approval,
   RateCard,
   AgeBands,
   GenderSplit,
@@ -37,6 +38,7 @@ const TABLES = {
   bookings: process.env.AIRTABLE_TABLE_BOOKINGS || "Bookings",
   relationships:
     process.env.AIRTABLE_TABLE_RELATIONSHIPS || "Advertiser Relationships",
+  approvals: process.env.AIRTABLE_TABLE_APPROVALS || "Approvals",
 };
 
 interface AirtableRecord {
@@ -429,6 +431,73 @@ export const airtableAdapter: DataAdapter = {
       // No Schedule B table yet — every advertiser is a new brand at 20%.
       return [];
     }
+  },
+
+  async getApprovals() {
+    try {
+      const recs = await fetchAll(TABLES.approvals);
+      const creatorRecs = await fetchAll(TABLES.creators);
+      const byRecord = new Map(
+        creatorRecs.map((r) => [
+          r.id,
+          {
+            id: str(r.fields["Creator ID"]) ?? r.id,
+            name: str(r.fields["Name"]) ?? "",
+          },
+        ])
+      );
+      return recs.map<Approval>((r) => {
+        const f = r.fields;
+        const link = Array.isArray(f["Creator"]) ? String(f["Creator"][0]) : null;
+        const creator = link ? byRecord.get(link) : undefined;
+        return {
+          id: r.id,
+          creatorId: creator?.id ?? link,
+          creatorName: creator?.name ?? "",
+          advertiser: str(f["Advertiser"]) ?? "",
+          deliverables: str(f["Deliverables"]),
+          flightMonth: str(f["Flight Month"]),
+          placementFee: numOrNull(f["Placement Fee"]) ?? 0,
+          commission: numOrNull(f["Commission"]) ?? 0,
+          creatorShare: numOrNull(f["Creator Share"]) ?? 0,
+          sentAt: str(f["Sent At"]),
+          responseDue: str(f["Response Due"]),
+          status: str(f["Status"]) ?? "Awaiting response",
+          respondedAt: str(f["Responded At"]),
+        };
+      });
+    } catch {
+      return [];
+    }
+  },
+
+  async recordApprovals(requests) {
+    if (requests.length === 0) return { created: 0 };
+    // Resolve creator record ids so the link field can be set.
+    const creatorRecs = await fetchAll(TABLES.creators);
+    const recordByCreatorId = new Map(
+      creatorRecs.map((r) => [str(r.fields["Creator ID"]) ?? r.id, r.id])
+    );
+    let created = 0;
+    for (const req of requests) {
+      const recId = req.creatorId ? recordByCreatorId.get(req.creatorId) : undefined;
+      await createRecord(TABLES.approvals, {
+        "Approval ID": `${req.advertiser} — ${req.creatorName}`.slice(0, 80),
+        ...(recId ? { Creator: [recId] } : {}),
+        Advertiser: req.advertiser,
+        Deliverables: req.deliverables,
+        "Flight Month": req.flightMonth,
+        "Placement Fee": req.placementFee,
+        Commission: req.commission,
+        "Creator Share": req.creatorShare,
+        "Sent At": req.sentAt,
+        "Response Due": req.responseDue,
+        Status: req.status,
+      });
+      created++;
+    }
+    invalidate();
+    return { created };
   },
 
   async getSavedBundles() {

@@ -134,6 +134,15 @@ export const localAdapter: DataAdapter = {
     return [];
   },
 
+  async getApprovals() {
+    return [];
+  },
+
+  async recordApprovals() {
+    // Local mode has no durable approvals store; the Airtable adapter does.
+    return { created: 0 };
+  },
+
   async getBookings() {
     return readRuntime().bookings ?? [];
   },

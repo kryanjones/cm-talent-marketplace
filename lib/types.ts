@@ -183,6 +183,23 @@ export interface AdvertiserRelationship {
   notes: string | null;
 }
 
+/** A recorded approval request under MSA §3.3. */
+export interface Approval {
+  id: string;
+  creatorId: string | null;
+  creatorName: string;
+  advertiser: string;
+  deliverables: string | null;
+  flightMonth: string | null;
+  placementFee: number;
+  commission: number;
+  creatorShare: number;
+  sentAt: string | null;
+  responseDue: string | null;
+  status: string;
+  respondedAt: string | null;
+}
+
 export type OverlapScenario =
   | "Same Creator Cross-Platform"
   | "Same Category Cross-Creator"
