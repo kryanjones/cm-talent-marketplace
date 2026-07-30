@@ -95,6 +95,12 @@ export interface Creator {
    * an em dash or pipe, e.g. "Delta — three-part travel series".
    */
   featuredPartnerships: string | null;
+  /**
+   * Where pitch-approval requests go — the creator's manager or team address.
+   * INTERNAL. Stripped by toBuyerCreator: a contact address is not something a
+   * buyer should be able to lift out of the page source.
+   */
+  teamEmail: string | null;
   priorOutlets: string[];
   primaryBeat: string | null;
   homeMarketDMA: string | null;
@@ -169,8 +175,14 @@ export interface SavedBundle {
   createdAt: string;
 }
 
-/** Public-facing creator: rate cards and sales-only boundary fields removed. */
-export type BuyerCreator = Omit<Creator, "channels" | "brandBoundary"> & {
+/**
+ * Public-facing creator: rate cards, the team contact address, and the
+ * sales-only boundary fields are all removed.
+ */
+export type BuyerCreator = Omit<
+  Creator,
+  "channels" | "brandBoundary" | "teamEmail"
+> & {
   channels: Omit<Channel, "rateCard">[];
   brandBoundary: Omit<
     BrandBoundary,

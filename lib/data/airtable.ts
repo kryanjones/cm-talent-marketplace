@@ -242,6 +242,7 @@ function mapCreator(r: AirtableRecord): RawCreator {
     // Optional fields — absent from the base today, read if they are ever added.
     positioning: str(f["Positioning"]),
     featuredPartnerships: str(f["Featured Partnerships"]),
+    teamEmail: str(f["Team Email"]),
     priorOutlets: arr(f["Prior Outlets"]),
     primaryBeat: str(f["Primary Beat"]),
     homeMarketDMA: str(f["Home Market / DMA"]),

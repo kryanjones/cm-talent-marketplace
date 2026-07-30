@@ -43,8 +43,12 @@ export async function getPendingCreators(): Promise<Creator[]> {
  * on the server; the buyer client only ever receives the sanitized shape.
  */
 export function toBuyerCreator(c: Creator): BuyerCreator {
+  // Destructure the internal fields out rather than spreading everything: a
+  // spread silently republishes any field added to Creator later, which is how
+  // a contact address ends up readable in a public page's source.
+  const { teamEmail, ...rest } = c;
   return {
-    ...c,
+    ...rest,
     channels: c.channels.map(({ rateCard, ...ch }) => ch),
     brandBoundary: c.brandBoundary
       ? (() => {

@@ -12,6 +12,7 @@ import { compactNumber } from "@/lib/format";
 import { bundleSharePath } from "@/lib/share";
 import { Chip, Eyebrow } from "@/components/ui";
 import { DealCalculator } from "./DealCalculator";
+import { PitchApproval } from "./PitchApproval";
 
 export function SavedBundles({
   bundles,
@@ -24,7 +25,9 @@ export function SavedBundles({
 }) {
   const byId = useMemo(() => new Map(creators.map((c) => [c.id, c])), [creators]);
   const coef = useMemo(() => coefficientsFromAssumptions(overlap), [overlap]);
-  const [pricingId, setPricingId] = useState<string | null>(null);
+  const [panel, setPanel] = useState<
+    { key: string; which: "pricing" | "approvals" } | null
+  >(null);
 
   if (bundles.length === 0) {
     return (
@@ -89,19 +92,39 @@ export function SavedBundles({
               ))}
             </div>
 
-            {/* Deal pricing — the sales-side half of the handoff. */}
+            {/* The two sales-side halves of the handoff: price it, and get the
+                creators' teams to approve it before it reaches the brand. */}
             {(() => {
               const key = b.id ?? b.bundleName;
-              const open = pricingId === key;
+              const open = panel?.key === key ? panel.which : null;
+              const toggle = (which: "pricing" | "approvals") =>
+                setPanel(open === which ? null : { key, which });
               return (
                 <>
-                  <button
-                    type="button"
-                    onClick={() => setPricingId(open ? null : key)}
-                    className="cm-label mt-4 border border-ink px-4 py-2 transition-colors hover:bg-ink hover:text-ink-inverse"
-                  >
-                    {open ? "Hide pricing" : "Price this bundle"}
-                  </button>
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    <button
+                      type="button"
+                      onClick={() => toggle("pricing")}
+                      className={`cm-label border px-4 py-2 transition-colors ${
+                        open === "pricing"
+                          ? "border-ink bg-ink text-ink-inverse"
+                          : "border-ink hover:bg-ink hover:text-ink-inverse"
+                      }`}
+                    >
+                      Pricing
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => toggle("approvals")}
+                      className={`cm-label border px-4 py-2 transition-colors ${
+                        open === "approvals"
+                          ? "border-ink bg-ink text-ink-inverse"
+                          : "border-ink hover:bg-ink hover:text-ink-inverse"
+                      }`}
+                    >
+                      Creator approvals
+                    </button>
+                  </div>
                   {/*
                     Fades in without animating height. The calculator's own
                     controls change its height (the premium row appears and
@@ -109,19 +132,27 @@ export function SavedBundles({
                     that resizes mid-flight strands framer-motion with a stale
                     inline height — the panel gets stuck part-open.
                   */}
-                  <AnimatePresence initial={false}>
+                  <AnimatePresence initial={false} mode="wait">
                     {open && (
                       <motion.div
+                        key={open}
                         initial={{ opacity: 0, y: -6 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.22, ease: [0.4, 0, 0.2, 1] }}
                       >
                         <div className="mt-4 border-t border-hairline pt-5">
-                          <DealCalculator
-                            components={b.components}
-                            creators={creators}
-                          />
+                          {open === "pricing" ? (
+                            <DealCalculator
+                              components={b.components}
+                              creators={creators}
+                            />
+                          ) : (
+                            <PitchApproval
+                              components={b.components}
+                              creators={creators}
+                            />
+                          )}
                         </div>
                       </motion.div>
                     )}
