@@ -6,6 +6,7 @@ import type {
   CreatorApplication,
   CreatorStatus,
   Booking,
+  AdvertiserRelationship,
 } from "@/lib/types";
 
 /**
@@ -27,6 +28,12 @@ export interface DataAdapter {
    * channel simply reads as fully open rather than the app failing.
    */
   getBookings(): Promise<Booking[]>;
+
+  /**
+   * Schedule B rows across all creators. Returns [] when no Advertiser
+   * Relationships table exists, in which case every advertiser is new (20%).
+   */
+  getAdvertiserRelationships(): Promise<AdvertiserRelationship[]>;
 
   getSavedBundles(): Promise<SavedBundle[]>;
   saveBundle(bundle: SavedBundle): Promise<SavedBundle>;

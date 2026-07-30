@@ -114,6 +114,11 @@ export interface Creator {
   agreementSignedDate: string | null;
   /** DocuSign envelope, once the agreement has been sent for signature. */
   agreementEnvelopeId: string | null;
+  /**
+   * Schedule C price floor, per placement. Below this we do not bring the
+   * creator a deal at all (MSA §4.3). Null means no floor set. INTERNAL.
+   */
+  priceFloor: number | null;
   priorOutlets: string[];
   primaryBeat: string | null;
   homeMarketDMA: string | null;
@@ -163,6 +168,21 @@ export interface Booking {
   status: "Held" | "Confirmed" | string;
 }
 
+/**
+ * One row of a creator's Schedule B — a pre-existing advertiser relationship
+ * and how it is treated. Absent from this list means a new brand at 20%.
+ */
+export interface AdvertiserRelationship {
+  id: string;
+  creatorId: string | null;
+  brand: string;
+  parentCompany: string | null;
+  /** "Keep it" (0%, do not solicit) or "Hand it to us" (15%). */
+  treatment: string;
+  lastDealDate: string | null;
+  notes: string | null;
+}
+
 export type OverlapScenario =
   | "Same Creator Cross-Platform"
   | "Same Category Cross-Creator"
@@ -200,6 +220,7 @@ export type BuyerCreator = Omit<
   | "agreementStatus"
   | "agreementSignedDate"
   | "agreementEnvelopeId"
+  | "priceFloor"
 > & {
   channels: Omit<Channel, "rateCard">[];
   brandBoundary: Omit<

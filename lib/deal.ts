@@ -1,25 +1,37 @@
 /**
- * Deal pricing and creator splits.
+ * Deal pricing and creator splits, per the executed agreement.
  *
- * SALES-ONLY. Everything here reads rate cards, so it must never be imported
- * into a buyer-facing surface.
+ * SALES-ONLY. Everything here reads rate cards.
  *
- * TypeScript port of scripts/deal/split_calculator.py, which was validated
- * against the live rate-card data. Two findings from that prototype are load-
- * bearing and are preserved here:
+ * The numbers are not ours to choose. MSA §6.1 and the Deal Summary fix the
+ * commission at 20% for new advertisers, 15% for hand-it-to-us brands, and 0%
+ * for keep-it brands, and MSA §1.1(m) fixes what the commission is calculated
+ * on. Both are encoded here rather than left adjustable, because a rate typed
+ * into a form is a rate that can breach the agreement.
  *
- *  1. The quality weight benchmarks against PLATFORM, not category. Engagement
- *     spans ~39x across surfaces (X ~1.1%, Substack ~43%), so any coarser
- *     benchmark hands the pool to newsletter creators on format alone.
- *
- *  2. A rate-card floor makes a value pool identical to cost-up unless the
- *     bundle carries a premium. At cost + margin the pool equals total cost
- *     exactly, so flooring everyone leaves nothing to redistribute. Only the
- *     premium can be split on performance.
+ * Placement Fee — the base for every calculation — is what the advertiser pays
+ * for the placement itself, net of:
+ *   (i)  any commission or discount a media buying agency retains before the
+ *        money reaches us, and
+ *   (ii) Pass-Through Costs: paid media, documented production, travel, gifting.
+ * MSA §1.1(m): "No other deduction, offset, or charge of any kind shall reduce
+ * the Placement Fee." So there is deliberately no other lever in this module.
  */
 import type { Channel, Creator, RateCard } from "@/lib/types";
 
-export type PricingModel = "cost-up" | "floor-premium";
+/** How a given advertiser is treated for this creator (Schedule B). */
+export type Treatment = "Keep it" | "Hand it to us" | "New";
+
+/** MSA §6.1. Not configurable. */
+export const COMMISSION_RATE: Record<Treatment, number> = {
+  "Keep it": 0,
+  "Hand it to us": 0.15,
+  New: 0.2,
+};
+
+export function rateFor(treatment: Treatment): number {
+  return COMMISSION_RATE[treatment];
+}
 
 export interface DealLineInput {
   creatorId: string;
@@ -31,58 +43,45 @@ export interface DealLineInput {
 export interface DealLine extends DealLineInput {
   creatorName: string;
   platform: string;
-  price: number;
+  /** Rate-card value of the placement, before any deduction. */
+  gross: number;
   reach: number;
-  /** engagement ÷ platform mean. 1.00 = average for that surface. */
-  weight: number;
-  weightedValue: number;
   availableFormats: string[];
+  /** Below this creator's Schedule C floor, if one is set. */
+  belowFloor: boolean;
 }
 
 export interface CreatorSplit {
   creatorId: string;
   creatorName: string;
-  reach: number;
-  /** Reach-weighted quality across this creator's lines. */
-  weight: number;
-  costUp: number;
-  costUpPct: number;
-  pool: number;
-  poolPct: number;
-  delta: number;
+  treatment: Treatment;
+  rate: number;
+  gross: number;
+  /** Gross less this creator's share of agency cut and pass-throughs. */
+  placementFee: number;
+  commission: number;
+  creatorShare: number;
+  belowFloor: boolean;
+  priceFloor: number | null;
 }
 
 export interface DealResult {
   lines: DealLine[];
+  /** What the advertiser is billed for the placements themselves. */
+  grossPlacements: number;
+  /** Retained by a media buying agency before the money reaches us. */
+  agencyDeduction: number;
+  /** Advertiser-funded costs that sit outside the split entirely. */
+  passThroughs: number;
+  /** MSA §1.1(m). The base for all commission. */
+  placementFee: number;
+  /** What the advertiser pays in total, including pass-throughs. */
+  advertiserTotal: number;
+  commission: number;
   creatorTotal: number;
-  takeRate: number;
-  premium: number;
-  /** Cost + margin. What the brand pays under cost-up. */
-  grossCostUp: number;
-  cmCutCostUp: number;
-  /** Cost + margin + premium. What the brand pays under floor+premium. */
-  grossWithPremium: number;
-  cmCutWithPremium: number;
-  creatorPool: number;
-  /** The part of the pool that divides on performance. */
-  surplus: number;
   splits: CreatorSplit[];
-}
-
-/** Mean engagement per platform — the 1.00 baseline for the quality weight. */
-export function platformBenchmarks(creators: Creator[]): Record<string, number> {
-  const acc: Record<string, number[]> = {};
-  for (const c of creators) {
-    for (const ch of c.channels) {
-      if (ch.avgEngagementRate == null) continue;
-      (acc[ch.platform] ??= []).push(ch.avgEngagementRate);
-    }
-  }
-  const out: Record<string, number> = {};
-  for (const [platform, values] of Object.entries(acc)) {
-    out[platform] = values.reduce((a, b) => a + b, 0) / values.length;
-  }
-  return out;
+  /** Lines priced under the relevant creator's Schedule C floor. */
+  belowFloorCount: number;
 }
 
 export function formatsFor(channel: Channel): string[] {
@@ -97,23 +96,17 @@ export function placementPrice(
   units: number
 ): number {
   const rc = channel.rateCard as RateCard | string | null;
-  if (!rc || typeof rc === "string") return 0;
+  if (!rc || typeof rc !== "object") return 0;
   const entry = rc[format];
   if (!entry) return 0;
   if (entry.type === "flat") return entry.usd * units;
-  // CPM prices against the reach the placement actually delivers.
   return entry.usd * ((channel.avgReachPerUnit ?? 0) / 1000) * units;
 }
 
 /**
- * The format a line should start on.
- *
- * The first priceable entry in the rate card, because rate cards are authored
- * with the marquee format first — Integrated Segment before Pre-roll,
- * Newsletter Primary before Secondary. Defaulting to the *cheapest* format
- * instead makes every line open at the smallest possible number (a $150
- * integrated segment opening as a $23 pre-roll), which understates the deal and
- * leaves sales correcting every row before they can quote.
+ * The format a line should start on: the first priceable entry in the rate
+ * card, because rate cards are authored with the marquee format first.
+ * Defaulting to the cheapest opens a $150 integrated segment as a $23 pre-roll.
  */
 export function primaryFormat(channel: Channel): string | null {
   for (const format of formatsFor(channel)) {
@@ -122,24 +115,23 @@ export function primaryFormat(channel: Channel): string | null {
   return null;
 }
 
-/** The cheapest priceable format — kept for budget-fitting callers. */
-export function cheapestFormat(channel: Channel): string | null {
-  let best: { format: string; price: number } | null = null;
-  for (const format of formatsFor(channel)) {
-    const price = placementPrice(channel, format, 1);
-    if (price > 0 && (!best || price < best.price)) best = { format, price };
-  }
-  return best?.format ?? null;
+export interface DealOptions {
+  /** Fraction the media buying agency retains, e.g. 0.15. */
+  agencyCut?: number;
+  /** Advertiser-funded costs outside the split, in dollars. */
+  passThroughs?: number;
+  /** How this advertiser is treated, per creator id. Absent ⇒ "New" (20%). */
+  treatments?: Record<string, Treatment>;
 }
 
 export function priceDeal(
   inputs: DealLineInput[],
   creators: Creator[],
-  opts: { takeRate?: number; premium?: number } = {}
+  opts: DealOptions = {}
 ): DealResult {
-  const takeRate = opts.takeRate ?? 0.3;
-  const premium = opts.premium ?? 0;
-  const bench = platformBenchmarks(creators);
+  const agencyCut = Math.min(Math.max(opts.agencyCut ?? 0, 0), 0.9);
+  const passThroughs = Math.max(opts.passThroughs ?? 0, 0);
+  const treatments = opts.treatments ?? {};
   const byCreator = new Map(creators.map((c) => [c.id, c]));
 
   const lines: DealLine[] = [];
@@ -147,71 +139,67 @@ export function priceDeal(
     const creator = byCreator.get(input.creatorId);
     const channel = creator?.channels.find((ch) => ch.id === input.channelId);
     if (!creator || !channel) continue;
-    const reach = (channel.avgReachPerUnit ?? 0) * input.units;
-    const benchmark = bench[channel.platform] || 1;
-    const weight = (channel.avgEngagementRate ?? benchmark) / benchmark;
+    const gross = placementPrice(channel, input.format, input.units);
+    const floor = creator.priceFloor;
     lines.push({
       ...input,
       creatorName: creator.name,
       platform: channel.platform,
-      price: placementPrice(channel, input.format, input.units),
-      reach,
-      weight,
-      weightedValue: reach * weight,
+      gross,
+      reach: (channel.avgReachPerUnit ?? 0) * input.units,
       availableFormats: formatsFor(channel),
+      // Schedule C is a per-placement floor, so compare the unit price.
+      belowFloor: floor != null && input.units > 0 && gross / input.units < floor,
     });
   }
 
-  const cost = new Map<string, number>();
-  const weighted = new Map<string, number>();
-  const reachBy = new Map<string, number>();
+  const grossPlacements = lines.reduce((s, l) => s + l.gross, 0);
+  const agencyDeduction = grossPlacements * agencyCut;
+  // Pass-throughs are advertiser-funded costs, not placement value: they are
+  // removed before commission and never form part of anyone's share.
+  const placementFee = Math.max(0, grossPlacements - agencyDeduction - passThroughs);
+
+  // Each creator's share of the deductions follows their share of the gross,
+  // so one creator's pass-through does not dilute another's fee.
+  const grossBy = new Map<string, number>();
   for (const l of lines) {
-    cost.set(l.creatorId, (cost.get(l.creatorId) ?? 0) + l.price);
-    weighted.set(l.creatorId, (weighted.get(l.creatorId) ?? 0) + l.weightedValue);
-    reachBy.set(l.creatorId, (reachBy.get(l.creatorId) ?? 0) + l.reach);
+    grossBy.set(l.creatorId, (grossBy.get(l.creatorId) ?? 0) + l.gross);
   }
-
-  const creatorTotal = [...cost.values()].reduce((a, b) => a + b, 0);
-  const totalWeighted = [...weighted.values()].reduce((a, b) => a + b, 0) || 1;
-
-  const grossCostUp = takeRate < 1 ? creatorTotal / (1 - takeRate) : creatorTotal;
-  const grossWithPremium = grossCostUp * (1 + premium);
-  const creatorPool = grossWithPremium * (1 - takeRate);
-  // Every creator is floored at their rate card; only what is left over after
-  // paying all the floors divides on delivered performance.
-  const surplus = Math.max(0, creatorPool - creatorTotal);
 
   const splits: CreatorSplit[] = [];
-  for (const [creatorId, costUp] of cost) {
-    const share = (weighted.get(creatorId) ?? 0) / totalWeighted;
-    const pool = costUp + surplus * share;
-    const reach = reachBy.get(creatorId) ?? 0;
+  for (const [creatorId, gross] of grossBy) {
+    const creator = byCreator.get(creatorId);
+    const treatment = treatments[creatorId] ?? "New";
+    const rate = rateFor(treatment);
+    const share = grossPlacements > 0 ? gross / grossPlacements : 0;
+    const fee = placementFee * share;
+    const commission = fee * rate;
     splits.push({
       creatorId,
-      creatorName:
-        lines.find((l) => l.creatorId === creatorId)?.creatorName ?? creatorId,
-      reach,
-      weight: reach ? (weighted.get(creatorId) ?? 0) / reach : 1,
-      costUp,
-      costUpPct: creatorTotal ? costUp / creatorTotal : 0,
-      pool,
-      poolPct: creatorPool ? pool / creatorPool : 0,
-      delta: pool - costUp,
+      creatorName: creator?.name ?? creatorId,
+      treatment,
+      rate,
+      gross,
+      placementFee: fee,
+      commission,
+      // MSA §6.1: "Creator shall be entitled to the balance of the Placement Fee."
+      creatorShare: fee - commission,
+      belowFloor: lines.some((l) => l.creatorId === creatorId && l.belowFloor),
+      priceFloor: creator?.priceFloor ?? null,
     });
   }
-  splits.sort((a, b) => b.reach - a.reach);
+  splits.sort((a, b) => b.gross - a.gross);
 
   return {
     lines,
-    creatorTotal,
-    takeRate,
-    premium,
-    grossCostUp,
-    cmCutCostUp: grossCostUp - creatorTotal,
-    grossWithPremium,
-    cmCutWithPremium: grossWithPremium - creatorPool,
-    creatorPool,
-    surplus,
+    grossPlacements,
+    agencyDeduction,
+    passThroughs,
+    placementFee,
+    advertiserTotal: grossPlacements + passThroughs,
+    commission: splits.reduce((s, x) => s + x.commission, 0),
+    creatorTotal: splits.reduce((s, x) => s + x.creatorShare, 0),
     splits,
+    belowFloorCount: lines.filter((l) => l.belowFloor).length,
   };
 }

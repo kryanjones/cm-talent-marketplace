@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import type {
+  AdvertiserRelationship,
   Booking,
   Creator,
   OverlapAssumption,
@@ -19,12 +20,14 @@ export function SalesView({
   bundles,
   overlap,
   bookings,
+  relationships,
 }: {
   active: Creator[];
   pending: Creator[];
   bundles: SavedBundle[];
   overlap: OverlapAssumption[];
   bookings: Booking[];
+  relationships: AdvertiserRelationship[];
 }) {
   const [tab, setTab] = useState<Tab>("inventory");
 
@@ -67,7 +70,12 @@ export function SalesView({
       )}
       {tab === "applications" && <VettingQueue pending={pending} />}
       {tab === "bundles" && (
-        <SavedBundles bundles={bundles} creators={active} overlap={overlap} />
+        <SavedBundles
+          bundles={bundles}
+          creators={active}
+          overlap={overlap}
+          relationships={relationships}
+        />
       )}
     </div>
   );

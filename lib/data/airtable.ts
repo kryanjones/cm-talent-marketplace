@@ -19,6 +19,7 @@ import type {
   CreatorStatus,
   AgreementStatus,
   Booking,
+  AdvertiserRelationship,
   RateCard,
   AgeBands,
   GenderSplit,
@@ -34,6 +35,8 @@ const TABLES = {
   overlap: process.env.AIRTABLE_TABLE_OVERLAP || "Overlap Assumptions",
   bundles: process.env.AIRTABLE_TABLE_BUNDLES || "Saved Bundles",
   bookings: process.env.AIRTABLE_TABLE_BOOKINGS || "Bookings",
+  relationships:
+    process.env.AIRTABLE_TABLE_RELATIONSHIPS || "Advertiser Relationships",
 };
 
 interface AirtableRecord {
@@ -247,6 +250,7 @@ function mapCreator(r: AirtableRecord): RawCreator {
     agreementStatus: (str(f["Agreement Status"]) as AgreementStatus) ?? null,
     agreementSignedDate: str(f["Agreement Signed Date"]),
     agreementEnvelopeId: str(f["Agreement Envelope ID"]),
+    priceFloor: numOrNull(f["Price Floor"]),
     priorOutlets: arr(f["Prior Outlets"]),
     primaryBeat: str(f["Primary Beat"]),
     homeMarketDMA: str(f["Home Market / DMA"]),
@@ -392,6 +396,37 @@ export const airtableAdapter: DataAdapter = {
       });
     } catch {
       // No Bookings table yet — treat inventory as unbooked rather than failing.
+      return [];
+    }
+  },
+
+  async getAdvertiserRelationships() {
+    try {
+      const recs = await fetchAll(TABLES.relationships);
+      // Creator may be a linked record or plain text, the same duality the rest
+      // of this base shows.
+      const creatorRecs = await fetchAll(TABLES.creators);
+      const idByRecord = new Map(
+        creatorRecs.map((r) => [r.id, str(r.fields["Creator ID"]) ?? r.id])
+      );
+      return recs.map<AdvertiserRelationship>((r) => {
+        const f = r.fields;
+        const raw = f["Creator"];
+        const creatorId = Array.isArray(raw)
+          ? idByRecord.get(String(raw[0])) ?? String(raw[0])
+          : str(raw);
+        return {
+          id: r.id,
+          creatorId,
+          brand: str(f["Brand"]) ?? "",
+          parentCompany: str(f["Parent Company"]),
+          treatment: str(f["Treatment"]) ?? "",
+          lastDealDate: str(f["Last Deal Date"]),
+          notes: str(f["Notes"]),
+        };
+      });
+    } catch {
+      // No Schedule B table yet — every advertiser is a new brand at 20%.
       return [];
     }
   },

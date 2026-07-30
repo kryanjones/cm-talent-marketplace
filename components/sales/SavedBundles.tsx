@@ -2,7 +2,12 @@
 
 import { useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import type { Creator, OverlapAssumption, SavedBundle } from "@/lib/types";
+import type {
+  AdvertiserRelationship,
+  Creator,
+  OverlapAssumption,
+  SavedBundle,
+} from "@/lib/types";
 import {
   calculateBundleReach,
   coefficientsFromAssumptions,
@@ -19,10 +24,12 @@ export function SavedBundles({
   bundles,
   creators,
   overlap,
+  relationships,
 }: {
   bundles: SavedBundle[];
   creators: Creator[];
   overlap: OverlapAssumption[];
+  relationships: AdvertiserRelationship[];
 }) {
   const byId = useMemo(() => new Map(creators.map((c) => [c.id, c])), [creators]);
   const coef = useMemo(() => coefficientsFromAssumptions(overlap), [overlap]);
@@ -151,6 +158,7 @@ export function SavedBundles({
                             <DealCalculator
                               components={b.components}
                               creators={creators}
+                              relationships={relationships}
                             />
                           ) : (
                             <PitchApproval

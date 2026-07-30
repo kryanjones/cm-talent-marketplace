@@ -130,6 +130,10 @@ export const localAdapter: DataAdapter = {
     return load().runtime.bundles;
   },
 
+  async getAdvertiserRelationships() {
+    return [];
+  },
+
   async getBookings() {
     return readRuntime().bookings ?? [];
   },
@@ -166,6 +170,7 @@ export const localAdapter: DataAdapter = {
       agreementStatus: "Not sent", // no authority to sell until this is Signed
       agreementSignedDate: null,
       agreementEnvelopeId: null,
+      priceFloor: null,
       priorOutlets: splitList(app.priorOutlets),
       primaryBeat: app.primaryBeat,
       homeMarketDMA: app.homeMarketDMA,
