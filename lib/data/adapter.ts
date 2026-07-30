@@ -7,6 +7,7 @@ import type {
   CreatorStatus,
   Booking,
   AdvertiserRelationship,
+  Approval,
 } from "@/lib/types";
 
 /**
@@ -34,6 +35,13 @@ export interface DataAdapter {
    * Relationships table exists, in which case every advertiser is new (20%).
    */
   getAdvertiserRelationships(): Promise<AdvertiserRelationship[]>;
+
+  /** Recorded §3.3 approval requests. [] when no Approvals table exists. */
+  getApprovals(): Promise<Approval[]>;
+  /** Records that a request was put to a creator, with its response deadline. */
+  recordApprovals(
+    requests: Omit<Approval, "id">[]
+  ): Promise<{ created: number }>;
 
   getSavedBundles(): Promise<SavedBundle[]>;
   saveBundle(bundle: SavedBundle): Promise<SavedBundle>;

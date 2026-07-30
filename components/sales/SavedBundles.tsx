@@ -164,6 +164,7 @@ export function SavedBundles({
                             <PitchApproval
                               components={b.components}
                               creators={creators}
+                              relationships={relationships}
                             />
                           )}
                         </div>
