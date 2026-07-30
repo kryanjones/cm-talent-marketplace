@@ -343,15 +343,21 @@ export const airtableAdapter: DataAdapter = {
 
   async getCreatorById(id: string) {
     const all = await loadAll();
-    return all.find((c) => c.id === id || c.id === id) ?? null;
+    return all.find((c) => c.id === id) ?? null;
   },
 
   async getOverlapAssumptions() {
-    const recs = await fetchAll(TABLES.overlap);
-    return recs.map<OverlapAssumption>((r) => ({
-      scenario: str(r.fields["Scenario"]) ?? "",
-      overlapCoefficient: numOrNull(r.fields["Overlap Coefficient"]) ?? 0,
-    }));
+    try {
+      const recs = await fetchAll(TABLES.overlap);
+      return recs.map<OverlapAssumption>((r) => ({
+        scenario: str(r.fields["Scenario"]) ?? "",
+        overlapCoefficient: numOrNull(r.fields["Overlap Coefficient"]) ?? 0,
+      }));
+    } catch (err) {
+      // Reach math has sane defaults; don't take the page down over this table.
+      console.error("overlap assumptions read failed, using defaults", err);
+      return [];
+    }
   },
 
   async getSavedBundles() {

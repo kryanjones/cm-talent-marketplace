@@ -7,6 +7,7 @@ import { CreatorCard } from "./CreatorCard";
 import { FilterPanel } from "./FilterPanel";
 import { BundlePanel } from "./BundlePanel";
 import { BundleProvider, useBundle } from "./bundle-context";
+import { arrangeForDisplay } from "@/lib/arrange";
 import {
   buildOptions,
   creatorMatches,
@@ -23,7 +24,7 @@ export function BuyerExperience({
   overlap: OverlapAssumption[];
 }) {
   return (
-    <BundleProvider>
+    <BundleProvider creators={creators}>
       <BuyerInner creators={creators} overlap={overlap} />
     </BundleProvider>
   );
@@ -44,8 +45,11 @@ function BuyerInner({
   const [bundleOpen, setBundleOpen] = useState(false);
   const bundle = useBundle();
 
+  // Filter, then arrange so similar-looking headshots (same gender/ethnicity
+  // recipe) never cluster — recomputed per filter change so the alternation
+  // holds for whatever subset is on screen.
   const filtered = useMemo(
-    () => creators.filter((c) => creatorMatches(c, filters)),
+    () => arrangeForDisplay(creators.filter((c) => creatorMatches(c, filters))),
     [creators, filters]
   );
 

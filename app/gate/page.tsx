@@ -2,6 +2,7 @@
 
 import { Suspense, useState } from "react";
 import { useSearchParams } from "next/navigation";
+import { CMLogo } from "@/components/Logo";
 
 function GateForm() {
   const params = useSearchParams();
@@ -61,8 +62,11 @@ export default function GatePage() {
       <div className="flex w-full max-w-sm flex-col gap-5">
         <span className="cm-rule-red" />
         <div>
-          <h1 className="cm-h2 font-bold">Collective Media</h1>
-          <p className="cm-label mt-1 text-accent">Talent Marketplace</p>
+          <h1>
+            <CMLogo className="h-20 w-auto" />
+            <span className="sr-only">Collective Media</span>
+          </h1>
+          <p className="cm-label mt-3 text-accent">Talent Marketplace</p>
         </div>
         <p className="cm-body text-sm text-ink/60">
           This preview is private. Enter the access password to continue.

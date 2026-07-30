@@ -1,3 +1,5 @@
+import { CMMark } from "@/components/Logo";
+
 /**
  * Persistent disclosure required on every view (Section 7 of the build prompt).
  */
@@ -9,7 +11,10 @@ export function SiteFooter() {
         <p className="cm-fine text-ink/60">
           All personas and metrics shown are fictional, for demonstration purposes only.
         </p>
-        <p className="cm-fine text-ink/40">© Collective Media</p>
+        <p className="cm-fine flex items-center gap-2 text-ink/40">
+          <CMMark className="h-4 w-auto" />
+          © Collective Media
+        </p>
       </div>
     </footer>
   );

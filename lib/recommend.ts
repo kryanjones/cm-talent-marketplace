@@ -14,7 +14,6 @@ import {
   coefficientsFromAssumptions,
   type OverlapCoefficients,
   type ResolvedComponent,
-  DEFAULT_COEFFICIENTS,
 } from "@/lib/reach";
 import type { OverlapAssumption } from "@/lib/types";
 
@@ -84,7 +83,7 @@ function fmtReach(n: number): string {
 
 export function recommend(input: RecommendInput): Recommendation[] {
   const { candidates, bundleComponents, goal, activeCategories = [] } = input;
-  const coef = coefficientsFromAssumptions(input.overlap) ?? DEFAULT_COEFFICIENTS;
+  const coef = coefficientsFromAssumptions(input.overlap);
 
   const inBundle = new Set(bundleComponents.map((c) => c.creator.id));
   const baseNet = calculateBundleReach(bundleComponents, coef).netReach;
