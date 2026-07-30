@@ -43,6 +43,16 @@ export interface DataAdapter {
     requests: Omit<Approval, "id">[]
   ): Promise<{ created: number }>;
 
+  /**
+   * Sets a creator's agreement status from a DocuSign envelope event.
+   * Returns null when no creator holds that envelope id.
+   */
+  updateAgreementByEnvelope(
+    envelopeId: string,
+    status: string,
+    signedDate: string | null
+  ): Promise<Creator | null>;
+
   getSavedBundles(): Promise<SavedBundle[]>;
   saveBundle(bundle: SavedBundle): Promise<SavedBundle>;
 

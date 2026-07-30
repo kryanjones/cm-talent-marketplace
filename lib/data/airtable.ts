@@ -500,6 +500,22 @@ export const airtableAdapter: DataAdapter = {
     return { created };
   },
 
+  async updateAgreementByEnvelope(envelopeId, status, signedDate) {
+    const recs = await fetchAll(TABLES.creators);
+    const rec = recs.find(
+      (r) => str(r.fields["Agreement Envelope ID"]) === envelopeId
+    );
+    if (!rec) return null;
+    const fields: Record<string, unknown> = { "Agreement Status": status };
+    // Only a completed envelope carries a signature date; anything else must
+    // clear it, so a declined agreement cannot keep an old signed date.
+    fields["Agreement Signed Date"] = signedDate;
+    await patchRecord(TABLES.creators, rec.id, fields);
+    invalidate();
+    const id = str(rec.fields["Creator ID"]) ?? rec.id;
+    return airtableAdapter.getCreatorById(id);
+  },
+
   async getSavedBundles() {
     try {
       const recs = await fetchAll(TABLES.bundles);

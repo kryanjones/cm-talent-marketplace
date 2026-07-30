@@ -143,6 +143,11 @@ export const localAdapter: DataAdapter = {
     return { created: 0 };
   },
 
+  async updateAgreementByEnvelope() {
+    // Local mode has no envelope records to match against.
+    return null;
+  },
+
   async getBookings() {
     return readRuntime().bookings ?? [];
   },
