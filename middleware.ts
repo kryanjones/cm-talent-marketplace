@@ -41,6 +41,14 @@ export function middleware(req: NextRequest) {
     return NextResponse.next();
   }
 
+  // Tracked placement links. These are published inside a creator's content and
+  // clicked by the public, who have no password and never will — gating them
+  // would break every link already out in the world. The route only redirects
+  // to a stored destination and records a count; it exposes nothing.
+  if (pathname.startsWith("/l/")) {
+    return NextResponse.next();
+  }
+
   const token = req.cookies.get("cm_site")?.value;
   if (token === password) return NextResponse.next();
 

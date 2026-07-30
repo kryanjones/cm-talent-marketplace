@@ -24,6 +24,7 @@ export function SalesView({
   bookings,
   relationships,
   campaigns,
+  trackedClicks,
 }: {
   active: Creator[];
   pending: Creator[];
@@ -32,6 +33,7 @@ export function SalesView({
   bookings: Booking[];
   relationships: AdvertiserRelationship[];
   campaigns: Campaign[];
+  trackedClicks: Record<string, number>;
 }) {
   const [tab, setTab] = useState<Tab>("inventory");
 
@@ -79,6 +81,7 @@ export function SalesView({
           campaigns={campaigns}
           bookings={bookings}
           creators={active}
+          trackedClicks={trackedClicks}
         />
       )}
       {tab === "bundles" && (

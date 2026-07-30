@@ -178,6 +178,10 @@ export interface Booking {
   impressions: number | null;
   clicks: number | null;
   deliveryNotes: string | null;
+  /** Short code for this placement's tracked link, if one was issued. */
+  linkCode: string | null;
+  /** Where the tracked link sends people. */
+  destinationUrl: string | null;
 }
 
 /**
