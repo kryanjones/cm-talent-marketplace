@@ -46,7 +46,13 @@ export function toBuyerCreator(c: Creator): BuyerCreator {
   // Destructure the internal fields out rather than spreading everything: a
   // spread silently republishes any field added to Creator later, which is how
   // a contact address ends up readable in a public page's source.
-  const { teamEmail, ...rest } = c;
+  const {
+    teamEmail,
+    agreementStatus,
+    agreementSignedDate,
+    agreementEnvelopeId,
+    ...rest
+  } = c;
   return {
     ...rest,
     channels: c.channels.map(({ rateCard, ...ch }) => ch),

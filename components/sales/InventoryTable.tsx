@@ -6,6 +6,7 @@ import type { Booking, Creator, RateCard } from "@/lib/types";
 import { compactNumber, percentFromFraction, usd } from "@/lib/format";
 import { Chip, Eyebrow } from "@/components/ui";
 import { AvailabilityGrid } from "@/components/calendar/AvailabilityGrid";
+import { AGREEMENT_TONE, agreementNote } from "@/lib/agency";
 import {
   computeFill,
   rollUp,
@@ -88,7 +89,19 @@ export function InventoryTable({
                   onClick={() => setOpenId(open ? null : c.id)}
                   className="grid w-full grid-cols-2 items-center gap-3 px-4 py-3 text-left transition-colors hover:bg-bg-alt md:grid-cols-[2fr_1fr_1fr_1fr_auto]"
                 >
-                  <span className="cm-sans font-semibold">{c.name}</span>
+                  <span className="cm-sans font-semibold">
+                    {c.name}
+                    {c.agreementStatus !== "Signed" && (
+                      <span
+                        title={agreementNote(c.agreementStatus)}
+                        className={`cm-fine ml-2 font-normal ${
+                          AGREEMENT_TONE[c.agreementStatus ?? "Not sent"]
+                        }`}
+                      >
+                        ● not cleared
+                      </span>
+                    )}
+                  </span>
                   <span className="cm-fine text-ink/60">{c.primaryBeat}</span>
                   <span className="cm-fine text-ink/60">{c.channels.length}</span>
                   <span className="cm-fine">

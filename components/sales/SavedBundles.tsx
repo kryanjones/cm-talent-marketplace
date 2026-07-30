@@ -13,6 +13,7 @@ import { bundleSharePath } from "@/lib/share";
 import { Chip, Eyebrow } from "@/components/ui";
 import { DealCalculator } from "./DealCalculator";
 import { PitchApproval } from "./PitchApproval";
+import { ClearanceWarning } from "./ClearanceWarning";
 
 export function SavedBundles({
   bundles,
@@ -142,6 +143,10 @@ export function SavedBundles({
                         transition={{ duration: 0.22, ease: [0.4, 0, 0.2, 1] }}
                       >
                         <div className="mt-4 border-t border-hairline pt-5">
+                          <ClearanceWarning
+                            components={b.components}
+                            creators={creators}
+                          />
                           {open === "pricing" ? (
                             <DealCalculator
                               components={b.components}
