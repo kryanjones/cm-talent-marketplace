@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import type { BuyerCreator } from "@/lib/types";
 import { compactNumber, percentFromFraction } from "@/lib/format";
@@ -122,6 +123,12 @@ export function CreatorCard({ creator }: { creator: BuyerCreator }) {
           >
             {expanded ? "Hide channels" : "View channels"}
           </button>
+          <Link
+            href={`/creator/${creator.id}`}
+            className="cm-label ml-auto text-accent underline-offset-4 transition-opacity duration-micro hover:underline"
+          >
+            Media kit
+          </Link>
         </div>
       </div>
 

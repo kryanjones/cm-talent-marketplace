@@ -154,6 +154,7 @@ export const localAdapter: DataAdapter = {
       personaType: "Applicant",
       isDemoPersona: false,
       bio: app.bio,
+      positioning: null, // sales writes this by hand after approval
       priorOutlets: splitList(app.priorOutlets),
       primaryBeat: app.primaryBeat,
       homeMarketDMA: app.homeMarketDMA,

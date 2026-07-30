@@ -153,6 +153,51 @@
   }
 }
 
+/*
+ * Print / "Download media kit".
+ * The download is the browser's own print-to-PDF, so the print stylesheet IS
+ * the PDF design: drop the app chrome, force light ink on white, and keep
+ * sections from breaking across pages.
+ */
+@media print {
+  @page {
+    margin: 16mm;
+  }
+  html,
+  body {
+    background: #fff !important;
+    color: #000 !important;
+  }
+  /* App chrome and anything interactive has no meaning on paper. */
+  header.sticky,
+  footer,
+  .cm-no-print {
+    display: none !important;
+  }
+  section,
+  article > header {
+    break-inside: avoid;
+  }
+  h1,
+  h2 {
+    break-after: avoid;
+  }
+  a {
+    text-decoration: none;
+    color: #000 !important;
+  }
+  /* Keep the signature rule and accent legible in print. */
+  .cm-rule-red {
+    background: #ff4c2d !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  img {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
+
 /* Thin, editorial scrollbars for the bundle/criteria panels */
 .cm-scroll {
   scrollbar-width: thin;

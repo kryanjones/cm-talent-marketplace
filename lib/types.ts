@@ -76,6 +76,13 @@ export interface Creator {
   personaType: string | null;
   isDemoPersona: boolean;
   bio: string | null;
+  /**
+   * Human-written sales positioning for the media kit. Optional: the field does
+   * not exist in the base yet, so this is null until someone adds a
+   * "Positioning" long-text column to Creators. The media kit falls back to Bio.
+   * Deliberately not automated — sales owns this copy.
+   */
+  positioning: string | null;
   priorOutlets: string[];
   primaryBeat: string | null;
   homeMarketDMA: string | null;
