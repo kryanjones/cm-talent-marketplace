@@ -41,6 +41,7 @@ const TABLES = {
     process.env.AIRTABLE_TABLE_RELATIONSHIPS || "Advertiser Relationships",
   approvals: process.env.AIRTABLE_TABLE_APPROVALS || "Approvals",
   campaigns: process.env.AIRTABLE_TABLE_CAMPAIGNS || "Campaigns",
+  clicks: process.env.AIRTABLE_TABLE_CLICKS || "Link Clicks",
 };
 
 interface AirtableRecord {
@@ -405,6 +406,8 @@ export const airtableAdapter: DataAdapter = {
           impressions: numOrNull(f["Impressions"]),
           clicks: numOrNull(f["Clicks"]),
           deliveryNotes: str(f["Delivery Notes"]),
+          linkCode: str(f["Link Code"]),
+          destinationUrl: str(f["Destination URL"]),
         };
       });
     } catch {
@@ -441,6 +444,49 @@ export const airtableAdapter: DataAdapter = {
     } catch {
       // No Schedule B table yet — every advertiser is a new brand at 20%.
       return [];
+    }
+  },
+
+  async resolveLinkCode(code) {
+    // Filtered server-side so the click path fetches one record, not the table.
+    const url = new URL(baseUrl(TABLES.bookings));
+    url.searchParams.set("pageSize", "1");
+    url.searchParams.set(
+      "filterByFormula",
+      `{Link Code}='${code.replace(/'/g, "\\'")}'`
+    );
+    const res = await fetch(url.toString(), {
+      headers: authHeaders(),
+      // Destinations change rarely; a short cache keeps popular links fast
+      // and keeps a burst of clicks from hammering Airtable's read limit.
+      next: { revalidate: 60 },
+    });
+    if (!res.ok) return null;
+    const d = (await res.json()) as { records: AirtableRecord[] };
+    const rec = d.records[0];
+    if (!rec) return null;
+    return str(rec.fields["Destination URL"]);
+  },
+
+  async recordLinkClick(code, referrerHost) {
+    await createRecord(TABLES.clicks, {
+      Code: code,
+      "Clicked At": new Date().toISOString(),
+      ...(referrerHost ? { "Referrer Host": referrerHost } : {}),
+    });
+  },
+
+  async getLinkClickCounts() {
+    try {
+      const recs = await fetchAll(TABLES.clicks);
+      const out: Record<string, number> = {};
+      for (const r of recs) {
+        const code = str(r.fields["Code"]);
+        if (code) out[code] = (out[code] ?? 0) + 1;
+      }
+      return out;
+    } catch {
+      return {};
     }
   },
 

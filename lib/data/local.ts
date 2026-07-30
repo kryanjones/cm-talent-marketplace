@@ -134,6 +134,18 @@ export const localAdapter: DataAdapter = {
     return [];
   },
 
+  async resolveLinkCode() {
+    return null;
+  },
+
+  async recordLinkClick() {
+    // Local mode has no click store.
+  },
+
+  async getLinkClickCounts() {
+    return {};
+  },
+
   async getCampaigns() {
     return [];
   },

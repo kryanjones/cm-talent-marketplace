@@ -37,6 +37,18 @@ export interface DataAdapter {
    */
   getAdvertiserRelationships(): Promise<AdvertiserRelationship[]>;
 
+  /**
+   * Destination for a tracked link code, or null if unknown.
+   * Used on the click path, so it must be cheap and must not throw.
+   */
+  resolveLinkCode(code: string): Promise<string | null>;
+
+  /** Appends one click. Append-only: no read-modify-write to race on. */
+  recordLinkClick(code: string, referrerHost: string | null): Promise<void>;
+
+  /** Click counts per link code. */
+  getLinkClickCounts(): Promise<Record<string, number>>;
+
   /** Campaigns. [] when no Campaigns table exists. */
   getCampaigns(): Promise<Campaign[]>;
 

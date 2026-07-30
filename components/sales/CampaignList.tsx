@@ -18,14 +18,16 @@ export function CampaignList({
   campaigns,
   bookings,
   creators,
+  trackedClicks,
 }: {
   campaigns: Campaign[];
   bookings: Booking[];
   creators: Creator[];
+  trackedClicks: Record<string, number>;
 }) {
   const reports = useMemo(
-    () => campaigns.map((c) => buildReport(c, bookings, creators)),
-    [campaigns, bookings, creators]
+    () => campaigns.map((c) => buildReport(c, bookings, creators, trackedClicks)),
+    [campaigns, bookings, creators, trackedClicks]
   );
 
   if (campaigns.length === 0) {

@@ -35,16 +35,17 @@ export default async function CampaignPage({
     return <AccessGate role="sales" />;
   }
 
-  const [campaigns, bookings, creators] = await Promise.all([
+  const [campaigns, bookings, creators, trackedClicks] = await Promise.all([
     data.getCampaigns(),
     data.getBookings(),
     getActiveCreators(),
+    data.getLinkClickCounts(),
   ]);
 
   const campaign = campaigns.find((c) => c.id === params.id);
   if (!campaign) notFound();
 
-  const report = buildReport(campaign, bookings, creators);
+  const report = buildReport(campaign, bookings, creators, trackedClicks);
 
   return (
     <div className="mx-auto max-w-content px-6">

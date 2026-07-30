@@ -147,7 +147,25 @@ export function WrapReport({ report }: { report: CampaignReport }) {
                   </td>
                   <td className="cm-fine py-2.5 pr-3 text-right tabular-nums">
                     {p.clicks != null ? (
-                      fullNumber(p.clicks)
+                      <>
+                        {fullNumber(p.clicks)}
+                        {/* Say where the number came from: one we measured is
+                            worth more than one transcribed off a dashboard. */}
+                        <span
+                          className={`ml-1.5 ${
+                            p.clickSource === "tracked"
+                              ? "text-success"
+                              : "text-ink/35"
+                          }`}
+                          title={
+                            p.clickSource === "tracked"
+                              ? "Measured by our tracked link"
+                              : "Reported figure, entered by hand"
+                          }
+                        >
+                          {p.clickSource === "tracked" ? "measured" : "reported"}
+                        </span>
+                      </>
                     ) : (
                       <span className="text-ink/30">—</span>
                     )}
@@ -173,7 +191,9 @@ export function WrapReport({ report }: { report: CampaignReport }) {
         </div>
         <p className="cm-fine text-ink/40">
           A dash means no figure has been recorded for that placement, not a zero
-          result.
+          result. Clicks marked <span className="text-success">measured</span> come
+          from our own tracked links; <span className="text-ink/55">reported</span>{" "}
+          figures were entered by hand from platform dashboards.
         </p>
       </section>
 

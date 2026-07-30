@@ -21,6 +21,9 @@ export interface PlacementRow {
   slots: number;
   impressions: number | null;
   clicks: number | null;
+  /** Where the click figure came from — tracked links are measured by us. */
+  clickSource: "tracked" | "reported" | null;
+  linkCode: string | null;
   deliveryNotes: string | null;
   /** Live once it has a URL and a published date. */
   isLive: boolean;
@@ -48,7 +51,9 @@ export interface CampaignReport {
 export function buildReport(
   campaign: Campaign,
   bookings: Booking[],
-  creators: Creator[]
+  creators: Creator[],
+  /** code → clicks, from our own redirect. Beats a hand-entered figure. */
+  trackedClicks: Record<string, number> = {}
 ): CampaignReport {
   const creatorByChannel = new Map<string, Creator>();
   for (const c of creators) {
@@ -63,6 +68,7 @@ export function buildReport(
 
   const placements: PlacementRow[] = mine.map((b) => {
     const creator = b.channelId ? creatorByChannel.get(b.channelId) : undefined;
+    const tracked = b.linkCode ? trackedClicks[b.linkCode] : undefined;
     return {
       bookingId: b.id,
       creatorId: creator?.id ?? null,
@@ -73,7 +79,10 @@ export function buildReport(
       liveUrl: b.liveUrl,
       slots: b.slots,
       impressions: b.impressions,
-      clicks: b.clicks,
+      // A tracked count is measured rather than transcribed, so it wins.
+      clicks: tracked ?? b.clicks,
+      clickSource: tracked != null ? "tracked" : b.clicks != null ? "reported" : null,
+      linkCode: b.linkCode,
       deliveryNotes: b.deliveryNotes,
       isLive: Boolean(b.liveUrl && b.publishedDate),
     };
