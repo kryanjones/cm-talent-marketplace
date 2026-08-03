@@ -17,7 +17,7 @@ import type {
  * implementation of this interface — components and API routes are untouched.
  */
 export interface DataAdapter {
-  source: "airtable" | "local";
+  source: "airtable" | "local" | "crm";
 
   /** All creators, fully assembled with channels + brand boundary. */
   getCreators(): Promise<Creator[]>;
