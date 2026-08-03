@@ -81,6 +81,11 @@ export function MediaKit({
 
   return (
     <article className="flex flex-col gap-14 pb-16 pt-8">
+      {/* The media kit was designed at screen width, so landscape is the
+          orientation that survives print-to-PDF; portrait squeezes the
+          two-column header and stat grids. Scoped here rather than in the
+          global print styles because the wrap report prints portrait. */}
+      <style>{`@media print { @page { size: letter landscape; margin: 12mm; } }`}</style>
       {/* ---------- Identity ---------- */}
       <header className="grid grid-cols-1 gap-8 md:grid-cols-[300px_minmax(0,1fr)]">
         <div className="relative aspect-[3/4] w-full max-w-[300px] overflow-hidden bg-placeholder-grey">

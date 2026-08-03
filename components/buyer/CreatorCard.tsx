@@ -35,18 +35,25 @@ export function CreatorCard({
       layout
       className="group flex flex-col border border-hairline bg-bg shadow-card transition-shadow duration-standard ease-brand hover:shadow-card-hover"
     >
-      {/* Image-forward header */}
+      {/* Image-forward header. The portrait itself is a door to the media kit —
+          Sarah's ask — while the badges layered on top stay non-navigating. */}
       <div className="relative aspect-[3/4] w-full overflow-hidden bg-placeholder-grey">
-        {creator.headshot ? (
-          <Image
-            src={creator.headshot}
-            alt={creator.name}
-            fill
-            sizes="(max-width: 768px) 100vw, 320px"
-            className="object-cover transition-transform duration-expressive ease-brand group-hover:scale-[1.03]"
-            unoptimized
-          />
-        ) : null}
+        <Link
+          href={`/creator/${creator.id}`}
+          aria-label={`${creator.name} — media kit`}
+          className="absolute inset-0"
+        >
+          {creator.headshot ? (
+            <Image
+              src={creator.headshot}
+              alt={creator.name}
+              fill
+              sizes="(max-width: 768px) 100vw, 320px"
+              className="object-cover transition-transform duration-expressive ease-brand group-hover:scale-[1.03]"
+              unoptimized
+            />
+          ) : null}
+        </Link>
         {/*
           One row rather than two independently-positioned corners: pinning the
           badge left and the tier right let them collide on narrow cards, so
