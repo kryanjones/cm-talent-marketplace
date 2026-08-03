@@ -10,11 +10,15 @@ import type { Creator, BuyerCreator } from "@/lib/types";
 import type { DataAdapter } from "./adapter";
 import { localAdapter } from "./local";
 import { airtableAdapter } from "./airtable";
+import { crmAdapter } from "./crm";
 
 function pickAdapter(): DataAdapter {
   const forced = process.env.DATA_SOURCE?.toLowerCase();
   if (forced === "local") return localAdapter;
   if (forced === "airtable") return airtableAdapter;
+  // Real talent, real rates: Sarah's CRM as the source of truth. Requires
+  // AIRTABLE_CRM_BASE_ID and a token with access to that base.
+  if (forced === "crm") return crmAdapter;
   // Auto: use Airtable when credentials exist, otherwise the seed dataset.
   if (process.env.AIRTABLE_API_KEY && process.env.AIRTABLE_BASE_ID) {
     return airtableAdapter;
