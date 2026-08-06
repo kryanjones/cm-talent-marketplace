@@ -99,14 +99,21 @@ export const INDUSTRIES = [
   "Travel & hospitality",
 ];
 
-/** Topics come from the live roster so the pills always match real inventory. */
+/**
+ * Topics come from the live roster's BEATS (Content Niche) — the editorial
+ * axis: what a creator actually covers. Deliberately NOT categoryAffinities:
+ * that field is Advertiser Category Fit, the brand-fit axis, and nearly every
+ * creator carries "Arts & Entertainment" there because they can SELL to
+ * entertainment brands — which is not the same as covering entertainment.
+ * Deriving topics from it made a News/Pol reporter "match" an entertainment
+ * brief.
+ */
 export function deriveTopics(
   creators: Array<{ primaryBeat: string | null; categoryAffinities: string[] }>
 ): string[] {
   const out = new Set<string>();
   for (const c of creators) {
     if (c.primaryBeat) out.add(c.primaryBeat);
-    for (const a of c.categoryAffinities) out.add(a);
   }
   return Array.from(out).sort((a, b) => a.localeCompare(b));
 }

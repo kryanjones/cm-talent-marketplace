@@ -135,18 +135,68 @@ function isConditional(creator: Creator, industry: string | null): boolean {
 /** Formats that leave the brand with an asset it can reuse or repurpose. */
 const REUSABLE_FORMAT = /custom|branded|product placement|takeover|mini-series|dedicated|video/i;
 
-/** True when the brief names topics and this creator carries at least one. */
-function matchesTopics(creator: Creator, brief: Brief): boolean {
+const TOPIC_STOPWORDS = new Set([
+  "and", "the", "of", "for", "with", "my", "our", "your", "film", "tv",
+]);
+
+function topicTokens(s: string): Set<string> {
+  return new Set(
+    s
+      .toLowerCase()
+      .split(/[^a-z0-9]+/)
+      .filter((w) => w.length >= 4 && !TOPIC_STOPWORDS.has(w))
+  );
+}
+
+/**
+ * How well this creator's BEAT matches the brief's topics. Editorial coverage
+ * only — categoryAffinities is the Advertiser Category Fit (brand-fit) axis
+ * and matching topics against it once made every News/Pol reporter "cover"
+ * entertainment. "partial" is a token overlap ("Entertainment Culture" vs
+ * "Arts & Entertainment"), which bridges the beat and industry vocabularies
+ * without pretending they are the same list.
+ */
+function topicMatchLevel(
+  creator: Creator,
+  brief: Brief
+): "exact" | "partial" | "none" {
   const wanted = [
     ...(brief.topics ?? []),
     ...(brief.affinity ? [brief.affinity] : []),
-  ].map((t) => t.toLowerCase());
-  if (!wanted.length) return false;
-  const carried = [
-    ...creator.categoryAffinities,
-    ...(creator.primaryBeat ? [creator.primaryBeat] : []),
-  ].map((t) => t.toLowerCase());
-  return wanted.some((w) => carried.some((c) => c === w));
+  ];
+  if (!wanted.length || !creator.primaryBeat) return "none";
+  const beat = creator.primaryBeat.toLowerCase();
+  if (wanted.some((w) => w.toLowerCase() === beat)) return "exact";
+  const beatTokens = topicTokens(creator.primaryBeat);
+  for (const w of wanted) {
+    for (const t of topicTokens(w)) {
+      if (beatTokens.has(t)) return "partial";
+    }
+  }
+  return "none";
+}
+
+/** True when the brief names topics and this creator's beat carries one. */
+function matchesTopics(creator: Creator, brief: Brief): boolean {
+  return topicMatchLevel(creator, brief) !== "none";
+}
+
+/**
+ * Topic preference applies to EVERY goal — a preference that only some goals
+ * honour is indistinguishable from no preference under the rest, which is how
+ * an entertainment brief came back all News/Pol. Neutral when no topics are
+ * chosen.
+ */
+function topicMultiplier(creator: Creator, brief: Brief): number {
+  if (!brief.topics?.length && !brief.affinity) return 1;
+  switch (topicMatchLevel(creator, brief)) {
+    case "exact":
+      return 1.6;
+    case "partial":
+      return 1.25;
+    default:
+      return 0.55;
+  }
 }
 
 /**
@@ -273,18 +323,13 @@ export function planBundle(
     if (preferred.length >= 3) pool = preferred;
   }
 
-  // Editorial topics are the same kind of soft filter: honour them when enough
-  // priced inventory carries the topics, otherwise fall back to the full pool
-  // and let the goal multiplier prefer topical creators instead.
-  let topicNote: "applied" | "preferred" | null = null;
+  // Editorial topics are the same kind of soft filter: restrict to on-topic
+  // inventory when there is enough of it, otherwise keep the full pool and let
+  // topicMultiplier prefer topical creators in scoring. Either way the
+  // narrative reports the actual on-topic composition afterwards.
   if (brief.topics?.length) {
     const onTopic = pool.filter((u) => matchesTopics(u.creator, brief));
-    if (onTopic.length >= 3) {
-      pool = onTopic;
-      topicNote = "applied";
-    } else {
-      topicNote = "preferred";
-    }
+    if (onTopic.length >= 3) pool = onTopic;
   }
 
   // "Tighten Category" means what it says: restrict the pool to creators who
@@ -294,8 +339,10 @@ export function planBundle(
   let tightenedOn: string | null = null;
   const tightenTarget = brief.affinity ?? brief.topics?.[0] ?? null;
   if (brief.goal === "Tighten Category" && tightenTarget) {
-    const inCategory = pool.filter((u) =>
-      u.creator.categoryAffinities.includes(tightenTarget)
+    const inCategory = pool.filter(
+      (u) =>
+        u.creator.categoryAffinities.includes(tightenTarget) ||
+        matchesTopics(u.creator, brief)
     );
     if (inCategory.length >= 4) {
       pool = inCategory;
@@ -325,7 +372,8 @@ export function planBundle(
       const score =
         perDollar *
         goalMultiplier(brief.goal, cand.creator, cand.channel, brief, chosen) *
-        audienceMultiplier(cand.channel, brief.audience);
+        audienceMultiplier(cand.channel, brief.audience) *
+        topicMultiplier(cand.creator, brief);
       if (!best || score > best.score) best = { cand, score, net };
     }
 
@@ -380,7 +428,7 @@ export function planBundle(
       excludedForBoundaries,
       conditional,
       tightenedOn,
-      topicNote,
+      topicTruth(brief, eligible, creatorIds),
       // Whether audience preferences could be honoured at all: true only when
       // some priced channel actually carries composition data.
       universe.some(
@@ -403,27 +451,85 @@ export function planBundle(
  * what the bundle panel shows. Natural-language phrasing can be layered on
  * later without changing what is asserted.
  */
+interface TopicTruth {
+  chosenOnTopic: number;
+  chosenTotal: number;
+  /** On-topic creators who exist but cannot be planned yet, and why. */
+  unsellable: { name: string; reason: string }[];
+}
+
+/**
+ * The actual on-topic composition of the plan, plus the on-topic creators the
+ * plan COULD NOT use and the specific data each is missing. This turns "why
+ * didn't I get Richard Lawson?" into an answer — and into the roster team's
+ * to-do list — instead of a silent substitution.
+ */
+function topicTruth(
+  brief: Brief,
+  eligible: Creator[],
+  chosenCreatorIds: Set<string>
+): TopicTruth | null {
+  if (!brief.topics?.length) return null;
+  const onTopic = eligible.filter((c) => matchesTopics(c, brief));
+  const unsellable: { name: string; reason: string }[] = [];
+  for (const c of onTopic) {
+    if (chosenCreatorIds.has(c.id)) continue;
+    const formats = c.channels.flatMap((ch) => ch.availableAdFormats);
+    const priced = c.channels.some(
+      (ch) => ch.rateCard && typeof ch.rateCard === "object" && Object.keys(ch.rateCard).length
+    );
+    const pickable = c.channels.some(
+      (ch) =>
+        ch.rateCard &&
+        typeof ch.rateCard === "object" &&
+        Object.keys(ch.rateCard).length &&
+        (ch.avgReachPerUnit ?? 0) > 0
+    );
+    if (pickable) continue; // sellable but outscored — not a data gap
+    if (!formats.length) unsellable.push({ name: c.name, reason: "no rate card on file yet" });
+    else if (!priced) unsellable.push({ name: c.name, reason: "rates not priced yet" });
+    else unsellable.push({ name: c.name, reason: "audience figures not on file yet" });
+  }
+  return {
+    chosenOnTopic: onTopic.filter((c) => chosenCreatorIds.has(c.id)).length,
+    chosenTotal: chosenCreatorIds.size,
+    unsellable,
+  };
+}
+
 function buildNarrative(
   brief: Brief,
   s: PlanSummary,
   excluded: number,
   conditional: { name: string; note: string | null }[],
   tightenedOn: string | null,
-  topicNote: "applied" | "preferred" | null = null,
+  topics: TopicTruth | null = null,
   audienceDataAvailable = true
 ): { headline: string; points: string[] } {
   const points: string[] = [];
 
   // Brief v2 honesty notes come first: what the plan did — and could not do —
   // with the buyer's answers.
-  if (topicNote === "applied" && brief.topics?.length) {
-    points.push(
-      `Every creator here publishes on ${brief.topics.join(", ")} — the topics you asked to show up with.`
-    );
-  } else if (topicNote === "preferred" && brief.topics?.length) {
-    points.push(
-      `Creators covering ${brief.topics.join(", ")} were preferred, but too few carry those topics to fill the plan from them alone.`
-    );
+  if (topics && brief.topics?.length) {
+    const asked = brief.topics.join(", ");
+    if (topics.chosenTotal > 0 && topics.chosenOnTopic === topics.chosenTotal) {
+      points.push(`Every creator here covers ${asked} — the topics you asked to show up with.`);
+    } else if (topics.chosenOnTopic > 0) {
+      points.push(
+        `${topics.chosenOnTopic} of the ${topics.chosenTotal} creators cover ${asked}; the rest extend reach beyond the topic.`
+      );
+    } else if (topics.chosenTotal > 0) {
+      points.push(
+        `No creator with bookable, priced inventory currently covers ${asked}, so this plan optimises your other goals instead.`
+      );
+    }
+    if (topics.unsellable.length) {
+      points.push(
+        `Also on these topics, not yet plannable: ${topics.unsellable
+          .map((u) => `${u.name} (${u.reason})`)
+          .join("; ")}. Ask us about them directly.`
+      );
+    }
   }
   if (brief.audience?.length && !audienceDataAvailable) {
     points.push(
