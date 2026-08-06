@@ -21,13 +21,18 @@ export type OptimizationGoal =
   | "Maximize Reach"
   | "Fit Budget"
   | "Tighten Category"
-  | "Expand Audience";
+  | "Expand Audience"
+  // Brief v2 (Sarah's "what matters most"):
+  | "Maximize Engagement"
+  | "Content I Can Reuse";
 
 export const GOALS: OptimizationGoal[] = [
   "Maximize Reach",
   "Fit Budget",
   "Tighten Category",
   "Expand Audience",
+  "Maximize Engagement",
+  "Content I Can Reuse",
 ];
 
 type CreatorLike = BuyerCreator | Creator;
@@ -173,6 +178,14 @@ export function recommend(input: RecommendInput): Recommendation[] {
       case "Fit Budget":
         // No rates in buyer view: proxy "efficiency" = strong incremental reach
         // from a smaller audience footprint (less duplication, leaner buy).
+        s.score = reachScore;
+        break;
+      // The two Brief v2 goals score per-channel signals (engagement rates,
+      // format types) that this creator-level recommender doesn't see, so
+      // reach stands in as the tiebreaker here; the planner applies the real
+      // weighting in lib/plan.ts.
+      case "Maximize Engagement":
+      case "Content I Can Reuse":
         s.score = reachScore;
         break;
     }

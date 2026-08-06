@@ -17,16 +17,20 @@ import {
   activeFilterCount,
   type FilterState,
 } from "./filters";
+import { deriveTopics, type BriefAnswers } from "./brief-options";
 
 export function BuyerExperience({
   creators,
   overlap,
   availability,
+  initialBrief = null,
 }: {
   creators: BuyerCreator[];
   overlap: OverlapAssumption[];
   /** channelId → qualitative state. Slot counts stay on the server. */
   availability: Record<string, Availability>;
+  /** Brief carried over from the landing page; auto-runs the planner. */
+  initialBrief?: BriefAnswers | null;
 }) {
   return (
     <BundleProvider creators={creators}>
@@ -34,6 +38,7 @@ export function BuyerExperience({
         creators={creators}
         overlap={overlap}
         availability={availability}
+        initialBrief={initialBrief}
       />
     </BundleProvider>
   );
@@ -43,11 +48,13 @@ function BuyerInner({
   creators,
   overlap,
   availability,
+  initialBrief,
 }: {
   creators: BuyerCreator[];
   overlap: OverlapAssumption[];
   /** channelId → qualitative state. Slot counts stay on the server. */
   availability: Record<string, Availability>;
+  initialBrief?: BriefAnswers | null;
 }) {
   const options = useMemo(() => buildOptions(creators), [creators]);
   const [filters, setFilters] = useState<FilterState>(() =>
@@ -84,7 +91,11 @@ function BuyerInner({
         {/* Guided entry point. Browsing stays available underneath — this
             never blocks the array. */}
         <div className="mt-7">
-          <BriefPanel onPlan={bundle.setBundle} />
+          <BriefPanel
+            onPlan={bundle.setBundle}
+            topics={deriveTopics(creators)}
+            initialBrief={initialBrief}
+          />
         </div>
       </section>
 

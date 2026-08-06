@@ -5,7 +5,12 @@ import { usePathname } from "next/navigation";
 import { CMLogo } from "@/components/Logo";
 
 const NAV = [
-  { href: "/", label: "Discover", match: (p: string) => p === "/" },
+  { href: "/", label: "Start a brief", match: (p: string) => p === "/" },
+  {
+    href: "/discover",
+    label: "Discover",
+    match: (p: string) => p.startsWith("/discover"),
+  },
   { href: "/sales", label: "Sales", match: (p: string) => p.startsWith("/sales") },
   { href: "/apply", label: "Apply", match: (p: string) => p.startsWith("/apply") },
 ];

@@ -37,3 +37,4 @@ next-env.d.ts
 /data/headshots/out/
 /data/headshots/final/
 /airtable_proxy_backup.json
+.env*

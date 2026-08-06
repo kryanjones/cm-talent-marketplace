@@ -1,12 +1,17 @@
 "use client";
 
-import { useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { CATEGORY_AFFINITIES, NOGO_CATEGORIES } from "@/lib/constants";
-import { GOALS, type OptimizationGoal } from "@/lib/recommend";
 import { BUDGET_BANDS } from "@/lib/plan";
-import { Eyebrow, Pill } from "@/components/ui";
+import { Eyebrow } from "@/components/ui";
 import type { BundleComponent } from "@/lib/types";
+import { BriefQuestions } from "./BriefQuestions";
+import {
+  BRIEF_GOALS,
+  EMPTY_ANSWERS,
+  platformLabelsToChannels,
+  type BriefAnswers,
+} from "./brief-options";
 
 interface PlanResponse {
   components: BundleComponent[];
@@ -24,52 +29,89 @@ interface PlanResponse {
   empty: boolean;
 }
 
-const GOAL_HELP: Record<OptimizationGoal, string> = {
-  "Maximize Reach": "The largest deduplicated audience the budget allows.",
-  "Fit Budget": "Efficient coverage that leaves room in the number.",
-  "Tighten Category": "Stay inside one audience interest for a coherent buy.",
-  "Expand Audience": "Spread across markets you are not already reaching.",
-};
-
 export function BriefPanel({
   onPlan,
+  topics,
+  initialBrief,
 }: {
   onPlan: (components: BundleComponent[]) => void;
+  /** Live topic vocabulary for the editorial-alignment question. */
+  topics: string[];
+  /** A brief carried over from the landing page — auto-runs on mount. */
+  initialBrief?: BriefAnswers | null;
 }) {
   const [open, setOpen] = useState(false);
-  const [industry, setIndustry] = useState<string>("");
-  const [affinity, setAffinity] = useState<string>("");
-  const [goal, setGoal] = useState<OptimizationGoal>("Maximize Reach");
-  const [budget, setBudget] = useState<number>(BUDGET_BANDS[2].value);
+  const [answers, setAnswers] = useState<BriefAnswers>(initialBrief ?? EMPTY_ANSWERS);
   const [status, setStatus] = useState<"idle" | "working" | "done" | "error">("idle");
   const [plan, setPlan] = useState<PlanResponse | null>(null);
 
-  async function submit(e: React.FormEvent) {
-    e.preventDefault();
-    setStatus("working");
-    try {
-      const res = await fetch("/api/plan", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          industry: industry || null,
-          affinity: affinity || null,
-          goal,
-          budget,
-        }),
-      });
-      if (!res.ok) throw new Error("plan failed");
-      const data = (await res.json()) as PlanResponse;
-      setPlan(data);
-      setStatus("done");
-      if (!data.empty) onPlan(data.components);
-    } catch {
-      setStatus("error");
+  const run = useCallback(
+    async (a: BriefAnswers) => {
+      setStatus("working");
+      try {
+        const res = await fetch("/api/plan", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            industry: a.industry || null,
+            affinity: null,
+            topics: a.topics,
+            audience: a.audience,
+            goal: a.goal,
+            budget: a.budget,
+            platforms: platformLabelsToChannels(a.platforms),
+          }),
+        });
+        if (!res.ok) throw new Error("plan failed");
+        const data = (await res.json()) as PlanResponse;
+        setPlan(data);
+        setStatus("done");
+        if (!data.empty) onPlan(data.components);
+      } catch {
+        setStatus("error");
+      }
+    },
+    [onPlan]
+  );
+
+  // A landing-page brief arrives via URL params and runs itself: the buyer
+  // already pressed "Show me a bundle" — asking again would be a second door.
+  const autoRan = useRef(false);
+  useEffect(() => {
+    if (initialBrief && !autoRan.current) {
+      autoRan.current = true;
+      run(initialBrief);
     }
+  }, [initialBrief, run]);
+
+  function submit(e: React.FormEvent) {
+    e.preventDefault();
+    run(answers);
   }
 
   const budgetLabel =
-    BUDGET_BANDS.find((b) => b.value === budget)?.label ?? "";
+    BUDGET_BANDS.find((b) => b.value === answers.budget)?.label ?? "";
+  const goalLabel =
+    BRIEF_GOALS.find((g) => g.value === answers.goal)?.label ?? answers.goal;
+  const briefSummary = [
+    answers.industry || "Any industry",
+    answers.topics.length ? answers.topics.slice(0, 2).join(", ") : null,
+    goalLabel,
+    budgetLabel,
+  ]
+    .filter(Boolean)
+    .join(" · ");
+
+  // ---------- working state (visible when a landing brief is assembling)
+  if (status === "working") {
+    return (
+      <div className="border border-hairline bg-bg-alt px-5 py-5">
+        <Eyebrow>Your brief</Eyebrow>
+        <p className="cm-h3 mt-2 font-bold">Assembling your bundle…</p>
+        <p className="cm-fine mt-1 text-ink/50">{briefSummary}</p>
+      </div>
+    );
+  }
 
   // ---------- resolved state: a compact summary of the brief + the rationale
   if (status === "done" && plan && !plan.empty) {
@@ -83,11 +125,7 @@ export function BriefPanel({
         <div className="flex flex-wrap items-center justify-between gap-3 border-b border-hairline px-5 py-3">
           <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
             <Eyebrow>Your brief</Eyebrow>
-            <span className="cm-fine text-ink/70">
-              {[industry || "Any category", affinity, goal, budgetLabel]
-                .filter(Boolean)
-                .join(" · ")}
-            </span>
+            <span className="cm-fine text-ink/70">{briefSummary}</span>
           </div>
           <button
             type="button"
@@ -170,7 +208,7 @@ export function BriefPanel({
     );
   }
 
-  // ---------- the form
+  // ---------- the form (all six questions, single screen)
   return (
     <AnimatePresence initial={false}>
       <motion.form
@@ -185,7 +223,7 @@ export function BriefPanel({
             <div>
               <Eyebrow>Your brief</Eyebrow>
               <p className="cm-body mt-1 text-sm text-ink/60">
-                Four questions. Nothing is binding, and no rates are shown.
+                Six questions. Nothing is binding, and no rates are shown.
               </p>
             </div>
             <button
@@ -197,70 +235,14 @@ export function BriefPanel({
             </button>
           </div>
 
-          <Field
-            label="What are you advertising?"
-            hint="Used to withhold creators who decline that category. Nothing is pitched to them."
-          >
-            <div className="flex flex-wrap gap-1.5">
-              <Pill active={industry === ""} onClick={() => setIndustry("")}>
-                General
-              </Pill>
-              {NOGO_CATEGORIES.map((c) => (
-                <Pill
-                  key={c}
-                  active={industry === c}
-                  onClick={() => setIndustry(industry === c ? "" : c)}
-                >
-                  {c}
-                </Pill>
-              ))}
-            </div>
-          </Field>
-
-          <Field
-            label="Which audience are you after?"
-            hint="Optional. Shapes which creators are prioritised."
-          >
-            <div className="flex flex-wrap gap-1.5">
-              {CATEGORY_AFFINITIES.map((a) => (
-                <Pill
-                  key={a}
-                  active={affinity === a}
-                  onClick={() => setAffinity(affinity === a ? "" : a)}
-                >
-                  {a}
-                </Pill>
-              ))}
-            </div>
-          </Field>
-
-          <Field label="What matters most?" hint={GOAL_HELP[goal]}>
-            <div className="flex flex-wrap gap-1.5">
-              {GOALS.map((g) => (
-                <Pill key={g} active={goal === g} onClick={() => setGoal(g)}>
-                  {g}
-                </Pill>
-              ))}
-            </div>
-          </Field>
-
-          <Field label="Working budget" hint="Shapes the plan. Never shown as a rate.">
-            <div className="flex flex-wrap gap-1.5">
-              {BUDGET_BANDS.map((b) => (
-                <Pill key={b.label} active={budget === b.value} onClick={() => setBudget(b.value)}>
-                  {b.label}
-                </Pill>
-              ))}
-            </div>
-          </Field>
+          <BriefQuestions answers={answers} onChange={setAnswers} topics={topics} />
 
           <div className="flex flex-wrap items-center gap-3">
             <button
               type="submit"
-              disabled={status === "working"}
-              className="cm-label bg-accent px-6 py-3 text-ink-inverse transition-opacity hover:opacity-90 disabled:opacity-50"
+              className="cm-label bg-accent px-6 py-3 text-ink-inverse transition-opacity hover:opacity-90"
             >
-              {status === "working" ? "Assembling…" : "Show me a bundle"}
+              Show me a bundle
             </button>
             {status === "error" && (
               <span className="cm-fine text-error">
@@ -271,23 +253,5 @@ export function BriefPanel({
         </div>
       </motion.form>
     </AnimatePresence>
-  );
-}
-
-function Field({
-  label,
-  hint,
-  children,
-}: {
-  label: string;
-  hint?: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <div className="flex flex-col gap-2">
-      <span className="cm-sans text-sm font-semibold">{label}</span>
-      {hint && <span className="cm-fine text-ink/45">{hint}</span>}
-      {children}
-    </div>
   );
 }

@@ -54,7 +54,7 @@ export default async function CreatorPage({
     <div className="mx-auto max-w-content px-6">
       <div className="cm-no-print pt-6">
         <Link
-          href="/"
+          href="/discover"
           className="cm-label text-ink/50 underline-offset-4 transition-colors hover:text-accent hover:underline"
         >
           ← All creators
