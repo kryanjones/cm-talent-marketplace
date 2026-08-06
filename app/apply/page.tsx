@@ -115,7 +115,7 @@ export default function ApplyPage() {
           adding them to the marketplace. You&apos;ll hear from us once a decision is
           made.
         </p>
-        <a href="/" className="cm-label mt-8 inline-block text-accent hover:underline">
+        <a href="/discover" className="cm-label mt-8 inline-block text-accent hover:underline">
           ← Back to Discover
         </a>
       </div>

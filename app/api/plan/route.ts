@@ -28,6 +28,8 @@ export async function POST(req: NextRequest) {
       budget: body.budget,
       markets: body.markets?.filter(Boolean) ?? [],
       platforms: body.platforms?.filter(Boolean) ?? [],
+      topics: body.topics?.filter(Boolean) ?? [],
+      audience: body.audience?.filter(Boolean) ?? [],
     };
 
     const [creators, overlap] = await Promise.all([

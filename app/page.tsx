@@ -1,44 +1,30 @@
-import { getActiveBuyerCreators, data, dataSource } from "@/lib/data";
-import { BuyerExperience } from "@/components/buyer/BuyerExperience";
-import { computeFill, type Availability } from "@/lib/inventory";
+import { redirect } from "next/navigation";
+import { getActiveBuyerCreators } from "@/lib/data";
+import { BriefLanding } from "@/components/landing/BriefLanding";
+import { deriveTopics } from "@/components/buyer/brief-options";
 
-// Always render against fresh data so Airtable edits show up.
 export const dynamic = "force-dynamic";
 
-export default async function BuyerPage() {
-  const [creators, overlap, bookings] = await Promise.all([
-    getActiveBuyerCreators(),
-    data.getOverlapAssumptions(),
-    data.getBookings(),
-  ]);
-
-  // Resolve availability on the server and hand the client only the qualitative
-  // label. Slot counts and booking records are commercial detail; a buyer needs
-  // to know whether they can buy, not how much room is left.
-  const fills = computeFill(
-    creators.flatMap((c) => c.channels),
-    bookings
-  );
-  const availability: Record<string, Availability> = {};
-  for (const [channelId, fill] of fills) {
-    if (fill.availability !== "Unknown") availability[channelId] = fill.availability;
+/**
+ * The front door is the brief (Sarah's redesign): a visitor either briefs us
+ * or steps through to the gallery at /discover.
+ *
+ * Shared-bundle links predate the split and point at "/?b=…" — those visitors
+ * are opening someone's bundle, not starting a brief, so they pass straight
+ * through to the gallery with the parameter intact.
+ */
+export default async function LandingPage({
+  searchParams,
+}: {
+  searchParams: Record<string, string | string[] | undefined>;
+}) {
+  const shared = searchParams.b;
+  if (typeof shared === "string" && shared) {
+    redirect(`/discover?b=${encodeURIComponent(shared)}`);
   }
 
+  const creators = await getActiveBuyerCreators();
   return (
-    <>
-      {dataSource === "local" && (
-        <div className="border-b border-hairline bg-bg-alt">
-          <p className="mx-auto max-w-content px-6 py-2 cm-fine text-ink/50">
-            Running on the local seed dataset — add Airtable credentials to connect
-            the live base.
-          </p>
-        </div>
-      )}
-      <BuyerExperience
-        creators={creators}
-        overlap={overlap}
-        availability={availability}
-      />
-    </>
+    <BriefLanding topics={deriveTopics(creators)} creatorCount={creators.length} />
   );
 }

@@ -43,6 +43,20 @@ export interface Brief {
   markets?: string[];
   /** Optional preferred platforms. */
   platforms?: string[];
+  /**
+   * Brief v2 editorial alignment — topics the brand wants to show up with
+   * (multi-select successor to `affinity`; both are honoured).
+   */
+  topics?: string[];
+  /**
+   * Brief v2 audience preferences: "Lean male" / "Lean female" /
+   * "Gender balance" and/or age bands like "18-24". Applied only where a
+   * channel actually carries audience-composition data — creators without it
+   * are NOT penalised, and the narrative says when preferences could not be
+   * applied at all. Recording a preference is not the same as having the data
+   * to honour it.
+   */
+  audience?: string[];
 }
 
 export interface PlanSummary {
@@ -118,10 +132,62 @@ function isConditional(creator: Creator, industry: string | null): boolean {
   return cond.some((n) => n.toLowerCase() === industry.toLowerCase());
 }
 
+/** Formats that leave the brand with an asset it can reuse or repurpose. */
+const REUSABLE_FORMAT = /custom|branded|product placement|takeover|mini-series|dedicated|video/i;
+
+/** True when the brief names topics and this creator carries at least one. */
+function matchesTopics(creator: Creator, brief: Brief): boolean {
+  const wanted = [
+    ...(brief.topics ?? []),
+    ...(brief.affinity ? [brief.affinity] : []),
+  ].map((t) => t.toLowerCase());
+  if (!wanted.length) return false;
+  const carried = [
+    ...creator.categoryAffinities,
+    ...(creator.primaryBeat ? [creator.primaryBeat] : []),
+  ].map((t) => t.toLowerCase());
+  return wanted.some((w) => carried.some((c) => c === w));
+}
+
+/**
+ * Audience-preference multiplier for one channel. Neutral (1) when the channel
+ * has no composition data: absence of data must never read as a mismatch, or
+ * the whole real roster — which has no survey data yet — would be penalised.
+ */
+function audienceMultiplier(channel: Channel, prefs: string[] | undefined): number {
+  if (!prefs?.length) return 1;
+  const gender = channel.audienceGenderSplit;
+  const ages = channel.audienceAgeBands;
+
+  let signal = 0; // >0 match, <0 mismatch, 0 no data
+  if (gender && typeof gender === "object") {
+    const m = Number(gender["M"] ?? gender["Male"] ?? NaN);
+    const f = Number(gender["F"] ?? gender["Female"] ?? NaN);
+    if (!Number.isNaN(m) && !Number.isNaN(f)) {
+      for (const p of prefs) {
+        if (p === "Lean male") signal += m >= 55 ? 1 : -1;
+        if (p === "Lean female") signal += f >= 55 ? 1 : -1;
+        if (p === "Gender balance") signal += Math.abs(m - f) <= 12 ? 1 : -1;
+      }
+    }
+  }
+  if (ages && typeof ages === "object") {
+    const wantedBands = prefs.filter((p) => /^\d{2}[-+]/.test(p) || p === "55+");
+    for (const band of wantedBands) {
+      const share = Number((ages as Record<string, unknown>)[band] ?? NaN);
+      if (!Number.isNaN(share)) signal += share >= 15 ? 1 : -0.5;
+    }
+  }
+  if (signal > 0) return 1.25;
+  if (signal < 0) return 0.8;
+  return 1;
+}
+
 /** Goal-specific multiplier applied to a candidate's reach-per-dollar score. */
 function goalMultiplier(
   goal: OptimizationGoal,
   creator: Creator,
+  channel: Channel,
   brief: Brief,
   chosen: ResolvedComponent[]
 ): number {
@@ -130,7 +196,7 @@ function goalMultiplier(
   const affinities = new Set(chosen.flatMap((c) => c.creator.categoryAffinities));
 
   const sharesCategory =
-    (!!brief.affinity && creator.categoryAffinities.includes(brief.affinity)) ||
+    matchesTopics(creator, brief) ||
     creator.categoryAffinities.some((a) => affinities.has(a)) ||
     (!!creator.primaryBeat && beats.has(creator.primaryBeat));
 
@@ -144,6 +210,18 @@ function goalMultiplier(
     case "Fit Budget":
       // Efficiency is already the base score; nudge toward the buyer's category.
       return sharesCategory ? 1.15 : 1;
+    case "Maximize Engagement": {
+      // Reward channels that demonstrably engage. A channel with no measured
+      // rate is dampened, not zeroed — unmeasured is not the same as bad.
+      const rate = channel.avgEngagementRate;
+      if (rate == null) return 0.7;
+      return Math.min(2.5, 0.6 + rate * 8);
+    }
+    case "Content I Can Reuse": {
+      // Reward channels selling formats that produce a reusable asset.
+      const reusable = channel.availableAdFormats.some((f) => REUSABLE_FORMAT.test(f));
+      return reusable ? 1.7 : 0.55;
+    }
     case "Maximize Reach":
     default:
       return 1;
@@ -195,18 +273,33 @@ export function planBundle(
     if (preferred.length >= 3) pool = preferred;
   }
 
+  // Editorial topics are the same kind of soft filter: honour them when enough
+  // priced inventory carries the topics, otherwise fall back to the full pool
+  // and let the goal multiplier prefer topical creators instead.
+  let topicNote: "applied" | "preferred" | null = null;
+  if (brief.topics?.length) {
+    const onTopic = pool.filter((u) => matchesTopics(u.creator, brief));
+    if (onTopic.length >= 3) {
+      pool = onTopic;
+      topicNote = "applied";
+    } else {
+      topicNote = "preferred";
+    }
+  }
+
   // "Tighten Category" means what it says: restrict the pool to creators who
   // actually carry the stated audience interest, rather than merely preferring
   // them. A weighted nudge loses to reach-per-dollar and produces a plan that
   // claims coherence it does not have. Falls back if that starves the pool.
   let tightenedOn: string | null = null;
-  if (brief.goal === "Tighten Category" && brief.affinity) {
+  const tightenTarget = brief.affinity ?? brief.topics?.[0] ?? null;
+  if (brief.goal === "Tighten Category" && tightenTarget) {
     const inCategory = pool.filter((u) =>
-      u.creator.categoryAffinities.includes(brief.affinity!)
+      u.creator.categoryAffinities.includes(tightenTarget)
     );
     if (inCategory.length >= 4) {
       pool = inCategory;
-      tightenedOn = brief.affinity;
+      tightenedOn = tightenTarget;
     }
   }
 
@@ -229,7 +322,10 @@ export function planBundle(
       if (incremental <= 0) continue;
 
       const perDollar = incremental / cand.price;
-      const score = perDollar * goalMultiplier(brief.goal, cand.creator, brief, chosen);
+      const score =
+        perDollar *
+        goalMultiplier(brief.goal, cand.creator, cand.channel, brief, chosen) *
+        audienceMultiplier(cand.channel, brief.audience);
       if (!best || score > best.score) best = { cand, score, net };
     }
 
@@ -283,7 +379,15 @@ export function planBundle(
       summary,
       excludedForBoundaries,
       conditional,
-      tightenedOn
+      tightenedOn,
+      topicNote,
+      // Whether audience preferences could be honoured at all: true only when
+      // some priced channel actually carries composition data.
+      universe.some(
+        (u) =>
+          u.channel.audienceGenderSplit != null ||
+          u.channel.audienceAgeBands != null
+      )
     ),
     excludedForBoundaries,
     conditional,
@@ -304,9 +408,28 @@ function buildNarrative(
   s: PlanSummary,
   excluded: number,
   conditional: { name: string; note: string | null }[],
-  tightenedOn: string | null
+  tightenedOn: string | null,
+  topicNote: "applied" | "preferred" | null = null,
+  audienceDataAvailable = true
 ): { headline: string; points: string[] } {
   const points: string[] = [];
+
+  // Brief v2 honesty notes come first: what the plan did — and could not do —
+  // with the buyer's answers.
+  if (topicNote === "applied" && brief.topics?.length) {
+    points.push(
+      `Every creator here publishes on ${brief.topics.join(", ")} — the topics you asked to show up with.`
+    );
+  } else if (topicNote === "preferred" && brief.topics?.length) {
+    points.push(
+      `Creators covering ${brief.topics.join(", ")} were preferred, but too few carry those topics to fill the plan from them alone.`
+    );
+  }
+  if (brief.audience?.length && !audienceDataAvailable) {
+    points.push(
+      `Your audience preferences (${brief.audience.join(", ")}) were recorded, but audience-composition data is not yet on file for this roster, so they did not shape the plan. It will apply automatically as creators complete audience surveys.`
+    );
+  }
 
   if (s.creatorCount === 0) {
     return {
